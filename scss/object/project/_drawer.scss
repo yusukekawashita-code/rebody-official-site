@@ -1,0 +1,104 @@
+@use "../../global" as *;
+
+.p-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: rgba($color-black, 0.78);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+
+    .p-drawer__inner {
+      transform: translateX(0);
+    }
+  }
+
+  &__inner {
+    width: min(64vw, 760px);
+    height: 100%;
+    margin-left: auto;
+    padding: 130px 48px 64px;
+    background: rgba(26, 26, 26, 0.55);
+    transform: translateX(100%);
+    transition: transform 0.45s ease;
+    overflow-y: auto;
+
+    @include mq($bp768) {
+      width: 66%;
+      padding: 120px 32px 48px;
+    }
+
+    @include mq($bp640) {
+      padding: 100px 24px 40px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+
+    @include mq($bp640) {
+      gap: 16px;
+    }
+  }
+
+  &__link {
+    color: $color-white;
+    font-size: rclamp(14, 20, 360, 1920);
+    font-weight: 500;
+    line-height: 1.4;
+    transition: opacity 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.65;
+      }
+    }
+
+    @include mq($bp640) {
+      font-size: rclamp(14, 18, 360, 1920);
+    }
+  }
+}
+.js-drawer-button {
+  position: relative;
+  z-index: 1000;
+
+  &.is-open {
+    background: transparent;
+    box-shadow: none;
+
+    .p-header__menu-line,
+    .p-sp-header__menu-line {
+      background: $color-white;
+    }
+
+    .p-header__menu-line:first-child,
+    .p-sp-header__menu-line:first-child {
+      transform: translateY(4px);
+    }
+
+    .p-header__menu-line:last-child,
+    .p-sp-header__menu-line:last-child {
+      opacity: 0;
+    }
+
+    .p-header__menu-text,
+    .p-sp-header__menu-text {
+      font-size: 0;
+
+      &::before {
+        content: "CLOSE";
+        font-size: rclamp(15, 18, 360, 1920);
+        color: $color-white;
+      }
+    }
+  }
+}

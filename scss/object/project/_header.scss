@@ -1,0 +1,184 @@
+@use "../../global" as *;
+
+.p-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &--pc {
+    display: flex;
+    @include mq($bp768) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    width: 150px;
+    display: block;
+    flex-shrink: 0;
+    @include mq($bp899) {
+      width: 120px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__copy {
+    margin-left: 12px;
+    font-size: rclamp(8, 14, 360, 1920);
+    line-height: 1.7;
+    color: $color-black;
+    white-space: nowrap;
+
+    sup {
+      font-size: 10px;
+    }
+  }
+
+  &__award {
+    width: 125px;
+    margin-left: 4px;
+    flex-shrink: 0;
+    @include mq($bp1024) {
+      width: 105px;
+    }
+    @include mq($bp899) {
+      width: 85px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    @include mq($bp1024) {
+      gap: 16px;
+    }
+    @include mq($bp899) {
+      gap: 12px;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $color-black;
+    text-decoration: none;
+  }
+
+  &__tel-icon {
+    width: 50px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__tel-number {
+    font-size: rclamp(16, 40, 360, 1920);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  &__line {
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: $color-white;
+    box-shadow: 0 4px 12px rgba($color-black, 0.28);
+    color: $color-green;
+    font-size: rclamp(14, 20, 360, 1920);
+    line-height: 1.15;
+    text-align: center;
+    flex-shrink: 0;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba($color-black, 0.22);
+      }
+    }
+
+    @include mq($bp1024) {
+      width: 70px;
+      height: 70px;
+    }
+    @include mq($bp899) {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__menu {
+    width: 80px;
+    height: 80px;
+    padding: 14px 12px 12px;
+    border: 0;
+    border-radius: 12px;
+    background: $color-white;
+    box-shadow: 0 4px 12px rgba($color-black, 0.28);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba($color-black, 0.22);
+      }
+    }
+    @include mq($bp1024) {
+      width: 70px;
+      height: 70px;
+    }
+    @include mq($bp899) {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__menu-line {
+    width: 56px;
+    height: 4px;
+    border-radius: 999px;
+    background: $color-black;
+    @include mq($bp899) {
+      width: 50px;
+      height: 2px;
+    }
+  }
+
+  &__menu-text {
+    font-size: rclamp(14, 20, 360, 1920);
+    line-height: 1;
+    color: $color-black;
+  }
+}

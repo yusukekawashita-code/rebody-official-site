@@ -1,0 +1,199 @@
+@use "../../global" as *;
+
+.p-sp-header {
+  display: none;
+
+  @include mq($bp768) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  @include mq($bp414) {
+    gap: 10px;
+  }
+
+  &__logo {
+    @include mq($bp768) {
+      width: 88px;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    @include mq($bp640) {
+      width: 50px;
+    }
+
+    @include mq($bp414) {
+      width: 45px;
+    }
+
+    @include mq($bp360) {
+      width: 42px;
+    }
+
+    @include mq($bp330) {
+      width: 36px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__nav {
+    @include mq($bp768) {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    @include mq($bp640) {
+      gap: 10px;
+    }
+
+    @include mq($bp399) {
+      gap: 8px;
+    }
+
+    @include mq($bp360) {
+      gap: 6px;
+    }
+
+    @include mq($bp330) {
+      gap: 3px;
+    }
+  }
+
+  &__nav-link {
+    @include mq($bp768) {
+      width: 90px;
+      height: 90px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: $color-orange;
+      color: $color-white;
+      font-size: rclamp(10, 18, 360, 1920);
+      text-align: center;
+    }
+
+    @include mq($bp640) {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+    }
+
+    @include mq($bp414) {
+      width: 45px;
+      height: 45px;
+    }
+
+    @include mq($bp360) {
+      width: 42px;
+      height: 42px;
+    }
+
+    @include mq($bp330) {
+      width: 41px;
+      height: 41px;
+      font-size: 9px;
+    }
+  }
+
+  &__menu {
+    @include mq($bp768) {
+      width: 90px;
+      height: 90px;
+      padding: 8px;
+      border: none;
+      border-radius: 12px;
+      background: $color-white;
+      box-shadow: 0 8px 18px rgba($color-black, 0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition:
+        transform 0.3s ease,
+        width 0.3s ease,
+        height 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    @include mq($bp640) {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+    }
+
+    @include mq($bp360) {
+      width: 46px;
+      height: 46px;
+    }
+
+    @include mq($bp330) {
+      width: 45px;
+      height: 45px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba($color-black, 0.22);
+      }
+    }
+
+    &.is-open {
+      width: 50px;
+      height: 52px;
+      background: transparent;
+      box-shadow: none;
+
+      @media (hover: hover) {
+        &:hover {
+          transform: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  &__menu-line {
+    @include mq($bp768) {
+      width: 55px;
+      height: 4px;
+      border-radius: 999px;
+      background: $color-black;
+    }
+
+    @include mq($bp640) {
+      width: 36px;
+      height: 3px;
+    }
+
+    @include mq($bp360) {
+      width: 33px;
+      height: 2.5px;
+    }
+  }
+
+  &__menu-text {
+    @include mq($bp768) {
+      font-size: rclamp(12, 22, 360, 1920);
+      line-height: 1;
+      color: $color-black;
+    }
+  }
+}
