@@ -32,11 +32,11 @@
 
     @include mq($bp768) {
       width: 66%;
-      padding: 120px 32px 48px;
+      padding: 100px 32px 48px;
     }
 
     @include mq($bp640) {
-      padding: 100px 24px 40px;
+      padding: 70px 24px 40px;
     }
   }
 
@@ -96,7 +96,7 @@
 
       &::before {
         content: "CLOSE";
-        font-size: rclamp(15, 18, 360, 1920);
+        font-size: rclamp(13, 18, 360, 1920);
         color: $color-white;
       }
     }

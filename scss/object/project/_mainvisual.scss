@@ -1,1 +1,106 @@
 @use "../../global" as *;
+
+.p-mainvisual {
+  background: linear-gradient(to right, $color-orange 0 50%, $color-white 50% 100%);
+
+  &__inner {
+    min-height: calc(100vh - 120px);
+    display: flex;
+
+    @include mq($bp768) {
+      min-height: auto;
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    width: 50%;
+    padding: 160px 40px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 720px;
+    margin-inline: auto;
+    background: $color-orange;
+    color: $color-white;
+
+    @include mq($bp768) {
+      width: 100%;
+      padding: 72px 24px 64px;
+      align-items: flex-start;
+    }
+
+    @include mq($bp640) {
+      padding: 50px 25px;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(42, 89, 768, 1920);
+    line-height: 1.8;
+  }
+
+  &__lead {
+    margin-top: 50px;
+    margin-left: 0;
+    padding: 20px 16px;
+    border: 2px solid $color-white;
+    color: $color-white;
+    font-size: rclamp(16, 22, 768, 1920);
+    line-height: 1.6;
+
+    @include mq($bp768) {
+      margin-top: 36px;
+      padding: 4px 16px;
+    }
+  }
+
+  &__logo {
+    width: 50%;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-white;
+
+    @include mq($bp768) {
+      width: 100%;
+      min-height: 480px;
+      padding: 20px 24px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 60px;
+    }
+    @include mq($bp399) {
+      min-height: 450px;
+      padding: 16px 20px;
+      gap: 50px;
+    }
+  }
+
+  &__logo-main {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    display: block;
+
+    @include mq($bp768) {
+      max-width: 680px;
+    }
+  }
+
+  &__logo-badge {
+    display: none;
+
+    @include mq($bp768) {
+      display: block;
+      width: 180px;
+      height: auto;
+      margin-left: auto;
+    }
+
+    @include mq($bp640) {
+      width: 120px;
+    }
+  }
+}
