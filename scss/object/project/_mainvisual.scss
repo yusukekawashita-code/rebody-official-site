@@ -7,8 +7,11 @@
     min-height: calc(100vh - 120px);
     display: flex;
 
-    @include mq($bp768) {
+    @include mq($bp1024) {
       min-height: auto;
+    }
+
+    @include mq($bp640) {
       flex-direction: column;
     }
   }
@@ -31,7 +34,7 @@
     }
 
     @include mq($bp640) {
-      padding: 50px 25px;
+      padding: 50px 40px;
     }
   }
 
@@ -94,13 +97,9 @@
 
     @include mq($bp768) {
       display: block;
-      width: 180px;
+      width: 120px;
       height: auto;
       margin-left: auto;
-    }
-
-    @include mq($bp640) {
-      width: 120px;
     }
   }
 }

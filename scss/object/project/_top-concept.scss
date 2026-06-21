@@ -1,0 +1,140 @@
+@use "../../global" as *;
+
+.p-top-concept {
+  padding: 140px 0;
+
+  @include mq($bp768) {
+    padding: 80px 0;
+  }
+  @include mq($bp640) {
+    margin-top: -100px;
+  }
+
+  &__title {
+    font-size: rclamp(22, 40, 768, 1920);
+    line-height: 1.85;
+  }
+
+  &__head {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+
+    @include mq($bp768) {
+      margin-top: 30px;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__text {
+    width: 46%;
+    padding-top: 40px;
+
+    @include mq($bp768) {
+      width: 100%;
+      padding-top: 0;
+    }
+
+    p {
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2.5;
+      @include mq($bp768) {
+        line-height: 2;
+      }
+
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__image {
+    width: 47%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__bottom {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+
+    @include mq($bp768) {
+      margin-top: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__result {
+    width: 45%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__result-title {
+    font-size: rclamp(15, 19, 360, 1920);
+    font-weight: 500;
+    line-height: 1.8;
+  }
+
+  &__list {
+    margin-top: 20px;
+    @include mq($bp768) {
+      margin-top: 10px;
+    }
+
+    li {
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 700;
+      line-height: 2;
+      margin-bottom: 8px;
+
+      &::before {
+        content: "・";
+      }
+    }
+  }
+
+  &__result-text {
+    font-size: rclamp(15, 19, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+    margin-top: 16px;
+    @include mq($bp768) {
+      margin-top: 10px;
+    }
+  }
+
+  &__symptoms {
+    width: 45%;
+    @include mq($bp768) {
+      width: 100%;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
