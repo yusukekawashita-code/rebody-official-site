@@ -31,7 +31,7 @@
     margin-left: 12px;
     font-size: rclamp(8, 14, 360, 1920);
     line-height: 1.7;
-    color: $color-black;
+    color: #231815;
     white-space: nowrap;
 
     sup {
@@ -74,7 +74,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    color: $color-black;
+    color: #231815;
     text-decoration: none;
   }
 
@@ -103,7 +103,7 @@
     place-items: center;
     border-radius: 12px;
     background: $color-white;
-    box-shadow: 0 4px 12px rgba($color-black, 0.28);
+    box-shadow: 0 4px 12px rgba(#231815, 0.28);
     color: $color-green;
     font-size: rclamp(14, 20, 360, 1920);
     line-height: 1.15;
@@ -116,7 +116,7 @@
     @media (hover: hover) {
       &:hover {
         transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba($color-black, 0.22);
+        box-shadow: 0 8px 20px rgba(#231815, 0.22);
       }
     }
 
@@ -137,7 +137,7 @@
     border: 0;
     border-radius: 12px;
     background: $color-white;
-    box-shadow: 0 4px 12px rgba($color-black, 0.28);
+    box-shadow: 0 4px 12px rgba(#231815, 0.28);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,7 +152,7 @@
     @media (hover: hover) {
       &:hover {
         transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba($color-black, 0.22);
+        box-shadow: 0 8px 20px rgba(#231815, 0.22);
       }
     }
     @include mq($bp1024) {
@@ -169,7 +169,7 @@
     width: 56px;
     height: 4px;
     border-radius: 999px;
-    background: $color-black;
+    background: #231815;
     @include mq($bp899) {
       width: 50px;
       height: 2px;
@@ -179,6 +179,6 @@
   &__menu-text {
     font-size: rclamp(14, 20, 360, 1920);
     line-height: 1;
-    color: $color-black;
+    color: #231815;
   }
 }

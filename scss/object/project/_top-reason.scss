@@ -1,0 +1,160 @@
+@use "../../global" as *;
+
+.p-top-reason {
+  padding: 140px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__inner {
+    width: 100%;
+  }
+
+  &__lead-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mq($bp768) {
+      display: block;
+    }
+  }
+
+  &__lead-text {
+    width: 40%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 40, 360, 1920);
+    line-height: 1.85;
+    white-space: nowrap;
+  }
+
+  &__text {
+    font-size: rclamp(15, 19, 360, 1920);
+    font-weight: 500;
+    line-height: 2.4;
+
+    @include mq($bp768) {
+      line-height: 2;
+    }
+
+    &--first {
+      margin-top: 76px;
+
+      @include mq($bp768) {
+        margin-top: 36px;
+      }
+    }
+
+    &--second {
+      white-space: nowrap;
+      margin-top: 45px;
+
+      @include mq($bp768) {
+        white-space: normal;
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__main-image {
+    width: 45%;
+
+    @include mq($bp768) {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      display: block;
+      @include mq($bp768) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__body-group {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include mq($bp768) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+  }
+
+  &__body-text {
+    width: 40%;
+
+    @include mq($bp768) {
+      width: 100%;
+      display: contents;
+    }
+  }
+
+  &__message-box {
+    max-width: 350px;
+    width: 100%;
+    padding: 24px;
+    background: $color-orange;
+    color: $color-white;
+
+    @include mq($bp768) {
+      max-width: 300px;
+      padding: 16px;
+    }
+    @include mq($bp640) {
+      max-width: 240px;
+      padding: 12px;
+    }
+
+    p {
+      font-size: rclamp(15, 22, 360, 1920);
+      line-height: 2;
+    }
+  }
+
+  &__visual {
+    width: 50%;
+
+    @include mq($bp768) {
+      order: 3;
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  &__steps {
+    width: 100%;
+  }
+
+  &__button {
+    margin-top: 80px;
+
+    .c-button {
+      @include mq($bp768) {
+        padding: 4px 20px;
+      }
+    }
+
+    @include mq($bp768) {
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+}

@@ -9,10 +9,10 @@
   justify-content: center;
   border: 1px solid #000000;
   border-radius: 4px;
-  background: $color-white;
   color: #000000;
   font-size: rclamp(14, 20, 360, 1920);
   line-height: 1.5;
+  text-align: center;
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;

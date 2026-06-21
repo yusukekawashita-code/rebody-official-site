@@ -1,0 +1,39 @@
+@use "../../global" as *;
+
+.c-thumbnail-card-list {
+  display: flex;
+  gap: 24px;
+
+  @include mq($bp640) {
+    gap: 12px;
+  }
+}
+
+.c-thumbnail-card {
+  width: calc((100% - 40px) / 3);
+
+  @include mq($bp640) {
+    width: calc((100% - 24px) / 3);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__label {
+    background: $color-orange;
+    color: $color-white;
+    font-size: rclamp(12, 18, 768, 1920);
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 8px;
+    padding: 10px;
+
+    @include mq($bp640) {
+      margin-top: 4px;
+      padding: 2px 4px;
+    }
+  }
+}
