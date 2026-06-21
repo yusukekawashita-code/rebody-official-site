@@ -1,0 +1,45 @@
+@use "../../global" as *;
+
+.c-button {
+  min-width: 430px;
+  min-height: 80px;
+  padding: 8px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background: $color-white;
+  color: #000000;
+  font-size: rclamp(14, 20, 360, 1920);
+  line-height: 1.5;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+
+  @include mq($bp768) {
+    min-width: auto;
+    min-height: auto;
+    padding: 12px 20px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  &--arrow {
+    &::after {
+      content: "";
+      margin-left: 14px;
+      border-style: solid;
+      border-width: 10px 0 10px 14px;
+      border-color: transparent transparent transparent $color-orange;
+      @include mq($bp768) {
+        margin-left: 8px;
+        border-width: 8px 0 8px 12px;
+      }
+    }
+  }
+}
