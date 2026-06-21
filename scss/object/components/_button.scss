@@ -17,7 +17,7 @@
     transform 0.3s ease,
     opacity 0.3s ease;
 
-  @include mq($bp768) {
+  @include mq($bp640) {
     min-width: auto;
     min-height: auto;
     padding: 12px 20px;
@@ -40,6 +40,21 @@
         margin-left: 8px;
         border-width: 8px 0 8px 12px;
       }
+    }
+  }
+
+  &--instagram {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-left: 8px;
+      background-image: url("../images/common/icon-instagram.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      vertical-align: middle;
     }
   }
 }

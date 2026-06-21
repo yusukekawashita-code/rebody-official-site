@@ -1,0 +1,118 @@
+@use "../../global" as *;
+
+.p-top-story {
+  padding: 100px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 60px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @include mq($bp768) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__content {
+    width: 45%;
+
+    @include mq($bp768) {
+      width: 100%;
+      order: 1;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 42, 768, 1920);
+    line-height: 1.7;
+  }
+
+  &__text {
+    p {
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2.4;
+
+      @include mq($bp768) {
+        line-height: 2;
+      }
+    }
+
+    &--first {
+      margin-top: 60px;
+
+      @include mq($bp768) {
+        margin-top: 40px;
+      }
+    }
+
+    &--second {
+      @include mq($bp768) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    margin-top: 50px;
+
+    @include mq($bp768) {
+      width: 100%;
+      max-width: 620px;
+      margin: 40px auto 0;
+      order: 2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__bottom {
+    width: 45%;
+    margin-top: -120px;
+    @include mq($bp1499) {
+      margin-top: -150px;
+    }
+
+    @include mq($bp999) {
+      margin-top: -20px;
+    }
+
+    @include mq($bp768) {
+      width: 100%;
+      margin-top: 48px;
+      order: 3;
+    }
+  }
+
+  &__buttons {
+    margin-top: 76px;
+    display: grid;
+    gap: 28px;
+
+    @include mq($bp768) {
+      margin-top: 40px;
+      gap: 20px;
+    }
+  }
+
+  &__button {
+    margin-top: 0;
+    .c-button {
+      @include mq($bp640) {
+        min-width: 300px;
+      }
+    }
+  }
+}

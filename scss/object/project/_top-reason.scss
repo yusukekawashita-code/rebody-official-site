@@ -57,7 +57,7 @@
       white-space: nowrap;
       margin-top: 45px;
 
-      @include mq($bp768) {
+      @include mq($bp1300) {
         white-space: normal;
         margin-top: 24px;
       }
