@@ -935,7 +935,7 @@ a {
 }
 .c-voice-section__note {
   margin-top: auto;
-  font-size: clamp(0.8125rem, 0.7692307692rem + 0.1923076923vw, 1rem);
+  font-size: clamp(0.6875rem, 0.6153846154rem + 0.3205128205vw, 1rem);
   font-weight: 500;
   line-height: 1.7;
 }
@@ -951,7 +951,7 @@ a {
 @media (max-width: 768px) {
   .c-voice-section__gallery {
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     margin-inline: auto;
   }
 }
@@ -2011,5 +2011,94 @@ a {
   .p-top-story__button .c-button {
     min-width: 300px;
   }
+}
+
+.p-top-media {
+  padding: 120px 0;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-top-media {
+    padding: 70px 0;
+  }
+}
+.p-top-media__inner {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.p-top-media__title {
+  padding-bottom: 8px;
+  border-bottom: 2px solid #333333;
+  font-size: clamp(1.25rem, 1.1346153846rem + 0.5128205128vw, 1.75rem);
+  line-height: 1.5;
+}
+.p-top-media__list {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 30px;
+}
+@media (max-width: 768px) {
+  .p-top-media__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+}
+@media (max-width: 640px) {
+  .p-top-media__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+}
+.p-top-media__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+@media (max-width: 640px) {
+  .p-top-media__item {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+.p-top-media__image {
+  width: 45%;
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .p-top-media__image {
+    width: 100%;
+  }
+}
+.p-top-media__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.p-top-media__content {
+  width: 52%;
+}
+@media (max-width: 640px) {
+  .p-top-media__content {
+    width: 100%;
+  }
+}
+.p-top-media__name {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #333333;
+  font-size: clamp(0.875rem, 0.8173076923rem + 0.2564102564vw, 1.125rem);
+  line-height: 1.4;
+}
+.p-top-media__text {
+  font-size: clamp(0.6875rem, 0.6442307692rem + 0.1923076923vw, 0.875rem);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+.p-top-media__publisher {
+  font-size: clamp(0.6875rem, 0.6442307692rem + 0.1923076923vw, 0.875rem);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -83,7 +83,7 @@
 
   &__note {
     margin-top: auto;
-    font-size: rclamp(13, 16, 360, 1920);
+    font-size: rclamp(11, 16, 360, 1920);
     font-weight: 500;
     line-height: 1.7;
 
@@ -98,7 +98,7 @@
 
     @include mq($bp768) {
       width: 100%;
-      max-width: 300px;
+      max-width: 250px;
       margin-inline: auto;
     }
   }
