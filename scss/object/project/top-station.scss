@@ -1,0 +1,100 @@
+@use "../../global" as *;
+
+.p-top-station {
+  padding: 120px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 30px 0 60px;
+  }
+
+  &__title {
+    padding-bottom: 8px;
+    border-bottom: 2px solid $color-orange;
+    font-size: rclamp(22, 40, 360, 1920);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &__body {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mq($bp768) {
+      flex-direction: column-reverse;
+      margin-top: 0;
+    }
+  }
+
+  &__content {
+    width: 43%;
+    @include mq($bp899) {
+      width: 70%;
+    }
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding-bottom: 8px;
+    border-bottom: 10px solid $color-orange;
+    color: $color-black;
+    line-height: 1;
+
+    span {
+      font-size: rclamp(30, 48, 360, 1920);
+    }
+
+    strong {
+      font-size: rclamp(60, 100, 360, 1920);
+    }
+
+    @include mq($bp768) {
+      display: block;
+      text-align: center;
+      border-bottom-width: 8px;
+      margin-top: 1rem;
+    }
+  }
+
+  &__date {
+    margin-top: 8px;
+    font-size: rclamp(14, 17, 360, 1920);
+    line-height: 1.6;
+  }
+
+  &__list {
+    margin-top: 30px;
+    @include mq($bp768) {
+      margin-top: 20px;
+    }
+
+    li {
+      font-size: rclamp(12, 17, 360, 1920);
+      line-height: 1.8;
+    }
+  }
+
+  &__image {
+    width: 55%;
+    margin-top: 70px;
+
+    @include mq($bp768) {
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
