@@ -11,8 +11,7 @@
   &__title {
     padding-bottom: 8px;
     border-bottom: 2px solid $color-orange;
-    font-size: rclamp(22, 40, 360, 1920);
-    font-weight: 700;
+    font-size: rclamp(19, 40, 360, 1920);
     line-height: 1.4;
   }
 
@@ -53,7 +52,7 @@
     }
 
     strong {
-      font-size: rclamp(60, 100, 360, 1920);
+      font-size: rclamp(50, 100, 360, 1920);
     }
 
     @include mq($bp768) {
