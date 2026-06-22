@@ -11,7 +11,7 @@
       min-height: auto;
     }
 
-    @include mq($bp640) {
+    @include mq($bp768) {
       flex-direction: column;
     }
   }
@@ -26,6 +26,9 @@
     margin-inline: auto;
     background: $color-orange;
     color: $color-white;
+    @include mq($bp1499) {
+      padding: 100px 40px 80px;
+    }
 
     @include mq($bp768) {
       width: 100%;
@@ -39,7 +42,7 @@
   }
 
   &__title {
-    font-size: rclamp(42, 89, 360, 1920);
+    font-size: rclamp(40, 89, 360, 1920);
     line-height: 1.8;
   }
 
