@@ -1,0 +1,100 @@
+@use "../../global" as *;
+
+.c-flow-section {
+  padding: 120px 0;
+
+  @include mq($bp768) {
+    padding: 60px 0;
+  }
+
+  &__title {
+    font-size: rclamp(22, 50, 360, 1920);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__line {
+    max-width: 1200px;
+    height: 12px;
+    margin: 25px auto 0;
+    background: $color-orange;
+
+    @include mq($bp768) {
+      height: 8px;
+      margin-top: 24px;
+    }
+    @include mq($bp640) {
+      height: 6px;
+    }
+
+    &--bottom {
+      margin-top: 60px;
+
+      @include mq($bp768) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__list {
+    max-width: 1080px;
+    margin: 75px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+
+    @include mq($bp768) {
+      margin-top: 48px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 40px;
+    }
+
+    @include mq($bp640) {
+      gap: 20px;
+    }
+  }
+}
+
+.c-flow-card {
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: rclamp(16, 20, 360, 1920);
+    line-height: 1.4;
+
+    span {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 3px;
+      background: $color-orange;
+      color: $color-white;
+      font-size: 20px;
+      line-height: 1;
+      flex-shrink: 0;
+      @include mq($bp640) {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: rclamp(13, 19, 360, 1920);
+    line-height: 1.7;
+    font-weight: 500;
+    margin-top: 12px;
+  }
+}
