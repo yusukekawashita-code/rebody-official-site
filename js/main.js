@@ -15,3 +15,5 @@ drawerButtons.forEach((button) => {
     document.body.classList.toggle("is-drawer-open", isOpen);
   });
 });
+
+baguetteBox.run(".c-voice-section__gallery");

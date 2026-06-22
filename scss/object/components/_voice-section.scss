@@ -1,0 +1,152 @@
+@use "../../global" as *;
+
+.c-voice-section {
+  padding: 120px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 60px 0;
+  }
+
+  &__title {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: rclamp(22, 42, 360, 1920);
+    line-height: 1.5;
+
+    span {
+      width: 39px;
+      height: 39px;
+      background: $color-orange;
+      flex-shrink: 0;
+
+      @include mq($bp768) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  &__card {
+    max-width: 1180px;
+    margin: 28px auto 0;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    background: $color-white;
+
+    @include mq($bp768) {
+      padding: 16px;
+      flex-direction: column-reverse;
+      gap: 24px;
+    }
+  }
+
+  &__content {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__profile {
+    padding-bottom: 12px;
+    border-bottom: 2px solid $color-black;
+    font-size: rclamp(18, 25, 360, 1920);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  &__text {
+    margin-top: 12px;
+
+    p {
+      font-size: rclamp(14, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2.2;
+      @include mq($bp768) {
+        line-height: 1.9;
+      }
+
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__note {
+    margin-top: auto;
+    font-size: rclamp(13, 16, 360, 1920);
+    font-weight: 500;
+    line-height: 1.7;
+
+    @include mq($bp768) {
+      padding-top: 25px;
+    }
+  }
+
+  &__gallery {
+    width: 30%;
+    flex-shrink: 0;
+
+    @include mq($bp768) {
+      width: 100%;
+      max-width: 300px;
+      margin-inline: auto;
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__zoom {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $color-orange;
+    border-radius: 50%;
+    background: $color-white;
+    @include mq($bp768) {
+      right: 4px;
+      bottom: 4px;
+      width: 36px;
+      height: 36px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      background: $color-orange;
+    }
+
+    &::before {
+      width: 26px;
+      height: 4px;
+    }
+
+    &::after {
+      width: 4px;
+      height: 26px;
+    }
+  }
+}
