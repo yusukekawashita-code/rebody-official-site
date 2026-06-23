@@ -1,0 +1,87 @@
+@use "../../global" as *;
+
+.p-story-pain {
+  padding-block: 90px;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding-block: 60px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include mq($bp768) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__content {
+    width: 47%;
+    @include mq($bp899) {
+      width: 90%;
+    }
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 40, 360, 1920);
+    white-space: nowrap;
+    @include mq($bp640) {
+      white-space: normal;
+    }
+  }
+
+  &__text {
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.5;
+    margin-top: 45px;
+
+    &-sp {
+      display: none;
+      @include mq($bp640) {
+        display: block;
+      }
+    }
+
+    @include mq($bp768) {
+      margin-top: 20px;
+      line-height: 2;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 34px;
+
+        @include mq($bp768) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 40%;
+    max-width: 480px;
+
+    @include mq($bp768) {
+      width: 100%;
+      max-width: 55%;
+      margin-inline: auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
