@@ -1128,14 +1128,9 @@ a {
 }
 @media (max-width: 768px) {
   .c-point-card__image {
-    width: 70%;
     max-width: 100%;
-    margin-inline: auto;
-  }
-}
-@media (max-width: 640px) {
-  .c-point-card__image {
     width: 100%;
+    margin-inline: auto;
   }
 }
 .c-point-card__image img {
@@ -1338,7 +1333,7 @@ a {
 @media (max-width: 768px) {
   .c-voice-section__gallery {
     width: 100%;
-    max-width: 275px;
+    max-width: 330px;
     margin-inline: auto;
   }
 }
@@ -2233,6 +2228,7 @@ a {
 }
 @media (max-width: 768px) {
   .p-mainvisual__content {
+    max-width: 100%;
     width: 100%;
     padding: 72px 24px 64px;
     align-items: flex-start;
