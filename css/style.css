@@ -966,12 +966,13 @@ a {
 
 .c-breadcrumb {
   border-bottom: 1px solid #cccccc;
+  background: white;
 }
 .c-breadcrumb__list {
-  display: flex;
-  align-items: center;
   min-height: 40px;
   padding-left: 4%;
+  display: flex;
+  align-items: center;
 }
 .c-breadcrumb__item {
   font-size: 12px;
@@ -979,12 +980,35 @@ a {
 }
 .c-breadcrumb__item a {
   color: #333333;
+  text-decoration: none;
   transition: opacity 0.3s ease;
 }
 @media (hover: hover) {
   .c-breadcrumb__item a:hover {
     opacity: 0.7;
   }
+}
+.c-breadcrumb__item span {
+  color: #333333;
+}
+.c-breadcrumb--sub {
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+.c-breadcrumb--sub .c-breadcrumb__list {
+  min-height: 40px;
+  gap: 0;
+  font-weight: 700;
+}
+.c-breadcrumb--sub .c-breadcrumb__item {
+  display: flex;
+  align-items: center;
+}
+.c-breadcrumb--sub .c-breadcrumb__item:not(:last-child)::after {
+  content: ">";
+  margin: 0 10px;
+  color: #808080;
+  font-weight: 400;
 }
 
 .c-thumbnail-card-list {
@@ -1651,6 +1675,72 @@ a {
     opacity: 0.65;
     text-decoration: underline;
   }
+}
+
+.c-sub-fv {
+  position: relative;
+  background: #fabe00;
+  overflow: hidden;
+}
+.c-sub-fv__inner {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .c-sub-fv__inner {
+    min-height: 300px;
+  }
+}
+@media (max-width: 640px) {
+  .c-sub-fv__inner {
+    min-height: 250px;
+  }
+}
+.c-sub-fv__mark {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  max-width: 400px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+}
+@media (max-width: 1499px) {
+  .c-sub-fv__mark {
+    left: 25%;
+    width: 30%;
+  }
+}
+@media (max-width: 899px) {
+  .c-sub-fv__mark {
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .c-sub-fv__mark {
+    width: 30%;
+  }
+}
+@media (max-width: 640px) {
+  .c-sub-fv__mark {
+    width: 45%;
+  }
+}
+.c-sub-fv__mark img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.c-sub-fv__title {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: clamp(2.0625rem, 1.5865384615rem + 2.1153846154vw, 4.125rem);
+  line-height: 1.4;
+  text-align: center;
 }
 
 .p-header {
