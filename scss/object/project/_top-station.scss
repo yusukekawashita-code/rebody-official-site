@@ -48,17 +48,17 @@
     line-height: 1;
 
     span {
-      font-size: rclamp(30, 48, 360, 1920);
+      font-size: rclamp(22, 48, 360, 1920);
     }
 
     strong {
-      font-size: rclamp(50, 100, 360, 1920);
+      font-size: rclamp(30, 100, 360, 1920);
     }
 
     @include mq($bp768) {
       display: block;
       text-align: center;
-      border-bottom-width: 8px;
+      border-bottom-width: 4px;
       margin-top: 1rem;
     }
   }
