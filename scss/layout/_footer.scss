@@ -251,6 +251,7 @@
     color: $color-white;
     font-size: rclamp(14, 18, 360, 1920);
     line-height: 1.4;
+    letter-spacing: 0.03em;
     transition:
       transform 0.3s ease,
       opacity 0.3s ease,

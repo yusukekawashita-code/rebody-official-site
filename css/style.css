@@ -705,6 +705,7 @@ a {
   color: white;
   font-size: clamp(0.875rem, 0.8173076923rem + 0.2564102564vw, 1.125rem);
   line-height: 1.4;
+  letter-spacing: 0.03em;
   transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
 }
 @media (max-width: 640px) {
@@ -2068,7 +2069,7 @@ a {
 }
 @media (max-width: 768px) {
   .p-drawer__inner {
-    width: 66%;
+    width: 72%;
     padding: 100px 32px 48px;
   }
 }
@@ -2086,11 +2087,20 @@ a {
     gap: 16px;
   }
 }
+.p-drawer__item.is-open .p-drawer__child {
+  max-height: 420px;
+  margin-top: 12px;
+  opacity: 1;
+}
+.p-drawer__item.is-open .p-drawer__arrow {
+  transform: rotate(180deg);
+}
 .p-drawer__link {
   color: white;
   font-size: clamp(0.875rem, 0.7884615385rem + 0.3846153846vw, 1.25rem);
   font-weight: 500;
   line-height: 1.4;
+  text-decoration: none;
   transition: opacity 0.3s ease;
 }
 @media (hover: hover) {
@@ -2101,6 +2111,59 @@ a {
 @media (max-width: 640px) {
   .p-drawer__link {
     font-size: clamp(0.875rem, 0.8173076923rem + 0.2564102564vw, 1.125rem);
+  }
+}
+.p-drawer__toggle {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.p-drawer__arrow {
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+.p-drawer__child {
+  max-height: 0;
+  margin-top: 0;
+  padding-left: 28px;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, margin-top 0.35s ease, opacity 0.25s ease;
+}
+@media (max-width: 640px) {
+  .p-drawer__child {
+    padding-left: 20px;
+  }
+}
+.p-drawer__child-link {
+  display: block;
+  color: white;
+  font-size: clamp(0.875rem, 0.8173076923rem + 0.2564102564vw, 1.125rem);
+  font-weight: 500;
+  line-height: 1.9;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.p-drawer__child-link:not(:first-child) {
+  margin-top: 12px;
+}
+@media (hover: hover) {
+  .p-drawer__child-link:hover {
+    opacity: 0.65;
+  }
+}
+@media (max-width: 640px) {
+  .p-drawer__child-link {
+    font-size: clamp(0.8125rem, 0.7692307692rem + 0.1923076923vw, 1rem);
   }
 }
 
