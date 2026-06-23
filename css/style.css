@@ -845,7 +845,6 @@ a {
 }
 @media (max-width: 768px) {
   .c-section-button {
-    text-align: center;
     margin-top: 30px;
   }
 }
@@ -1219,6 +1218,9 @@ a {
   .c-flow-section__list {
     gap: 20px;
   }
+}
+.c-flow-section .c-section-button {
+  text-align: center;
 }
 
 .c-flow-card__image img {
@@ -3537,11 +3539,13 @@ a {
 
 .p-story-natural {
   padding-block: 90px;
+  margin-bottom: 90px;
   background: #fef9e5;
 }
 @media (max-width: 768px) {
   .p-story-natural {
     padding-block: 45px;
+    margin-bottom: 45px;
   }
 }
 .p-story-natural__inner {

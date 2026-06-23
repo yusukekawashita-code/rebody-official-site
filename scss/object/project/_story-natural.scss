@@ -2,10 +2,12 @@
 
 .p-story-natural {
   padding-block: 90px;
+  margin-bottom: 90px;
   background: $Bg-orange;
 
   @include mq($bp768) {
     padding-block: 45px;
+    margin-bottom: 45px;
   }
 
   &__inner {
