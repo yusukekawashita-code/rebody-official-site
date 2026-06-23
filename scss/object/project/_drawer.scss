@@ -37,6 +37,9 @@
     @include mq($bp640) {
       padding: 70px 24px 40px;
     }
+    @include mq($bp399) {
+      width: 80%;
+    }
   }
 
   &__list {
