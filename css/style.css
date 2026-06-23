@@ -3271,11 +3271,11 @@ a {
 }
 @media (max-width: 768px) {
   .p-story-growth__steps {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    margin-top: 64px;
-    padding: 0 4px;
+    margin-top: 60px;
   }
+}
+.p-story-growth__steps picture {
+  display: block;
 }
 .p-story-growth__steps img {
   width: 100%;
@@ -3427,5 +3427,111 @@ a {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.p-story-health {
+  padding-block: 100px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-story-health {
+    padding-block: 50px;
+  }
+}
+.p-story-health__lead {
+  max-width: 1200px;
+}
+.p-story-health__main {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+}
+@media (max-width: 768px) {
+  .p-story-health__main {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+.p-story-health__content {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .p-story-health__content {
+    width: 100%;
+  }
+}
+.p-story-health__title {
+  font-size: clamp(1.25rem, 1.0192307692rem + 1.0256410256vw, 2.25rem);
+  white-space: nowrap;
+  margin-block: 40px;
+}
+@media (max-width: 640px) {
+  .p-story-health__title {
+    white-space: normal;
+    margin-block: 20px;
+  }
+}
+.p-story-health__text {
+  font-size: clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);
+  font-weight: 500;
+  line-height: 2.5;
+}
+@media (max-width: 768px) {
+  .p-story-health__text {
+    line-height: 2;
+  }
+}
+.p-story-health__text p:not(:first-child) {
+  margin-top: 12px;
+}
+.p-story-health__text strong {
+  font-weight: 700;
+}
+.p-story-health__text--bottom {
+  width: 52%;
+}
+@media (max-width: 768px) {
+  .p-story-health__text--bottom {
+    width: 100%;
+  }
+}
+.p-story-health__image {
+  width: 40%;
+  max-width: 470px;
+}
+@media (max-width: 768px) {
+  .p-story-health__image {
+    max-width: 100%;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+.p-story-health__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.p-story-health__bottom {
+  margin-top: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  .p-story-health__bottom {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+}
+.p-story-health__steps {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .p-story-health__steps {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

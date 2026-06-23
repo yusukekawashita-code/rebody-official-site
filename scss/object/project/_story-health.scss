@@ -1,0 +1,112 @@
+@use "../../global" as *;
+
+.p-story-health {
+  padding-block: 100px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding-block: 50px;
+  }
+
+  &__lead {
+    max-width: 1200px;
+  }
+
+  &__main {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 50px;
+
+    @include mq($bp768) {
+      flex-direction: column;
+      gap: 25px;
+    }
+  }
+
+  &__content {
+    width: 50%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(20, 36, 360, 1920);
+    white-space: nowrap;
+    margin-block: 40px;
+
+    @include mq($bp640) {
+      white-space: normal;
+      margin-block: 20px;
+    }
+  }
+
+  &__text {
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.5;
+
+    @include mq($bp768) {
+      line-height: 2;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    &--bottom {
+      width: 52%;
+
+      @include mq($bp768) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__image {
+    width: 40%;
+    max-width: 470px;
+
+    @include mq($bp768) {
+      max-width: 100%;
+      width: 100%;
+      margin-inline: auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__bottom {
+    margin-top: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    @include mq($bp768) {
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 20px;
+    }
+  }
+
+  &__steps {
+    width: 50%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+}
