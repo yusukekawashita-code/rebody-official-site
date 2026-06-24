@@ -1,0 +1,95 @@
+@use "../../global" as *;
+
+.p-flow-intro {
+  padding: 120px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 60px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+
+    @include mq($bp768) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__content {
+    width: 55%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 41, 360, 1920);
+    line-height: 1.75;
+  }
+
+  &__label {
+    width: fit-content;
+    max-width: 680px;
+    margin-top: 60px;
+    padding: 6px 24px;
+    background: #fdecb2;
+    font-size: rclamp(15, 24, 360, 1920);
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+
+    @include mq($bp768) {
+      width: 100%;
+      margin-top: 30px;
+      padding: 5px 15px;
+    }
+  }
+
+  &__text {
+    margin-top: 45px;
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.5;
+    margin-top: 60px;
+
+    @include mq($bp768) {
+      line-height: 2;
+      margin-top: 30px;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 14px;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__images {
+    width: 39%;
+    display: grid;
+    gap: 14px;
+
+    @include mq($bp768) {
+      width: 100%;
+      gap: 16px;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
