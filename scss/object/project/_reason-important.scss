@@ -128,7 +128,7 @@
     @include mq($bp640) {
       padding: 4px 20px;
       grid-template-columns: 36px 1fr 124px;
-      gap: 25px;
+      gap: 18px;
     }
 
     &:not(:last-child)::after {
