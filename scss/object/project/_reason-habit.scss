@@ -52,10 +52,13 @@
   }
 
   &__title {
-    font-size: rclamp(22, 40, 360, 1920);
+    font-size: rclamp(20, 40, 360, 1920);
     white-space: nowrap;
     text-indent: 0.5em;
     margin-left: -0.5em;
+    @include mq($bp768) {
+      white-space: normal;
+    }
   }
 
   &__text {
