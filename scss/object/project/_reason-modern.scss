@@ -1,0 +1,138 @@
+@use "../../global" as *;
+
+.p-reason-modern {
+  padding-block: 120px;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding-block: 60px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    @include mq($bp768) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__content {
+    width: 45%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 40, 360, 1920);
+  }
+
+  &__text {
+    margin-top: 50px;
+
+    @include mq($bp768) {
+      margin-top: 25px;
+    }
+  }
+
+  &__lead {
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.5;
+    margin-bottom: 50px;
+
+    @include mq($bp768) {
+      line-height: 2;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__list {
+    li {
+      display: flex;
+      gap: 0.1em;
+      font-size: rclamp(15, 18, 360, 1920);
+      font-weight: 700;
+      line-height: 2.5;
+
+      @include mq($bp768) {
+        line-height: 2;
+      }
+
+      &::before {
+        content: "・";
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &__sub {
+    margin: 50px 0 8px;
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.5;
+
+    @include mq($bp768) {
+      line-height: 2;
+      margin: 30px 0 10px;
+    }
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.5;
+
+    @include mq($bp768) {
+      line-height: 2;
+    }
+  }
+
+  &__conclusion {
+    margin-top: 50px;
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.2;
+    @include mq($bp768) {
+      margin-top: 25px;
+      line-height: 2;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__images {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include mq($bp768) {
+      width: 100%;
+      gap: 25px;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    &--past {
+      margin-top: 12px;
+
+      @include mq($bp768) {
+        margin-top: 0;
+      }
+    }
+  }
+}
