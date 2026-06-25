@@ -1,0 +1,109 @@
+@use "../../global" as *;
+
+.p-self-conditioning-reasons {
+  padding: 100px 0 180px;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 50px 0 90px;
+  }
+
+  &__inner {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    @include mq($bp899) {
+      gap: 30px;
+    }
+
+    @include mq($bp640) {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 42, 360, 1920);
+
+    span {
+      font-size: rclamp(30, 60, 360, 1920);
+      color: $color-orange;
+    }
+  }
+
+  &__image {
+    width: 200px;
+
+    @include mq($bp899) {
+      width: 165px;
+    }
+
+    @include mq($bp640) {
+      width: 120px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__list {
+    margin-top: 50px;
+    display: grid;
+    gap: 28px;
+
+    @include mq($bp768) {
+      margin-top: 25px;
+      gap: 20px;
+    }
+  }
+
+  &__card {
+    padding: 40px;
+    background: $color-white;
+
+    @include mq($bp640) {
+      padding: 20px;
+    }
+  }
+
+  &__card-title {
+    padding-bottom: 12px;
+    border-bottom: 3px solid $color-orange;
+    font-size: rclamp(18, 33, 360, 1920);
+    @include mq($bp768) {
+      text-indent: -1em;
+      padding-left: 1em;
+      line-height: 1.5;
+    }
+  }
+
+  &__card-text {
+    margin-top: 20px;
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.4;
+    @include mq($bp768) {
+      margin-top: 10px;
+      line-height: 1.9;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
