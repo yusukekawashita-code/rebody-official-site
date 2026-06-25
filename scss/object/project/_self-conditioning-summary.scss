@@ -1,11 +1,11 @@
 @use "../../global" as *;
 
 .p-self-conditioning-summary {
-  padding: 120px 0 100px;
+  padding: 90px 0 100px;
   background: $color-white;
 
   @include mq($bp768) {
-    padding: 70px 0;
+    padding: 20px 0 70px;
   }
 
   &__inner {
@@ -41,11 +41,11 @@
     margin-top: 45px;
     font-size: rclamp(14, 18, 360, 1920);
     font-weight: 500;
-    line-height: 2.5;
+    line-height: 2.2;
 
     @include mq($bp768) {
       margin-top: 20px;
-      line-height: 2;
+      line-height: 1.8;
     }
 
     p {
