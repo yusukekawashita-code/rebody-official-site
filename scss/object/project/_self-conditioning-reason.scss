@@ -1,0 +1,70 @@
+@use "../../global" as *;
+
+.p-self-conditioning-reason {
+  padding: 130px 0 100px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 60px 0 50px;
+  }
+
+  &__inner {
+    max-width: 1000px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__title {
+    width: fit-content;
+    margin-inline: auto;
+    padding: 6px 28px;
+    background: #fdecb2;
+    font-size: rclamp(18, 32, 360, 1920);
+
+    @include mq($bp768) {
+      padding: 5px 16px;
+    }
+  }
+
+  &__text {
+    margin-top: 40px;
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.5;
+
+    @include mq($bp768) {
+      margin-top: 20px;
+      line-height: 2;
+      text-align: left;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 34px;
+
+        @include mq($bp768) {
+          margin-top: 28px;
+        }
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__table {
+    margin-top: 70px;
+
+    @include mq($bp768) {
+      margin-top: 40px;
+      overflow-x: auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
