@@ -1,0 +1,241 @@
+@use "../../global" as *;
+
+.p-flow-steps {
+  padding: 150px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 90px 0 70px;
+  }
+  &__note {
+    font-size: rclamp(15, 19, 360, 1920);
+    line-height: 2;
+    text-align: center;
+    margin-top: 45px;
+
+    @include mq($bp768) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.p-flow-step {
+  position: relative;
+  max-width: 850px;
+  margin-inline: auto;
+  background: $color-white;
+
+  &:not(:first-child) {
+    margin-top: 150px;
+
+    @include mq($bp768) {
+      margin-top: 75px;
+    }
+  }
+
+  &__head {
+    width: fit-content;
+    min-height: 58px;
+    padding: 4px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: $color-orange;
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    top: -29px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq($bp768) {
+      width: calc(100% - 40px);
+      min-height: 45px;
+      gap: 12px;
+      padding: 6px 24px;
+    }
+  }
+
+  &__number {
+    font-size: rclamp(17, 33, 360, 1920);
+    white-space: nowrap;
+    position: relative;
+    padding-right: 22px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 36px;
+      background: $color-white;
+
+      @include mq($bp768) {
+        height: 28px;
+      }
+    }
+  }
+
+  &__name {
+    font-size: rclamp(15, 33, 360, 1920);
+    white-space: nowrap;
+    @include mq($bp640) {
+      white-space: normal;
+      line-height: 1.5;
+    }
+  }
+
+  &__body {
+    padding: 60px 40px;
+
+    @include mq($bp768) {
+      padding: 40px 30px;
+    }
+
+    @include mq($bp640) {
+      padding: 40px 24px;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(18, 30, 360, 1920);
+    text-align: center;
+  }
+
+  &__lead {
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.5;
+    text-align: center;
+    margin-top: 16px;
+
+    @include mq($bp768) {
+      line-height: 2;
+      margin-top: 12px;
+    }
+  }
+
+  &__main {
+    margin-top: 30px;
+    padding: 40px 0;
+    border-top: 3px solid $color-orange;
+    border-bottom: 3px solid $color-orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    @include mq($bp768) {
+      padding: 20px 0;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__image {
+    width: 40%;
+    max-width: 275px;
+
+    @include mq($bp768) {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &--treatment {
+    .p-flow-step__image {
+      max-width: 240px;
+
+      @include mq($bp768) {
+        max-width: 180px;
+      }
+    }
+  }
+
+  &--reeducation {
+    .p-flow-step__image {
+      max-width: 160px;
+
+      @include mq($bp768) {
+        max-width: 120px;
+      }
+    }
+  }
+
+  &--self-conditioning {
+    .p-flow-step__image {
+      max-width: 360px;
+
+      @include mq($bp768) {
+        max-width: 300px;
+      }
+    }
+  }
+  &--self-conditioning:not(:first-child) {
+    margin-top: 80px;
+    @include mq($bp768) {
+      margin-top: 40px;
+    }
+  }
+
+  &__button {
+    margin-top: 45px;
+    text-align: center;
+
+    .c-button {
+      margin-inline: auto;
+    }
+  }
+
+  &__list {
+    padding-left: 0;
+
+    li {
+      display: flex;
+      gap: 0.1em;
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2;
+
+      &::before {
+        content: "・";
+        flex-shrink: 0;
+      }
+
+      &:not(:first-child) {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 30px;
+    text-align: center;
+    font-size: rclamp(14, 19, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+
+    @include mq($bp768) {
+      margin-top: 20px;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
