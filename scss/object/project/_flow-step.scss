@@ -53,7 +53,7 @@
       width: calc(100% - 40px);
       min-height: 45px;
       gap: 12px;
-      padding: 6px 24px;
+      padding: 6px 12px;
     }
   }
 
@@ -183,7 +183,7 @@
   &--self-conditioning:not(:first-child) {
     margin-top: 80px;
     @include mq($bp768) {
-      margin-top: 40px;
+      margin-top: 55px;
     }
   }
 
