@@ -1,0 +1,114 @@
+@use "../../global" as *;
+
+.p-self-conditioning-summary {
+  padding: 120px 0 100px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__inner {
+    max-width: 1100px;
+    margin-inline: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include mq($bp768) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__content {
+    width: 55%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    width: fit-content;
+    padding: 4px 14px;
+    background: #fdecb2;
+    font-size: rclamp(22, 40, 360, 1920);
+  }
+
+  &__text {
+    margin-top: 45px;
+    font-size: rclamp(14, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.5;
+
+    @include mq($bp768) {
+      margin-top: 20px;
+      line-height: 2;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 28px;
+
+        @include mq($bp768) {
+          margin-top: 16px;
+        }
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__strong {
+    font-weight: 700;
+  }
+
+  &__image {
+    width: 34%;
+    max-width: 360px;
+
+    @include mq($bp768) {
+      width: 80%;
+      max-width: 320px;
+      margin-inline: auto;
+    }
+
+    @include mq($bp640) {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__buttons {
+    max-width: 950px;
+    margin: 100px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+
+    @include mq($bp768) {
+      margin-top: 60px;
+      gap: 20px;
+    }
+
+    @include mq($bp640) {
+      grid-template-columns: 1fr;
+    }
+
+    .c-button {
+      width: 100%;
+      max-width: none;
+      margin-inline: auto;
+    }
+  }
+}
