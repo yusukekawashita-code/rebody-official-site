@@ -33,3 +33,43 @@ drawerAccordionButtons.forEach((button) => {
     }
   });
 });
+
+const toolModalOpenButtons = document.querySelectorAll(".js-tool-modal-open");
+const toolModalCloseButtons = document.querySelectorAll(".js-tool-modal-close");
+
+toolModalOpenButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetId = button.dataset.modalTarget;
+    const modal = document.getElementById(targetId);
+
+    if (!modal) return;
+
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("is-modal-open");
+  });
+});
+
+toolModalCloseButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = button.closest(".c-tool-modal");
+
+    if (!modal) return;
+
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("is-modal-open");
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+
+  const openModal = document.querySelector(".c-tool-modal.is-open");
+
+  if (!openModal) return;
+
+  openModal.classList.remove("is-open");
+  openModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("is-modal-open");
+});

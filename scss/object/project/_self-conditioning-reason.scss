@@ -28,7 +28,7 @@
 
   &__text {
     margin-top: 40px;
-    font-size: rclamp(15, 18, 360, 1920);
+    font-size: rclamp(14, 18, 360, 1920);
     font-weight: 500;
     line-height: 2.5;
 
@@ -43,7 +43,7 @@
         margin-top: 34px;
 
         @include mq($bp768) {
-          margin-top: 28px;
+          margin-top: 20px;
         }
       }
     }

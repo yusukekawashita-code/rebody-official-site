@@ -88,7 +88,7 @@
 
   &__card-text {
     margin-top: 20px;
-    font-size: rclamp(15, 18, 360, 1920);
+    font-size: rclamp(14, 18, 360, 1920);
     font-weight: 500;
     line-height: 2.4;
     @include mq($bp768) {

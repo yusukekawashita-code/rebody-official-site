@@ -1,0 +1,97 @@
+@use "../../global" as *;
+
+.p-self-conditioning-tools {
+  padding: 150px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__inner {
+    max-width: 1100px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: rclamp(20, 36, 360, 1920);
+  }
+
+  &__lead {
+    margin-top: 50px;
+    font-size: rclamp(14, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.4;
+
+    @include mq($bp768) {
+      margin-top: 20px;
+      line-height: 2;
+    }
+  }
+
+  &__buttons {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+
+    @include mq($bp768) {
+      margin-top: 45px;
+      gap: 20px;
+    }
+
+    @include mq($bp640) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__button {
+    min-height: 66px;
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    color: $color-white;
+    font-size: rclamp(16, 28, 360, 1920);
+    text-align: left;
+    border: 0;
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+
+    @include mq($bp768) {
+      min-height: 50px;
+      padding: 8px 18px;
+    }
+
+    span {
+      margin-right: 12px;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.85;
+        transform: translateY(-4px);
+      }
+    }
+
+    &--blue {
+      background: #004097;
+    }
+
+    &--green {
+      background: #00a199;
+    }
+
+    &--brown {
+      background: #946134;
+    }
+
+    &--orange {
+      background: #ef8230;
+    }
+  }
+}
