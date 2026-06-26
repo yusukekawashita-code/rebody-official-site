@@ -1,0 +1,145 @@
+@use "../../global" as *;
+
+.p-traffic-intro {
+  padding: 80px 0 110px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 60px 0 80px;
+  }
+
+  &__label {
+    width: fit-content;
+    margin-inline: auto;
+    padding: 6px 28px;
+    background: #fdecb2;
+    font-size: rclamp(20, 36, 360, 1920);
+    text-align: center;
+
+    span {
+      font-size: rclamp(18, 30, 360, 1920);
+    }
+
+    @include mq($bp768) {
+      padding: 5px 16px;
+    }
+    @include mq($bp640) {
+      line-height: 1.35;
+    }
+  }
+
+  &__content {
+    margin-top: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 60px;
+
+    @include mq($bp768) {
+      margin-top: 50px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 20px;
+    }
+  }
+
+  &__text {
+    width: 55%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 40, 360, 1920);
+  }
+
+  &__body {
+    margin-top: 120px;
+    font-size: rclamp(14, 17, 360, 1920);
+    line-height: 2.4;
+    font-weight: 500;
+
+    @include mq($bp768) {
+      line-height: 2;
+      margin-top: 40px;
+    }
+  }
+
+  &__lead {
+    margin-bottom: 4px;
+  }
+
+  &__text {
+    margin-top: 4px;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      @include mq($bp768) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 1em;
+      font-weight: 700;
+
+      &::before {
+        content: "・";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    max-width: 640px;
+
+    @include mq($bp768) {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__bottom {
+    margin-top: 60px;
+    font-size: rclamp(14, 17, 360, 1920);
+    font-weight: 500;
+    line-height: 2.4;
+
+    @include mq($bp768) {
+      line-height: 2;
+      margin-top: 40px;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 56px;
+
+        @include mq($bp768) {
+          margin-top: 32px;
+        }
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
