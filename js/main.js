@@ -73,3 +73,15 @@ document.addEventListener("keydown", (event) => {
   openModal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("is-modal-open");
 });
+
+const qaAccordionButtons = document.querySelectorAll(".js-qa-accordion");
+
+qaAccordionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".p-qa-accordion__item");
+    if (!item) return;
+
+    const isOpen = item.classList.toggle("is-open");
+    button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+});

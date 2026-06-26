@@ -1,0 +1,213 @@
+@use "../../global" as *;
+
+.p-qa-accordion {
+  margin-top: 40px;
+  padding: 120px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    margin-top: -20px;
+    padding: 60px 0;
+  }
+
+  &__inner {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  &__item {
+    background: $color-white;
+
+    &:not(:first-child) {
+      margin-top: 36px;
+
+      @include mq($bp768) {
+        margin-top: 20px;
+      }
+    }
+
+    &.is-open {
+      .p-qa-accordion__answer {
+        max-height: 3000px;
+        opacity: 1;
+      }
+
+      .p-qa-accordion__icon {
+        &::before {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        &::after {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__question {
+    position: relative;
+    width: 100%;
+    padding: 40px 70px 50px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    border: 0;
+    background: $color-white;
+    text-align: left;
+    cursor: pointer;
+
+    @include mq($bp768) {
+      padding: 30px 50px 30px 20px;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 70px;
+      right: 70px;
+      bottom: 25px;
+      height: 3px;
+      background: $color-orange;
+
+      @include mq($bp768) {
+        left: 28px;
+        right: 28px;
+        bottom: 18px;
+        height: 2px;
+      }
+    }
+  }
+
+  &__number {
+    color: $color-orange;
+    font-size: rclamp(20, 42, 360, 1920);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-size: rclamp(15, 30, 360, 1920);
+    line-height: 1.5;
+    color: #333;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    width: 36px;
+    height: 36px;
+    transform: translateY(-50%);
+
+    @include mq($bp768) {
+      right: 25px;
+      width: 20px;
+      height: 20px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 36px;
+      height: 6px;
+      background: $color-orange;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease;
+
+      @include mq($bp768) {
+        width: 28px;
+        height: 4px;
+      }
+      @include mq($bp640) {
+        width: 20px;
+        height: 2.5px;
+      }
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease;
+  }
+
+  &__answer-inner {
+    position: relative;
+    padding: 4px 70px 50px;
+    overflow: hidden;
+
+    @include mq($bp768) {
+      padding: 4px 28px 36px;
+    }
+
+    &::after {
+      content: "A";
+      position: absolute;
+      right: 50px;
+      bottom: -7%;
+      color: #f1f1f1;
+      font-size: rclamp(180, 300, 360, 1920);
+      line-height: 1;
+      z-index: 0;
+      pointer-events: none;
+
+      @include mq($bp768) {
+        right: 10px;
+        font-size: 180px;
+      }
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+      font-size: rclamp(14, 20, 360, 1920);
+      line-height: 2;
+      font-weight: 500;
+    }
+    &--q6 {
+      &::after {
+        bottom: -2%;
+      }
+    }
+  }
+
+  &__list {
+    position: relative;
+    z-index: 1;
+    margin: 16px 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 1.4em;
+      font-size: rclamp(14, 20, 360, 1920);
+      line-height: 2;
+      font-weight: 500;
+
+      &::before {
+        content: "○";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    &--disc {
+      li::before {
+        content: "●";
+      }
+    }
+  }
+}
