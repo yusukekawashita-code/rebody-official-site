@@ -26,6 +26,9 @@
     @include mq($bp640) {
       line-height: 1.35;
     }
+    @include mq($bp640) {
+      line-height: 1.35;
+    }
   }
 
   &__content {
