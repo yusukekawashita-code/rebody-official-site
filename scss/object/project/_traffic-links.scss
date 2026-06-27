@@ -1,0 +1,72 @@
+@use "../../global" as *;
+
+.p-traffic-links {
+  padding-bottom: 110px;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    padding: 6px 28px;
+    background: #fdecb2;
+    font-size: rclamp(20, 36, 360, 1920);
+    text-align: center;
+
+    @include mq($bp768) {
+      padding: 5px 16px;
+    }
+  }
+
+  &__grid {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px 15px;
+
+    @include mq($bp1024) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mq($bp768) {
+      margin-top: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+    }
+
+    @include mq($bp640) {
+      margin-top: 30px;
+      gap: 8px;
+    }
+  }
+
+  &__item {
+    min-height: 60px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-white;
+    border: 1px solid $color-black;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+    @include mq($bp640) {
+      min-height: 45px;
+    }
+
+    span {
+      font-size: rclamp(14, 18, 360, 1920);
+      font-weight: 700;
+      line-height: 1.4;
+      color: $color-black;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: $color-orange;
+    }
+  }
+}

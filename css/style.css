@@ -6231,8 +6231,7 @@ a {
 @media (max-width: 768px) {
   .p-traffic-symptom__list {
     margin-top: 40px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 0;
+    gap: 20px 12px;
   }
 }
 .p-traffic-symptom__item img {
@@ -6259,5 +6258,103 @@ a {
 }
 .p-traffic-symptom__item span {
   font-size: 0.9em;
+}
+.p-traffic-symptom__note {
+  text-align: left;
+  font-size: clamp(0.875rem, 0.8173076923rem + 0.2564102564vw, 1.125rem);
+  font-weight: 500;
+  line-height: 2.2;
+  margin-top: 70px;
+}
+@media (max-width: 768px) {
+  .p-traffic-symptom__note {
+    margin-top: 40px;
+    line-height: 2;
+  }
+}
+.p-traffic-symptom__note p:not(:first-child) {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .p-traffic-symptom__note p:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+.p-traffic-symptom__note-strong {
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
+  font-weight: 700;
+}
+
+.p-traffic-links {
+  padding-bottom: 110px;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .p-traffic-links {
+    padding-bottom: 50px;
+  }
+}
+.p-traffic-links__title {
+  padding: 6px 28px;
+  background: #fdecb2;
+  font-size: clamp(1.25rem, 1.0192307692rem + 1.0256410256vw, 2.25rem);
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-traffic-links__title {
+    padding: 5px 16px;
+  }
+}
+.p-traffic-links__grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px 15px;
+}
+@media (max-width: 1024px) {
+  .p-traffic-links__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .p-traffic-links__grid {
+    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+  }
+}
+@media (max-width: 640px) {
+  .p-traffic-links__grid {
+    margin-top: 30px;
+    gap: 8px;
+  }
+}
+.p-traffic-links__item {
+  min-height: 60px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+@media (max-width: 640px) {
+  .p-traffic-links__item {
+    min-height: 45px;
+  }
+}
+.p-traffic-links__item span {
+  font-size: clamp(0.875rem, 0.8173076923rem + 0.2564102564vw, 1.125rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #333333;
+}
+.p-traffic-links__item:hover {
+  transform: translateY(-4px);
+  border-color: #fabe00;
 }
 /*# sourceMappingURL=style.css.map */

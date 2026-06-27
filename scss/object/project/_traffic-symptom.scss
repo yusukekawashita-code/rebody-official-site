@@ -51,8 +51,7 @@
 
     @include mq($bp768) {
       margin-top: 40px;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px 0;
+      gap: 20px 12px;
     }
   }
 
@@ -81,5 +80,33 @@
     span {
       font-size: 0.9em;
     }
+  }
+
+  &__note {
+    text-align: left;
+    font-size: rclamp(14, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2.2;
+    margin-top: 70px;
+
+    @include mq($bp768) {
+      margin-top: 40px;
+      line-height: 2;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 40px;
+
+        @include mq($bp768) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  &__note-strong {
+    font-size: rclamp(15, 20, 360, 1920);
+    font-weight: 700;
   }
 }
