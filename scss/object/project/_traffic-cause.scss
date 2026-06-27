@@ -1,0 +1,188 @@
+@use "../../global" as *;
+
+.p-traffic-cause {
+  padding: 140px 0 120px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0 60px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+
+    @include mq($bp768) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    @include mq($bp640) {
+      gap: 8px;
+    }
+  }
+
+  &__head-text {
+    width: 52%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(20, 40, 360, 1920);
+    white-space: nowrap;
+    text-indent: 0.5em;
+    margin-left: -0.5em;
+    @include mq($bp768) {
+      white-space: normal;
+    }
+  }
+
+  &__lead {
+    margin-top: 70px;
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+
+    @include mq($bp768) {
+      margin-top: 30px;
+    }
+  }
+
+  &__head-image {
+    width: 45%;
+    max-width: 545px;
+
+    @include mq($bp768) {
+      width: 100%;
+      max-width: 500px;
+      margin-inline: auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__middle {
+    margin-top: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+
+    @include mq($bp768) {
+      margin-top: 40px;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__text {
+    width: 58%;
+    font-size: rclamp(15, 19, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 24px;
+        @include mq($bp768) {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  &__highlight {
+    width: fit-content;
+    padding: 2px 10px;
+    background: rgba($color-orange, 0.28);
+    font-weight: 700;
+  }
+
+  &__pain-image {
+    width: 28%;
+    max-width: 220px;
+
+    @include mq($bp768) {
+      width: 60%;
+      max-width: 180px;
+      margin-inline: auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__bottom {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+
+    @include mq($bp768) {
+      margin-top: 40px;
+      flex-direction: column-reverse;
+      gap: 36px;
+    }
+  }
+
+  &__check-image {
+    width: 32%;
+    max-width: 280px;
+
+    @include mq($bp768) {
+      width: 75%;
+      max-width: 200px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__bottom-text {
+    width: 45%;
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    margin: 12px 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 1em;
+
+      &::before {
+        content: "・";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
