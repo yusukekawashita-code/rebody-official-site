@@ -1,0 +1,284 @@
+@use "../../global" as *;
+
+.p-traffic-insurance {
+  padding: 120px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 20px;
+
+    @include mq($bp768) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &--clinic {
+      margin-top: 150px;
+
+      @include mq($bp768) {
+        margin-top: 70px;
+      }
+
+      .p-traffic-insurance__illust {
+        align-self: flex-end;
+
+        @include mq($bp768) {
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  &__text {
+    width: 49%;
+
+    @include mq($bp768) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 24px;
+    font-size: rclamp(20, 33, 360, 1920);
+    line-height: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.2em;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background: $color-orange;
+    }
+  }
+
+  &__body {
+    margin-top: 62px;
+    font-size: rclamp(14, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+
+    @include mq($bp768) {
+      margin-top: 36px;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__lead {
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__example {
+    margin-bottom: 50px;
+    @include mq($bp768) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__support {
+    margin-bottom: 0;
+  }
+
+  &__list {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 1em;
+      font-weight: 700;
+
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+
+      &::before {
+        content: "・";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $color-orange;
+      }
+    }
+  }
+
+  &__highlight {
+    display: inline-block;
+    margin-block: 4px;
+    padding: 6px 10px;
+    background: #f2f2f2;
+    font-weight: 500;
+  }
+
+  &__image {
+    width: 42%;
+    max-width: 480px;
+
+    @include mq($bp768) {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__illust {
+    width: 30%;
+    max-width: 220px;
+
+    @include mq($bp768) {
+      width: 100%;
+      max-width: 175px;
+      margin-inline: auto;
+    }
+
+    @include mq($bp640) {
+      max-width: 145px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__consult {
+    margin-top: 160px;
+
+    @include mq($bp768) {
+      margin-top: 80px;
+    }
+  }
+
+  &__check-list {
+    margin-top: 65px;
+    padding: 0;
+
+    @include mq($bp768) {
+      margin-top: 36px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 42px;
+      font-size: rclamp(15, 18, 360, 1920);
+      font-weight: 700;
+      line-height: 1.8;
+
+      @include mq($bp768) {
+        padding-left: 30px;
+      }
+
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.3em;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #333;
+        background: $color-white;
+
+        @include mq($bp768) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0.4em;
+        left: 6px;
+        width: 9px;
+        height: 15px;
+        border-right: 2px solid $color-orange;
+        border-bottom: 2px solid $color-orange;
+        transform: rotate(45deg);
+
+        @include mq($bp768) {
+          left: 5px;
+          width: 8px;
+          height: 13px;
+        }
+      }
+    }
+  }
+
+  &__consult-text {
+    margin-top: 60px;
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+
+    @include mq($bp768) {
+      margin-top: 40px;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__banner {
+    max-width: 640px;
+    margin-top: 50px;
+
+    @include mq($bp768) {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+
+    a {
+      display: block;
+      transition: opacity 0.3s ease;
+
+      @media (hover: hover) {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+}

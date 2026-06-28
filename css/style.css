@@ -6670,4 +6670,268 @@ a {
 .p-traffic-treatment__bottom strong {
   font-weight: 700;
 }
+
+.p-traffic-insurance {
+  padding: 120px 0;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance {
+    padding: 70px 0;
+  }
+}
+.p-traffic-insurance__block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__block {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.p-traffic-insurance__block--clinic {
+  margin-top: 150px;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__block--clinic {
+    margin-top: 70px;
+  }
+}
+.p-traffic-insurance__block--clinic .p-traffic-insurance__illust {
+  align-self: flex-end;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__block--clinic .p-traffic-insurance__illust {
+    align-self: center;
+  }
+}
+.p-traffic-insurance__text {
+  width: 49%;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__text {
+    width: 100%;
+  }
+}
+.p-traffic-insurance__title {
+  position: relative;
+  padding-left: 24px;
+  font-size: clamp(1.25rem, 1.0625rem + 0.8333333333vw, 2.0625rem);
+  line-height: 2;
+}
+.p-traffic-insurance__title::before {
+  content: "";
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: #fabe00;
+}
+.p-traffic-insurance__body {
+  margin-top: 62px;
+  font-size: clamp(0.875rem, 0.8173076923rem + 0.2564102564vw, 1.125rem);
+  font-weight: 500;
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__body {
+    margin-top: 36px;
+  }
+}
+.p-traffic-insurance__body p:not(:first-child) {
+  margin-top: 20px;
+}
+.p-traffic-insurance__body strong {
+  font-weight: 700;
+}
+.p-traffic-insurance__lead {
+  margin-bottom: 12px;
+}
+.p-traffic-insurance__list {
+  margin-bottom: 20px;
+}
+.p-traffic-insurance__example {
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__example {
+    margin-bottom: 30px;
+  }
+}
+.p-traffic-insurance__support {
+  margin-bottom: 0;
+}
+.p-traffic-insurance__list {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+.p-traffic-insurance__list li {
+  position: relative;
+  padding-left: 1em;
+  font-weight: 700;
+}
+.p-traffic-insurance__list li:not(:first-child) {
+  margin-top: 10px;
+}
+.p-traffic-insurance__list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fabe00;
+}
+.p-traffic-insurance__highlight {
+  display: inline-block;
+  margin-block: 4px;
+  padding: 6px 10px;
+  background: #f2f2f2;
+  font-weight: 500;
+}
+.p-traffic-insurance__image {
+  width: 42%;
+  max-width: 480px;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+.p-traffic-insurance__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.p-traffic-insurance__illust {
+  width: 30%;
+  max-width: 220px;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__illust {
+    width: 100%;
+    max-width: 175px;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 640px) {
+  .p-traffic-insurance__illust {
+    max-width: 145px;
+  }
+}
+.p-traffic-insurance__illust img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.p-traffic-insurance__consult {
+  margin-top: 160px;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__consult {
+    margin-top: 80px;
+  }
+}
+.p-traffic-insurance__check-list {
+  margin-top: 65px;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__check-list {
+    margin-top: 36px;
+  }
+}
+.p-traffic-insurance__check-list li {
+  position: relative;
+  padding-left: 42px;
+  font-size: clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);
+  font-weight: 700;
+  line-height: 1.8;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__check-list li {
+    padding-left: 30px;
+  }
+}
+.p-traffic-insurance__check-list li:not(:first-child) {
+  margin-top: 20px;
+}
+.p-traffic-insurance__check-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #333;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__check-list li::before {
+    width: 20px;
+    height: 20px;
+  }
+}
+.p-traffic-insurance__check-list li::after {
+  content: "";
+  position: absolute;
+  top: 0.4em;
+  left: 6px;
+  width: 9px;
+  height: 15px;
+  border-right: 2px solid #fabe00;
+  border-bottom: 2px solid #fabe00;
+  transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__check-list li::after {
+    left: 5px;
+    width: 8px;
+    height: 13px;
+  }
+}
+.p-traffic-insurance__consult-text {
+  margin-top: 60px;
+  font-size: clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);
+  font-weight: 500;
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__consult-text {
+    margin-top: 40px;
+  }
+}
+.p-traffic-insurance__consult-text p:not(:first-child) {
+  margin-top: 16px;
+}
+.p-traffic-insurance__banner {
+  max-width: 640px;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .p-traffic-insurance__banner {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}
+.p-traffic-insurance__banner a {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+@media (hover: hover) {
+  .p-traffic-insurance__banner a:hover {
+    opacity: 0.8;
+  }
+}
+.p-traffic-insurance__banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 /*# sourceMappingURL=style.css.map */
