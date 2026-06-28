@@ -2011,6 +2011,95 @@ a {
   }
 }
 
+.c-traffic-qa {
+  margin-top: 40px;
+  padding: 120px 0;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .c-traffic-qa {
+    margin-top: 0;
+    padding: 40px 0 60px;
+  }
+}
+.c-traffic-qa__inner {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+.c-traffic-qa__item {
+  position: relative;
+  padding: 40px 50px 70px;
+  background: white;
+  overflow: hidden;
+}
+.c-traffic-qa__item::after {
+  content: "A";
+  position: absolute;
+  right: 46px;
+  bottom: -36px;
+  color: #f1f1f1;
+  font-size: clamp(8.75rem, 7.7403846154rem + 4.4871794872vw, 13.125rem);
+  line-height: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+.c-traffic-qa__item:not(:first-child) {
+  margin-top: 36px;
+}
+@media (max-width: 768px) {
+  .c-traffic-qa__item {
+    padding: 25px 12px 30px;
+  }
+  .c-traffic-qa__item::after {
+    right: 12px;
+    bottom: -24px;
+    font-size: 135px;
+  }
+}
+.c-traffic-qa__question {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 1rem;
+  text-indent: -3.1em;
+  padding-left: 3em;
+  border-bottom: 3px solid #fabe00;
+  font-size: clamp(0.9375rem, 0.7211538462rem + 0.9615384615vw, 1.875rem);
+  line-height: 1.5;
+  color: #333;
+}
+.c-traffic-qa__question span {
+  font-size: clamp(1.25rem, 0.9326923077rem + 1.4102564103vw, 2.625rem);
+  line-height: 1;
+  color: #fabe00;
+  margin-right: 14px;
+}
+@media (max-width: 768px) {
+  .c-traffic-qa__question span {
+    margin-right: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .c-traffic-qa__question {
+    text-indent: -3em;
+    padding-bottom: 12px;
+  }
+}
+.c-traffic-qa__answer {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+}
+@media (max-width: 768px) {
+  .c-traffic-qa__answer {
+    margin-top: 15px;
+  }
+}
+.c-traffic-qa__answer p {
+  font-size: clamp(0.875rem, 0.7884615385rem + 0.3846153846vw, 1.25rem);
+  line-height: 2;
+  font-weight: 500;
+}
+
 .p-header {
   width: 100%;
   display: flex;
@@ -6933,5 +7022,106 @@ a {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.p-traffic-qa__intro {
+  padding: 150px 0 0;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-traffic-qa__intro {
+    padding: 90px 0 20px;
+  }
+}
+.p-traffic-qa__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-traffic-qa__inner {
+    max-width: 500px;
+  }
+}
+.p-traffic-qa__inner::before, .p-traffic-qa__inner::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  width: 150px;
+  aspect-ratio: 321/441;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+}
+@media (max-width: 1024px) {
+  .p-traffic-qa__inner::before, .p-traffic-qa__inner::after {
+    width: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .p-traffic-qa__inner::before, .p-traffic-qa__inner::after {
+    width: 100px;
+    bottom: -20px;
+  }
+}
+@media (max-width: 640px) {
+  .p-traffic-qa__inner::before, .p-traffic-qa__inner::after {
+    width: 50px;
+  }
+}
+.p-traffic-qa__inner::before {
+  left: -160px;
+  background-image: url("../images/traffic/traffic-qa-left.png");
+}
+@media (max-width: 1024px) {
+  .p-traffic-qa__inner::before {
+    left: -90px;
+  }
+}
+@media (max-width: 899px) {
+  .p-traffic-qa__inner::before {
+    left: -70px;
+  }
+}
+@media (max-width: 640px) {
+  .p-traffic-qa__inner::before {
+    left: 10px;
+  }
+}
+@media (max-width: 399px) {
+  .p-traffic-qa__inner::before {
+    left: -5px;
+  }
+}
+.p-traffic-qa__inner::after {
+  right: -160px;
+  background-image: url("../images/traffic/traffic-qa-right.png");
+}
+@media (max-width: 1024px) {
+  .p-traffic-qa__inner::after {
+    right: -90px;
+  }
+}
+@media (max-width: 899px) {
+  .p-traffic-qa__inner::after {
+    right: -70px;
+  }
+}
+@media (max-width: 640px) {
+  .p-traffic-qa__inner::after {
+    right: 15px;
+  }
+}
+@media (max-width: 399px) {
+  .p-traffic-qa__inner::after {
+    right: 5px;
+  }
+}
+.p-traffic-qa__title {
+  font-size: clamp(1.375rem, 1.1153846154rem + 1.1538461538vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.5;
 }
 /*# sourceMappingURL=style.css.map */
