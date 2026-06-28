@@ -35,6 +35,9 @@
 
     &:not(:first-child) {
       margin-top: 36px;
+      @include mq($bp768) {
+        margin-top: 24px;
+      }
     }
 
     @include mq($bp768) {

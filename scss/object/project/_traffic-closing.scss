@@ -1,0 +1,89 @@
+@use "../../global" as *;
+
+.p-traffic-closing {
+  padding: 120px 0 90px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0 60px;
+  }
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+    align-items: flex-end;
+
+    @include mq($bp768) {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(20, 36, 360, 1920);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &__text {
+    margin-top: 52px;
+
+    @include mq($bp768) {
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: rclamp(14, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2.4;
+      @include mq($bp768) {
+        line-height: 1.6;
+      }
+
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__flow {
+    display: flex;
+    gap: 34px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include mq($bp640) {
+      gap: 14px;
+    }
+
+    span {
+      display: inline-block;
+      padding: 2px 8px;
+      background: #fcdf80;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+  }
+
+  &__image {
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 380px;
+      height: auto;
+    }
+
+    @include mq($bp768) {
+      order: -1;
+
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+}
