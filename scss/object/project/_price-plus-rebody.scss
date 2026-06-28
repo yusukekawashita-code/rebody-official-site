@@ -1,0 +1,203 @@
+@use "../../global" as *;
+
+.p-price-plus-rebody {
+  background: $color-white;
+
+  &__inner {
+    max-width: 900px;
+    margin: 30px auto 0;
+
+    @include mq($bp768) {
+      margin-top: 20px;
+    }
+  }
+
+  &__lead {
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+    @include mq($bp768) {
+      line-height: 1.7;
+    }
+  }
+
+  &__title {
+    margin-top: 60px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid $color-orange;
+    font-size: rclamp(20, 33, 360, 1920);
+
+    span {
+      margin-right: 4px;
+    }
+
+    @include mq($bp768) {
+      margin-top: 30px;
+    }
+  }
+
+  &__text {
+    margin-top: 22px;
+    @include mq($bp768) {
+      margin-top: 12px;
+    }
+
+    p {
+      font-size: rclamp(15, 18, 360, 1920);
+      font-weight: 500;
+      line-height: 2;
+      @include mq($bp768) {
+        line-height: 1.7;
+      }
+
+      &:not(:first-child) {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &__block {
+    margin-top: 50px;
+    @include mq($bp768) {
+      margin-top: 30px;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    padding-left: 30px;
+    font-size: rclamp(18, 25, 360, 1920);
+    @include mq($bp768) {
+      padding-left: 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.45em;
+      left: 0;
+      width: 19px;
+      height: 19px;
+      background: $color-orange;
+      @include mq($bp768) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__sub-heading {
+    position: relative;
+    padding-left: 22px;
+    font-size: rclamp(16, 22, 360, 1920);
+    font-weight: 700;
+
+    &::before {
+      content: "■";
+      position: absolute;
+      left: 0;
+      color: $color-black;
+    }
+
+    small {
+      margin-left: 12px;
+      font-size: rclamp(15, 18, 360, 1920);
+      font-weight: 500;
+    }
+  }
+
+  &__price {
+    position: relative;
+    margin-top: 4px;
+    padding-left: 20px;
+    font-size: rclamp(15, 20, 360, 1920);
+    font-weight: 700;
+
+    &::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: $color-black;
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 0 4px;
+      background: $Bg-orange;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid $color-black;
+      padding: 8px 14px;
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      vertical-align: middle;
+    }
+
+    th {
+      font-weight: 700;
+      text-align: center;
+      white-space: nowrap;
+      @include mq($bp768) {
+        width: 20%;
+        padding: 8px;
+      }
+    }
+  }
+
+  &__ticket-table {
+    width: 425px;
+    max-width: 100%;
+    margin-top: 10px;
+    border: 1px solid $color-black;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    th,
+    td {
+      border: none;
+      padding: 4px 8px;
+      font-size: rclamp(15, 18, 360, 1920);
+      font-weight: 700;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    thead {
+      th {
+        border-bottom: 1px solid $color-black;
+      }
+    }
+
+    th:first-child,
+    td:first-child {
+      border-right: 1px solid $color-black;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      border-right: 1px solid $color-black;
+    }
+  }
+
+  &__box {
+    margin-top: 10px;
+    padding: 8px 18px;
+    border: 1px solid $color-black;
+    font-size: rclamp(14, 17, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}

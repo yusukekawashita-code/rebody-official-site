@@ -1,0 +1,122 @@
+@use "../../global" as *;
+
+.p-price-section-title {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding: 4px 20px;
+  background: $Bg-orange;
+  text-align: center;
+  @include mq($bp640) {
+    padding: 6px 12px;
+  }
+
+  &__text {
+    font-size: rclamp(20, 40, 360, 1920);
+  }
+}
+
+.p-price-payment {
+  padding: 70px 0 120px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 30px 0 80px;
+  }
+
+  &__note {
+    max-width: 900px;
+    margin: 0 auto 24px;
+    font-size: rclamp(14, 18, 360, 1920);
+    font-weight: 500;
+    @include mq($bp640) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__table-wrap {
+    max-width: 800px;
+    margin: 40px auto 0;
+    overflow-x: auto;
+    @include mq($bp640) {
+      margin-top: 25px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 8px 12px;
+      border: 1px solid $color-black;
+      font-size: rclamp(12, 18, 360, 1920);
+      font-weight: 500;
+      line-height: 2;
+      text-align: center;
+      vertical-align: middle;
+      @include mq($bp768) {
+        line-height: 1.7;
+      }
+    }
+
+    th {
+      width: 50%;
+    }
+  }
+
+  &__image {
+    max-width: 800px;
+    margin: 45px auto 0;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    max-width: 800px;
+    margin: 50px auto 0;
+
+    p {
+      font-size: rclamp(14, 18, 360, 1920);
+      font-weight: 500;
+      line-height: 2;
+      @include mq($bp768) {
+        line-height: 1.7;
+      }
+
+      &:not(:first-child) {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  &__message {
+    max-width: 800px;
+    margin: 100px auto 0;
+
+    @include mq($bp768) {
+      margin-top: 50px;
+    }
+
+    h3 {
+      font-size: rclamp(18, 36, 360, 1920);
+    }
+
+    p {
+      margin-top: 30px;
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2;
+      letter-spacing: 0.04em;
+
+      @include mq($bp768) {
+        margin-top: 20px;
+        line-height: 1.7;
+      }
+    }
+  }
+}
