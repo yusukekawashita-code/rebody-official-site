@@ -8740,4 +8740,72 @@ a {
     display: none;
   }
 }
+
+.p-seminar-technology {
+  padding: 120px 0;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .p-seminar-technology {
+    padding: 70px 0;
+  }
+}
+.p-seminar-technology__body {
+  display: grid;
+  grid-template-columns: 1fr 55%;
+  align-items: flex-start;
+  gap: 45px;
+}
+@media (max-width: 768px) {
+  .p-seminar-technology__body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.p-seminar-technology__image img {
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-seminar-technology__title {
+  font-size: clamp(1.375rem, 1.1153846154rem + 1.1538461538vw, 2.5rem);
+  text-indent: -0.5em;
+}
+.p-seminar-technology__text {
+  margin-top: 45px;
+}
+@media (max-width: 768px) {
+  .p-seminar-technology__text {
+    margin-top: 25px;
+  }
+}
+.p-seminar-technology__text p {
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .p-seminar-technology__text p {
+    line-height: 1.8;
+  }
+}
+.p-seminar-technology__text p + p {
+  margin-top: 36px;
+}
+@media (max-width: 768px) {
+  .p-seminar-technology__text p + p {
+    margin-top: 24px;
+  }
+}
+.p-seminar-technology__text span {
+  display: inline;
+  padding: 0 4px;
+  background: #fdecb2;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
 /*# sourceMappingURL=style.css.map */

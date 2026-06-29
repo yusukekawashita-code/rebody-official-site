@@ -1,0 +1,71 @@
+@use "../../global" as *;
+
+.p-seminar-technology {
+  padding: 120px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 55%;
+    align-items: flex-start;
+    gap: 45px;
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__image {
+    img {
+      display: block;
+      max-width: 500px;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 40, 360, 1920);
+    text-indent: -0.5em;
+  }
+
+  &__text {
+    margin-top: 45px;
+
+    @include mq($bp768) {
+      margin-top: 25px;
+    }
+
+    p {
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2;
+      @include mq($bp768) {
+        line-height: 1.8;
+      }
+
+      & + p {
+        margin-top: 36px;
+
+        @include mq($bp768) {
+          margin-top: 24px;
+        }
+      }
+    }
+
+    span {
+      display: inline;
+      padding: 0 4px;
+      background: #fdecb2;
+      font-weight: 700;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+  }
+}
