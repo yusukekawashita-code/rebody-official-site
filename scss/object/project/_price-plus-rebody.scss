@@ -25,7 +25,7 @@
     margin-top: 60px;
     padding-bottom: 8px;
     border-bottom: 3px solid $color-orange;
-    font-size: rclamp(20, 33, 360, 1920);
+    font-size: rclamp(18, 33, 360, 1920);
 
     span {
       margin-right: 4px;
@@ -66,7 +66,7 @@
   &__heading {
     position: relative;
     padding-left: 30px;
-    font-size: rclamp(18, 25, 360, 1920);
+    font-size: rclamp(16, 25, 360, 1920);
     @include mq($bp768) {
       padding-left: 24px;
     }
