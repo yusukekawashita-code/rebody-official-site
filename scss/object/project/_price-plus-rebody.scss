@@ -160,6 +160,9 @@
     border: 1px solid $color-black;
     border-collapse: separate;
     border-spacing: 0;
+    @include mq($bp640) {
+      width: 100%;
+    }
 
     th,
     td {

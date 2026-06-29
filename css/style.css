@@ -7575,6 +7575,11 @@ a {
   border-collapse: separate;
   border-spacing: 0;
 }
+@media (max-width: 640px) {
+  .p-price-plus-rebody__ticket-table {
+    width: 100%;
+  }
+}
 .p-price-plus-rebody__ticket-table th,
 .p-price-plus-rebody__ticket-table td {
   border: none;
