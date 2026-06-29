@@ -7430,7 +7430,7 @@ a {
   }
 }
 .p-price-plus-rebody__lead {
-  font-size: clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
   font-weight: 500;
   line-height: 2;
 }
@@ -7462,7 +7462,7 @@ a {
   }
 }
 .p-price-plus-rebody__text p {
-  font-size: clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
   font-weight: 500;
   line-height: 2;
 }
@@ -7613,7 +7613,7 @@ a {
 }
 @media (max-width: 768px) {
   .p-price-cross-rebody {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 }
 .p-price-cross-rebody__inner {
@@ -7631,7 +7631,7 @@ a {
 }
 .p-price-cross-rebody__lead {
   margin-top: 16px;
-  font-size: clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
   font-weight: 500;
   line-height: 2;
 }
@@ -7675,7 +7675,7 @@ a {
   }
 }
 .p-price-cross-rebody__purpose-list li {
-  font-size: clamp(0.875rem, 0.8173076923rem + 0.2564102564vw, 1.125rem);
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
   font-weight: 500;
 }
 .p-price-cross-rebody__purpose-list li::before {
@@ -7691,14 +7691,20 @@ a {
   .p-price-cross-rebody__plans {
     grid-template-columns: 1fr;
     gap: 50px;
-    margin-top: 30px;
+    margin-top: 40px;
   }
 }
 .p-price-cross-rebody__heading {
   position: relative;
   padding-left: 30px;
-  font-size: clamp(1rem, 0.9134615385rem + 0.3846153846vw, 1.375rem);
+  font-size: clamp(1rem, 0.8990384615rem + 0.4487179487vw, 1.4375rem);
   font-weight: 700;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .p-price-cross-rebody__heading {
+    white-space: normal;
+  }
 }
 .p-price-cross-rebody__heading::before {
   content: "";
@@ -7760,10 +7766,15 @@ a {
   padding: 8px 16px;
   background: #231815;
   color: white;
-  font-size: clamp(1rem, 0.9134615385rem + 0.3846153846vw, 1.375rem);
+  font-size: clamp(0.9375rem, 0.8365384615rem + 0.4487179487vw, 1.375rem);
   line-height: 1.35;
   text-align: left;
   border: 1px solid #333333;
+}
+@media (max-width: 640px) {
+  .p-price-cross-rebody__table thead th {
+    padding: 5px 16px;
+  }
 }
 .p-price-cross-rebody__table tbody th,
 .p-price-cross-rebody__table tbody td {
@@ -7833,6 +7844,104 @@ a {
 @media (max-width: 399px) {
   .p-price-cross-rebody__price-row {
     grid-template-columns: 1fr 120px;
+  }
+}
+
+.p-price-traffic-treatment {
+  margin-top: 90px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-price-traffic-treatment {
+    margin-top: 50px;
+  }
+}
+.p-price-traffic-treatment__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.p-price-traffic-treatment__title {
+  padding-bottom: 8px;
+  border-bottom: 3px solid #fabe00;
+  font-size: clamp(1.125rem, 0.9086538462rem + 0.9615384615vw, 2.0625rem);
+}
+.p-price-traffic-treatment__title span {
+  margin-right: 4px;
+}
+.p-price-traffic-treatment__lead {
+  margin-top: 12px;
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .p-price-traffic-treatment__lead {
+    line-height: 1.7;
+  }
+}
+.p-price-traffic-treatment__content {
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .p-price-traffic-treatment__content {
+    margin-top: 30px;
+  }
+}
+.p-price-traffic-treatment__heading {
+  position: relative;
+  padding-left: 24px;
+  font-size: clamp(1rem, 0.9134615385rem + 0.3846153846vw, 1.375rem);
+  font-weight: 700;
+}
+.p-price-traffic-treatment__heading::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  color: #231815;
+}
+.p-price-traffic-treatment__list {
+  margin-top: 1rem;
+  padding-left: 1em;
+}
+@media (max-width: 768px) {
+  .p-price-traffic-treatment__list {
+    margin-top: 0.4rem;
+  }
+}
+.p-price-traffic-treatment__list li {
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
+  font-weight: 500;
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .p-price-traffic-treatment__list li {
+    line-height: 1.8;
+  }
+}
+.p-price-traffic-treatment__list li::before {
+  content: "○";
+}
+.p-price-traffic-treatment__fee {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .p-price-traffic-treatment__fee {
+    display: block;
+    gap: 20px;
+    margin-top: 30px;
+  }
+}
+.p-price-traffic-treatment__fee-text {
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .p-price-traffic-treatment__fee-text {
+    margin-top: 12px;
+    padding-left: 28px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@
   background: $color-white;
 
   @include mq($bp768) {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   &__inner {
@@ -26,7 +26,7 @@
 
   &__lead {
     margin-top: 16px;
-    font-size: rclamp(15, 18, 360, 1920);
+    font-size: rclamp(15, 20, 360, 1920);
     font-weight: 500;
     line-height: 2;
     @include mq($bp768) {
@@ -70,7 +70,7 @@
     }
 
     li {
-      font-size: rclamp(14, 18, 360, 1920);
+      font-size: rclamp(15, 20, 360, 1920);
       font-weight: 500;
 
       &::before {
@@ -88,15 +88,19 @@
     @include mq($bp768) {
       grid-template-columns: 1fr;
       gap: 50px;
-      margin-top: 30px;
+      margin-top: 40px;
     }
   }
 
   &__heading {
     position: relative;
     padding-left: 30px;
-    font-size: rclamp(16, 22, 360, 1920);
+    font-size: rclamp(16, 23, 360, 1920);
     font-weight: 700;
+    white-space: nowrap;
+    @include mq($bp768) {
+      white-space: normal;
+    }
 
     &::before {
       content: "";
@@ -161,10 +165,13 @@
         padding: 8px 16px;
         background: #231815;
         color: $color-white;
-        font-size: rclamp(16, 22, 360, 1920);
+        font-size: rclamp(15, 22, 360, 1920);
         line-height: 1.35;
         text-align: left;
         border: 1px solid $color-black;
+        @include mq($bp640) {
+          padding: 5px 16px;
+        }
       }
     }
 
