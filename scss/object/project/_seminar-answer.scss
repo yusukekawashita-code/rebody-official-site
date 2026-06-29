@@ -1,0 +1,79 @@
+@use "../../global" as *;
+
+.p-seminar-answer {
+  padding: 120px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 60px 0;
+  }
+
+  &__inner {
+    max-width: 900px;
+  }
+
+  &__title {
+    font-size: rclamp(22, 36, 360, 1920);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    gap: 45px;
+    margin-top: 70px;
+
+    @include mq($bp768) {
+      gap: 34px;
+      margin-top: 36px;
+    }
+  }
+
+  &__heading {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid $color-orange;
+    font-size: rclamp(17, 22, 360, 1920);
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: $color-orange;
+    color: $color-white;
+    font-size: rclamp(18, 22, 360, 1920);
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 4px;
+  }
+
+  &__accent {
+    margin: 0 4px;
+    color: $color-orange;
+    font-weight: 700;
+  }
+  &__heading-text {
+    display: inline;
+  }
+
+  &__text {
+    margin-top: 10px;
+    padding-left: 40px;
+    font-size: rclamp(16, 19, 360, 1920);
+    font-weight: 500;
+
+    @include mq($bp768) {
+      padding-left: 0;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}
