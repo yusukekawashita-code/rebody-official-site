@@ -7949,4 +7949,204 @@ a {
     padding-left: 28px;
   }
 }
+
+.p-price-other {
+  margin-top: 90px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-price-other {
+    margin-top: 60px;
+  }
+}
+.p-price-other__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.p-price-other__table {
+  width: 100%;
+  margin-top: 45px;
+  border-collapse: collapse;
+}
+@media (max-width: 768px) {
+  .p-price-other__table {
+    margin-top: 24px;
+  }
+}
+.p-price-other__table th,
+.p-price-other__table td {
+  border: 1px solid #333333;
+  padding: 12px 30px;
+  font-size: clamp(1rem, 0.9423076923rem + 0.2564102564vw, 1.25rem);
+  font-weight: 500;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .p-price-other__table th,
+.p-price-other__table td {
+    padding: 8px 16px;
+  }
+}
+.p-price-other__table th {
+  width: 28%;
+  text-align: left;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .p-price-other__table th {
+    width: 38%;
+    white-space: normal;
+  }
+}
+.p-price-other__table td {
+  width: 72%;
+}
+@media (max-width: 768px) {
+  .p-price-other__table td {
+    width: 66%;
+  }
+}
+
+.p-price-products {
+  margin-block: 100px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-price-products {
+    margin-block: 60px;
+  }
+}
+.p-price-products__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.p-price-products__items {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .p-price-products__items {
+    margin-top: 30px;
+  }
+}
+.p-price-products__item {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  align-items: center;
+  gap: 24px;
+}
+.p-price-products__item:not(:first-child) {
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .p-price-products__item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .p-price-products__image {
+    order: -1;
+  }
+}
+.p-price-products__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.p-price-products__table th,
+.p-price-products__table td {
+  border: 1px solid #333333;
+  padding: 10px 20px;
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
+  font-weight: 500;
+  vertical-align: middle;
+}
+.p-price-products__table th {
+  width: 60%;
+  text-align: left;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .p-price-products__table th {
+    width: 65%;
+    white-space: normal;
+  }
+}
+.p-price-products__table td {
+  width: 32%;
+  text-align: center;
+  white-space: nowrap;
+}
+.p-price-products__image {
+  text-align: center;
+}
+.p-price-products__image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: inline-block;
+}
+.p-price-products__training {
+  margin-top: 70px;
+}
+.p-price-products__training-box {
+  border: 1px solid #333333;
+  padding: 24px 28px;
+}
+@media (max-width: 768px) {
+  .p-price-products__training-box {
+    padding: 20px 16px;
+  }
+}
+.p-price-products__training-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: clamp(1.125rem, 1.0096153846rem + 0.5128205128vw, 1.625rem);
+  font-weight: 700;
+  line-height: 1.5;
+}
+.p-price-products__training-title span {
+  width: 14px;
+  height: 14px;
+  background: #fabe00;
+  flex-shrink: 0;
+}
+.p-price-products__training-price {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 14px;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .p-price-products__training-price {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+.p-price-products__training-arrow {
+  font-size: clamp(1.125rem, 1.0384615385rem + 0.3846153846vw, 1.5rem);
+  color: #231815;
+}
+.p-price-products__training-highlight {
+  padding: 0 6px;
+  background: #fef9e5;
+  font-size: clamp(1.25rem, 1.1346153846rem + 0.5128205128vw, 1.75rem);
+  line-height: 1.2;
+}
+.p-price-products__training-note {
+  color: #ff0000;
+  font-size: clamp(0.8125rem, 0.7692307692rem + 0.1923076923vw, 1rem);
+}
+.p-price-products__training-text {
+  margin-top: 24px;
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.8;
+}
+@media (max-width: 768px) {
+  .p-price-products__training-text br {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,159 @@
+@use "../../global" as *;
+
+.p-price-products {
+  margin-block: 100px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    margin-block: 60px;
+  }
+
+  &__inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__items {
+    margin-top: 40px;
+
+    @include mq($bp768) {
+      margin-top: 30px;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    align-items: center;
+    gap: 24px;
+
+    &:not(:first-child) {
+      margin-top: 60px;
+    }
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+
+  &__image {
+    @include mq($bp768) {
+      order: -1;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid $color-black;
+      padding: 10px 20px;
+      font-size: rclamp(15, 20, 360, 1920);
+      font-weight: 500;
+      vertical-align: middle;
+    }
+
+    th {
+      width: 60%;
+      text-align: left;
+      white-space: nowrap;
+
+      @include mq($bp640) {
+        width: 65%;
+        white-space: normal;
+      }
+    }
+
+    td {
+      width: 32%;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  &__image {
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      display: inline-block;
+    }
+  }
+
+  &__training {
+    margin-top: 70px;
+  }
+
+  &__training-box {
+    border: 1px solid $color-black;
+    padding: 24px 28px;
+
+    @include mq($bp768) {
+      padding: 20px 16px;
+    }
+  }
+
+  &__training-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: rclamp(18, 26, 360, 1920);
+    font-weight: 700;
+    line-height: 1.5;
+
+    span {
+      width: 14px;
+      height: 14px;
+      background: $color-orange;
+      flex-shrink: 0;
+    }
+  }
+
+  &__training-price {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: 14px;
+    font-weight: 700;
+
+    @include mq($bp768) {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  }
+
+  &__training-arrow {
+    font-size: rclamp(18, 24, 360, 1920);
+    color: #231815;
+  }
+
+  &__training-highlight {
+    padding: 0 6px;
+    background: $Bg-orange;
+    font-size: rclamp(20, 28, 360, 1920);
+    line-height: 1.2;
+  }
+
+  &__training-note {
+    color: #ff0000;
+    font-size: rclamp(13, 16, 360, 1920);
+  }
+
+  &__training-text {
+    margin-top: 24px;
+    font-size: rclamp(15, 20, 360, 1920);
+    font-weight: 500;
+    line-height: 1.8;
+
+    @include mq($bp768) {
+      br {
+        display: none;
+      }
+    }
+  }
+}

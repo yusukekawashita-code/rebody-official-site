@@ -1,0 +1,57 @@
+@use "../../global" as *;
+
+.p-price-other {
+  margin-top: 90px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    margin-top: 60px;
+  }
+
+  &__inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__table {
+    width: 100%;
+    margin-top: 45px;
+    border-collapse: collapse;
+
+    @include mq($bp768) {
+      margin-top: 24px;
+    }
+
+    th,
+    td {
+      border: 1px solid $color-black;
+      padding: 12px 30px;
+      font-size: rclamp(16, 20, 360, 1920);
+      font-weight: 500;
+      vertical-align: middle;
+
+      @include mq($bp768) {
+        padding: 8px 16px;
+      }
+    }
+
+    th {
+      width: 28%;
+      text-align: left;
+      white-space: nowrap;
+
+      @include mq($bp768) {
+        width: 38%;
+        white-space: normal;
+      }
+    }
+
+    td {
+      width: 72%;
+
+      @include mq($bp768) {
+        width: 66%;
+      }
+    }
+  }
+}
