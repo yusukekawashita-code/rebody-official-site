@@ -1,0 +1,98 @@
+@use "../../global" as *;
+
+.p-seminar-method {
+  padding: 120px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__inner {
+    max-width: 1200px;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 34, 360, 1920);
+
+    span {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0.22em;
+        height: 0.5em;
+        background: $Bg-orange;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 60px;
+
+    @include mq($bp768) {
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: rclamp(15, 20, 360, 1920);
+      font-weight: 500;
+      line-height: 2.2;
+      @include mq($bp768) {
+        line-height: 1.8;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+
+    @include mq($bp640) {
+      gap: 4px;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.04);
+        }
+      }
+    }
+  }
+}
