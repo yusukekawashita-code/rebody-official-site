@@ -1,0 +1,100 @@
+@use "../../global" as *;
+
+.p-seminar-instructor {
+  padding: 120px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__inner {
+    max-width: 1100px;
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 24px;
+    font-size: rclamp(28, 40, 360, 1920);
+    font-weight: 700;
+    line-height: 1.4;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.12em;
+      left: 0;
+      width: 8px;
+      height: 1.4em;
+      background: $color-orange;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    align-items: start;
+    gap: 80px;
+    margin-top: 50px;
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-top: 36px;
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: 60px;
+
+    @include mq($bp768) {
+      gap: 32px;
+    }
+
+    p {
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2.2;
+
+      @include mq($bp768) {
+        line-height: 1.9;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__profile {
+    @include mq($bp768) {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+  }
+
+  &__image {
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1.18 / 1;
+      object-fit: cover;
+    }
+  }
+
+  &__position {
+    margin-top: 28px;
+    font-size: rclamp(16, 20, 360, 1920);
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  &__name {
+    margin-top: 10px;
+    font-size: rclamp(26, 36, 360, 1920);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+  }
+}

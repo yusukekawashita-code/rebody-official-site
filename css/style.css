@@ -8750,6 +8750,9 @@ a {
     padding: 70px 0;
   }
 }
+.p-seminar-technology__inner {
+  max-width: 1200px;
+}
 .p-seminar-technology__body {
   display: grid;
   grid-template-columns: 1fr 55%;
@@ -8771,11 +8774,18 @@ a {
      object-fit: cover;
 }
 .p-seminar-technology__title {
-  font-size: clamp(1.375rem, 1.1153846154rem + 1.1538461538vw, 2.5rem);
+  font-size: clamp(1.3125rem, 1.0961538462rem + 0.9615384615vw, 2.25rem);
   text-indent: -0.5em;
 }
 .p-seminar-technology__text {
   margin-top: 45px;
+  white-space: nowrap;
+}
+@media (max-width: 1300px) {
+  .p-seminar-technology__text {
+    margin-top: 25px;
+    white-space: normal;
+  }
 }
 @media (max-width: 768px) {
   .p-seminar-technology__text {
@@ -8807,5 +8817,96 @@ a {
   font-weight: 700;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+.p-seminar-instructor {
+  padding: 120px 0;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-seminar-instructor {
+    padding: 70px 0;
+  }
+}
+.p-seminar-instructor__inner {
+  max-width: 1100px;
+}
+.p-seminar-instructor__title {
+  position: relative;
+  padding-left: 24px;
+  font-size: clamp(1.75rem, 1.5769230769rem + 0.7692307692vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.p-seminar-instructor__title::before {
+  content: "";
+  position: absolute;
+  top: 0.12em;
+  left: 0;
+  width: 8px;
+  height: 1.4em;
+  background: #fabe00;
+}
+.p-seminar-instructor__body {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  align-items: start;
+  gap: 80px;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .p-seminar-instructor__body {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-top: 36px;
+  }
+}
+.p-seminar-instructor__text {
+  display: grid;
+  gap: 60px;
+}
+@media (max-width: 768px) {
+  .p-seminar-instructor__text {
+    gap: 32px;
+  }
+}
+.p-seminar-instructor__text p {
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 2.2;
+}
+@media (max-width: 768px) {
+  .p-seminar-instructor__text p {
+    line-height: 1.9;
+  }
+  .p-seminar-instructor__text p br {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .p-seminar-instructor__profile {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+.p-seminar-instructor__image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.18/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-seminar-instructor__position {
+  margin-top: 28px;
+  font-size: clamp(1rem, 0.9423076923rem + 0.2564102564vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.6;
+}
+.p-seminar-instructor__name {
+  margin-top: 10px;
+  font-size: clamp(1.625rem, 1.4807692308rem + 0.641025641vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
 }
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,9 @@
     padding: 70px 0;
   }
 
+  &__inner {
+    max-width: 1200px;
+  }
   &__body {
     display: grid;
     grid-template-columns: 1fr 55%;
@@ -31,12 +34,17 @@
   }
 
   &__title {
-    font-size: rclamp(22, 40, 360, 1920);
+    font-size: rclamp(21, 36, 360, 1920);
     text-indent: -0.5em;
   }
 
   &__text {
     margin-top: 45px;
+    white-space: nowrap;
+    @include mq($bp1300) {
+      margin-top: 25px;
+      white-space: normal;
+    }
 
     @include mq($bp768) {
       margin-top: 25px;
