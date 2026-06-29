@@ -8266,4 +8266,230 @@ a {
     margin-top: 40px;
   }
 }
+
+.p-seminar-intro {
+  padding: 180px 0 100px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-seminar-intro {
+    padding: 80px 0 50px;
+  }
+}
+.p-seminar-intro__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .p-seminar-intro__body {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+.p-seminar-intro__catch {
+  font-size: clamp(1.375rem, 1.1153846154rem + 1.1538461538vw, 2.5rem);
+  text-indent: -1em;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .p-seminar-intro__catch {
+    text-indent: initial;
+  }
+}
+.p-seminar-intro__text {
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .p-seminar-intro__text {
+    margin-top: 25px;
+  }
+}
+.p-seminar-intro__text p {
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 2.5;
+}
+@media (max-width: 768px) {
+  .p-seminar-intro__text p {
+    line-height: 2;
+  }
+  .p-seminar-intro__text p br {
+    display: none;
+  }
+}
+.p-seminar-intro__button-wrap {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .p-seminar-intro__button-wrap {
+    margin-top: 22px;
+  }
+}
+.p-seminar-intro__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 480px;
+  padding: 16px 36px;
+  border-radius: 4px;
+  background: #fabe00;
+  color: #333333;
+  font-size: clamp(1.125rem, 0.9807692308rem + 0.641025641vw, 1.75rem);
+  line-height: 1.4;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.p-seminar-intro__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 36px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid white;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+@media (any-hover: hover) {
+  .p-seminar-intro__button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+  }
+  .p-seminar-intro__button:hover::after {
+    transform: translate(4px, -50%);
+  }
+}
+@media (max-width: 640px) {
+  .p-seminar-intro__button {
+    width: 100%;
+    min-width: auto;
+    padding: 12px 24px;
+  }
+  .p-seminar-intro__button::after {
+    right: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .p-seminar-intro__image {
+    order: -1;
+  }
+}
+.p-seminar-intro__image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.p-seminar-change {
+  padding: 120px 0;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .p-seminar-change {
+    padding: 60px 0;
+  }
+}
+.p-seminar-change__inner {
+  max-width: 1200px;
+}
+.p-seminar-change__body {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  align-items: center;
+  gap: 50px;
+}
+@media (max-width: 768px) {
+  .p-seminar-change__body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.p-seminar-change__image {
+  text-align: center;
+}
+.p-seminar-change__image img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .p-seminar-change__image img {
+    max-width: 200px;
+  }
+}
+.p-seminar-change__list {
+  display: grid;
+  gap: 14px;
+}
+.p-seminar-change__item {
+  display: grid;
+  grid-template-columns: 8% 20% 5% 1fr;
+  align-items: center;
+  border: 3px solid #fabe00;
+  padding: 12px 22px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-seminar-change__item {
+    grid-template-columns: 36px 24% auto 1fr;
+    gap: 6px;
+    padding: 10px;
+  }
+}
+@media (max-width: 414px) {
+  .p-seminar-change__item {
+    grid-template-columns: 36px 27% auto 1fr;
+  }
+}
+@media (max-width: 360px) {
+  .p-seminar-change__item {
+    grid-template-columns: 36px 29% auto 1fr;
+  }
+}
+.p-seminar-change__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #fabe00;
+  color: white;
+  font-size: clamp(1.25rem, 1.1634615385rem + 0.3846153846vw, 1.625rem);
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .p-seminar-change__number {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
+.p-seminar-change__before {
+  font-size: clamp(0.875rem, 0.7596153846rem + 0.5128205128vw, 1.375rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.p-seminar-change__arrow {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 16px solid #fabe00;
+}
+@media (max-width: 768px) {
+  .p-seminar-change__arrow {
+    border-top-width: 9px;
+    border-bottom-width: 9px;
+    border-left-width: 10px;
+  }
+}
+.p-seminar-change__after {
+  font-size: clamp(0.9375rem, 0.8076923077rem + 0.5769230769vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.5;
+}
 /*# sourceMappingURL=style.css.map */

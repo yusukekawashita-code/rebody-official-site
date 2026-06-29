@@ -1,0 +1,125 @@
+@use "../../global" as *;
+
+.p-seminar-intro {
+  padding: 180px 0 100px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 80px 0 50px;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    gap: 40px;
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  &__catch {
+    font-size: rclamp(22, 40, 360, 1920);
+    text-indent: -1em;
+    white-space: nowrap;
+    @include mq($bp768) {
+      text-indent: initial;
+    }
+  }
+
+  &__text {
+    margin-top: 60px;
+
+    @include mq($bp768) {
+      margin-top: 25px;
+    }
+
+    p {
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2.5;
+
+      @include mq($bp768) {
+        line-height: 2;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__button-wrap {
+    margin-top: 40px;
+
+    @include mq($bp768) {
+      margin-top: 22px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 480px;
+    padding: 16px 36px;
+    border-radius: 4px;
+    background: $color-orange;
+    color: $color-black;
+    font-size: rclamp(18, 28, 360, 1920);
+    line-height: 1.4;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 36px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 14px solid $color-white;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.85;
+        transform: translateY(-2px);
+
+        &::after {
+          transform: translate(4px, -50%);
+        }
+      }
+    }
+
+    @include mq($bp640) {
+      width: 100%;
+      min-width: auto;
+      padding: 12px 24px;
+
+      &::after {
+        right: 24px;
+      }
+    }
+  }
+
+  &__image {
+    @include mq($bp768) {
+      order: -1;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+  }
+}
