@@ -85,3 +85,93 @@ qaAccordionButtons.forEach((button) => {
     button.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 });
+
+const videoSliderEl = document.querySelector(".js-video-slider");
+
+if (videoSliderEl && typeof Swiper !== "undefined") {
+  // Swiper初期化前に、動画クリックがSwiperへ伝わらないようにする
+  videoSliderEl.querySelectorAll(".c-video-slider__video").forEach((video) => {
+    ["pointerdown", "mousedown", "touchstart", "click"].forEach((eventName) => {
+      video.addEventListener(
+        eventName,
+        (event) => {
+          event.stopImmediatePropagation();
+        },
+        true,
+      );
+    });
+  });
+
+  const videoSlider = document.querySelector(".js-video-slider");
+
+  if (videoSlider) {
+    const wrapper = videoSlider.querySelector(".swiper-wrapper");
+    const slides = videoSlider.querySelectorAll(".swiper-slide");
+    const root = videoSlider.closest(".c-video-slider");
+    const prevButton = root.querySelector(".c-video-slider__button--prev");
+    const nextButton = root.querySelector(".c-video-slider__button--next");
+    const pagination = root.querySelector(".c-video-slider__pagination");
+
+    let currentIndex = 0;
+
+    const getSlidesPerView = () => {
+      return window.innerWidth >= 768 ? 4 : 1;
+    };
+
+    const getMaxIndex = () => {
+      return Math.max(0, slides.length - Math.ceil(getSlidesPerView()));
+    };
+
+    const createDots = () => {
+      pagination.innerHTML = "";
+
+      for (let i = 0; i <= getMaxIndex(); i++) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "c-video-slider__dot";
+        dot.setAttribute("aria-label", `${i + 1}番目のスライドへ`);
+
+        dot.addEventListener("click", () => {
+          currentIndex = i;
+          updateSlider();
+        });
+
+        pagination.appendChild(dot);
+      }
+    };
+
+    const updateSlider = () => {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      wrapper.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+
+      const dots = pagination.querySelectorAll(".c-video-slider__dot");
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("is-active", index === currentIndex);
+      });
+
+      slides.forEach((slide) => {
+        const video = slide.querySelector("video");
+        if (video) video.pause();
+      });
+    };
+
+    prevButton.addEventListener("click", () => {
+      currentIndex = Math.max(0, currentIndex - 1);
+      updateSlider();
+    });
+
+    nextButton.addEventListener("click", () => {
+      currentIndex = Math.min(getMaxIndex(), currentIndex + 1);
+      updateSlider();
+    });
+
+    window.addEventListener("resize", () => {
+      currentIndex = Math.min(currentIndex, getMaxIndex());
+      createDots();
+      updateSlider();
+    });
+
+    createDots();
+    updateSlider();
+  }
+}

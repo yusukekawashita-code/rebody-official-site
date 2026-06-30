@@ -1,0 +1,15 @@
+@use "../../global" as *;
+
+.p-seminar-interview {
+  padding: 120px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 60px 0;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: rclamp(22, 40, 360, 1920);
+  }
+}

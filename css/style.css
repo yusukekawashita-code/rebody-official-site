@@ -2105,6 +2105,113 @@ a {
   font-weight: 500;
 }
 
+.c-video-slider {
+  position: relative;
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .c-video-slider {
+    margin-top: 30px;
+  }
+}
+.c-video-slider__container {
+  overflow: hidden;
+}
+.c-video-slider .swiper-wrapper {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.c-video-slider .swiper-slide {
+  flex: 0 0 25%;
+}
+@media (max-width: 768px) {
+  .c-video-slider .swiper-slide {
+    flex-basis: 100%;
+  }
+}
+.c-video-slider__video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9/16;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: #666;
+}
+.c-video-slider__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .c-video-slider__pagination {
+    margin-top: 16px;
+  }
+}
+.c-video-slider__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #bdbdbd;
+  cursor: pointer;
+}
+.c-video-slider__dot.is-active {
+  background: #666;
+}
+.c-video-slider__button {
+  position: absolute;
+  top: calc(50% - 23px);
+  z-index: 10;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: #555;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .c-video-slider__button {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+}
+.c-video-slider__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+}
+.c-video-slider__button--prev {
+  left: -40px;
+}
+@media (max-width: 768px) {
+  .c-video-slider__button--prev {
+    left: -10px;
+  }
+}
+.c-video-slider__button--prev::before {
+  transform: translate(-35%, -50%) rotate(-135deg);
+}
+.c-video-slider__button--next {
+  right: -40px;
+}
+@media (max-width: 768px) {
+  .c-video-slider__button--next {
+    right: -10px;
+  }
+}
+.c-video-slider__button--next::before {
+  transform: translate(-65%, -50%) rotate(45deg);
+}
+
 .p-header {
   width: 100%;
   display: flex;
@@ -9128,5 +9235,19 @@ a {
   .p-seminar-performance__message {
     margin-top: 24px;
   }
+}
+
+.p-seminar-interview {
+  padding: 120px 0;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .p-seminar-interview {
+    padding: 60px 0;
+  }
+}
+.p-seminar-interview__title {
+  text-align: center;
+  font-size: clamp(1.375rem, 1.1153846154rem + 1.1538461538vw, 2.5rem);
 }
 /*# sourceMappingURL=style.css.map */
