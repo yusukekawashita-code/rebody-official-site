@@ -89,17 +89,22 @@ qaAccordionButtons.forEach((button) => {
 const interviewMovie = document.querySelector(".js-interview-movie");
 
 if (interviewMovie) {
+  const viewport = interviewMovie.querySelector(".c-interview-movie__viewport");
   const track = interviewMovie.querySelector(".c-interview-movie__track");
   const items = interviewMovie.querySelectorAll(".c-interview-movie__item");
   const prevButton = interviewMovie.querySelector(".c-interview-movie__button--prev");
   const nextButton = interviewMovie.querySelector(".c-interview-movie__button--next");
   const pagination = interviewMovie.querySelector(".c-interview-movie__pagination");
 
-  if (track && items.length && prevButton && nextButton && pagination) {
+  if (viewport && track && items.length && prevButton && nextButton && pagination) {
     let currentIndex = 0;
 
+    const isDesktop = () => {
+      return window.innerWidth >= 768;
+    };
+
     const getSlidesPerView = () => {
-      return window.innerWidth >= 768 ? 4 : 1;
+      return isDesktop() ? 4 : 1;
     };
 
     const getMaxIndex = () => {
@@ -113,15 +118,28 @@ if (interviewMovie) {
       });
     };
 
-    const updateMovieSlider = () => {
-      const itemWidth = items[0].getBoundingClientRect().width;
-      track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
-
+    const updateDots = () => {
       const dots = pagination.querySelectorAll(".c-interview-movie__dot");
+
       dots.forEach((dot, index) => {
         dot.classList.toggle("is-active", index === currentIndex);
       });
+    };
 
+    const updateMovieSlider = () => {
+      const itemWidth = items[0].getBoundingClientRect().width;
+
+      if (isDesktop()) {
+        track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+      } else {
+        track.style.transform = "none";
+        viewport.scrollTo({
+          left: itemWidth * currentIndex,
+          behavior: "smooth",
+        });
+      }
+
+      updateDots();
       pauseAllVideos();
     };
 
@@ -153,13 +171,37 @@ if (interviewMovie) {
       updateMovieSlider();
     });
 
+    viewport.addEventListener("scroll", () => {
+      if (isDesktop()) return;
+
+      const itemWidth = items[0].getBoundingClientRect().width;
+      const newIndex = Math.round(viewport.scrollLeft / itemWidth);
+
+      if (newIndex !== currentIndex) {
+        currentIndex = Math.min(getMaxIndex(), Math.max(0, newIndex));
+        updateDots();
+      }
+    });
+
     window.addEventListener("resize", () => {
       currentIndex = Math.min(currentIndex, getMaxIndex());
       createDots();
-      updateMovieSlider();
+
+      if (isDesktop()) {
+        updateMovieSlider();
+      } else {
+        track.style.transform = "none";
+        updateDots();
+      }
     });
 
     createDots();
-    updateMovieSlider();
+
+    if (isDesktop()) {
+      updateMovieSlider();
+    } else {
+      track.style.transform = "none";
+      updateDots();
+    }
   }
 }

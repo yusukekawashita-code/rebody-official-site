@@ -10,18 +10,30 @@
 
   &__viewport {
     overflow: hidden;
+
+    @include mq($bp768) {
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   &__track {
     display: flex;
     scroll-behavior: smooth;
+
+    @include mq($bp768) {
+      transform: none !important;
+    }
   }
 
   &__item {
     flex: 0 0 25%;
 
     @include mq($bp768) {
-      flex-basis: 100%;
+      flex: 0 0 100%;
+      scroll-snap-align: start;
     }
   }
 
