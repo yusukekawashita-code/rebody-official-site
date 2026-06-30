@@ -34,6 +34,19 @@ drawerAccordionButtons.forEach((button) => {
   });
 });
 
+const accordionButtons = document.querySelectorAll(".js-accordion");
+
+accordionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".c-accordion");
+
+    if (!item) return;
+
+    const isOpen = item.classList.toggle("is-open");
+    button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+});
+
 const toolModalOpenButtons = document.querySelectorAll(".js-tool-modal-open");
 const toolModalCloseButtons = document.querySelectorAll(".js-tool-modal-close");
 

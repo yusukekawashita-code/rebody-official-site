@@ -2225,6 +2225,96 @@ a {
   background: #666;
 }
 
+.c-accordion {
+  background: white;
+}
+.c-accordion.is-open .c-accordion__answer {
+  display: block;
+}
+.c-accordion.is-open .c-accordion__icon::after {
+  opacity: 0;
+}
+.c-accordion__question {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 48px 70px 32px;
+  border: none;
+  border-bottom: 4px solid #f8b900;
+  background: transparent;
+  color: #333;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .c-accordion__question {
+    padding: 28px 50px 22px 20px;
+  }
+}
+.c-accordion__number {
+  flex-shrink: 0;
+  margin-right: 18px;
+  color: #f8b900;
+  font-size: clamp(1.375rem, 1.1730769231rem + 0.8974358974vw, 2.25rem);
+}
+.c-accordion__title {
+  padding-right: 50px;
+  font-size: clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);
+}
+@media (max-width: 768px) {
+  .c-accordion__title {
+    padding-right: 20px;
+  }
+}
+.c-accordion__icon {
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  width: 36px;
+  height: 36px;
+  transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .c-accordion__icon {
+    right: 18px;
+    width: 24px;
+    height: 24px;
+  }
+}
+.c-accordion__icon::before, .c-accordion__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #f8b900;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+}
+.c-accordion__icon::before {
+  width: 100%;
+  height: 5px;
+}
+.c-accordion__icon::after {
+  width: 5px;
+  height: 100%;
+}
+.c-accordion__answer {
+  display: none;
+  padding: 32px 70px 48px;
+}
+@media (max-width: 768px) {
+  .c-accordion__answer {
+    padding: 24px 20px 32px;
+  }
+}
+.c-accordion__answer p {
+  font-size: clamp(0.875rem, 0.8173076923rem + 0.2564102564vw, 1.125rem);
+  font-weight: 500;
+  line-height: 2;
+}
+
 .p-header {
   width: 100%;
   display: flex;
@@ -9373,5 +9463,69 @@ a {
   .p-seminar-benefit__button {
     margin-top: 30px;
   }
+}
+
+.p-seminar-qa {
+  padding: 100px 0;
+  background: #fbf5df;
+}
+@media (max-width: 768px) {
+  .p-seminar-qa {
+    padding: 70px 0;
+  }
+}
+.p-seminar-qa__heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  margin-bottom: 80px;
+}
+@media (max-width: 768px) {
+  .p-seminar-qa__heading {
+    min-height: 150px;
+    margin-bottom: 40px;
+  }
+}
+.p-seminar-qa__title {
+  font-size: clamp(1.375rem, 1.1730769231rem + 0.8974358974vw, 2.25rem);
+  text-align: center;
+}
+.p-seminar-qa__image {
+  position: absolute;
+  bottom: 0;
+}
+.p-seminar-qa__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.p-seminar-qa__image--left {
+  left: 90px;
+  width: 180px;
+}
+@media (max-width: 768px) {
+  .p-seminar-qa__image--left {
+    left: 0;
+    width: 80px;
+  }
+}
+.p-seminar-qa__image--right {
+  right: 90px;
+  width: 180px;
+}
+@media (max-width: 768px) {
+  .p-seminar-qa__image--right {
+    right: 0;
+    width: 80px;
+  }
+}
+.p-seminar-qa__list {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.p-seminar-qa .c-accordion + .c-accordion {
+  margin-top: 24px;
 }
 /*# sourceMappingURL=style.css.map */

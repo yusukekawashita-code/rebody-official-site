@@ -1,0 +1,69 @@
+@use "../../global" as *;
+
+.p-seminar-qa {
+  padding: 100px 0;
+  background: #fbf5df;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    margin-bottom: 80px;
+
+    @include mq($bp768) {
+      min-height: 150px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 36, 360, 1920);
+    text-align: center;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &--left {
+      left: 90px;
+      width: 180px;
+
+      @include mq($bp768) {
+        left: 0;
+        width: 80px;
+      }
+    }
+
+    &--right {
+      right: 90px;
+      width: 180px;
+
+      @include mq($bp768) {
+        right: 0;
+        width: 80px;
+      }
+    }
+  }
+
+  &__list {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .c-accordion + .c-accordion {
+    margin-top: 24px;
+  }
+}
