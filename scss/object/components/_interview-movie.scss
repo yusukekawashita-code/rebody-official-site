@@ -1,0 +1,113 @@
+@use "../../global" as *;
+
+.c-interview-movie {
+  position: relative;
+  margin-top: 60px;
+
+  @include mq($bp768) {
+    margin-top: 30px;
+  }
+
+  &__viewport {
+    overflow: hidden;
+  }
+
+  &__track {
+    display: flex;
+    scroll-behavior: smooth;
+  }
+
+  &__item {
+    flex: 0 0 25%;
+
+    @include mq($bp768) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    background: #666;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: #555;
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    @include mq($bp768) {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 9px;
+      height: 9px;
+      border-top: 3px solid $color-white;
+      border-right: 3px solid $color-white;
+    }
+
+    &--prev {
+      left: -40px;
+
+      @include mq($bp768) {
+        left: -10px;
+      }
+
+      &::before {
+        transform: translate(-35%, -50%) rotate(-135deg);
+      }
+    }
+
+    &--next {
+      right: -40px;
+
+      @include mq($bp768) {
+        right: -10px;
+      }
+
+      &::before {
+        transform: translate(-65%, -50%) rotate(45deg);
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+
+    @include mq($bp768) {
+      margin-top: 16px;
+    }
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #bdbdbd;
+    cursor: pointer;
+
+    &.is-active {
+      background: #666;
+    }
+  }
+}

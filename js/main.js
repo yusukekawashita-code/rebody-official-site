@@ -86,32 +86,16 @@ qaAccordionButtons.forEach((button) => {
   });
 });
 
-const videoSliderEl = document.querySelector(".js-video-slider");
+const interviewMovie = document.querySelector(".js-interview-movie");
 
-if (videoSliderEl && typeof Swiper !== "undefined") {
-  // Swiper初期化前に、動画クリックがSwiperへ伝わらないようにする
-  videoSliderEl.querySelectorAll(".c-video-slider__video").forEach((video) => {
-    ["pointerdown", "mousedown", "touchstart", "click"].forEach((eventName) => {
-      video.addEventListener(
-        eventName,
-        (event) => {
-          event.stopImmediatePropagation();
-        },
-        true,
-      );
-    });
-  });
+if (interviewMovie) {
+  const track = interviewMovie.querySelector(".c-interview-movie__track");
+  const items = interviewMovie.querySelectorAll(".c-interview-movie__item");
+  const prevButton = interviewMovie.querySelector(".c-interview-movie__button--prev");
+  const nextButton = interviewMovie.querySelector(".c-interview-movie__button--next");
+  const pagination = interviewMovie.querySelector(".c-interview-movie__pagination");
 
-  const videoSlider = document.querySelector(".js-video-slider");
-
-  if (videoSlider) {
-    const wrapper = videoSlider.querySelector(".swiper-wrapper");
-    const slides = videoSlider.querySelectorAll(".swiper-slide");
-    const root = videoSlider.closest(".c-video-slider");
-    const prevButton = root.querySelector(".c-video-slider__button--prev");
-    const nextButton = root.querySelector(".c-video-slider__button--next");
-    const pagination = root.querySelector(".c-video-slider__pagination");
-
+  if (track && items.length && prevButton && nextButton && pagination) {
     let currentIndex = 0;
 
     const getSlidesPerView = () => {
@@ -119,7 +103,26 @@ if (videoSliderEl && typeof Swiper !== "undefined") {
     };
 
     const getMaxIndex = () => {
-      return Math.max(0, slides.length - Math.ceil(getSlidesPerView()));
+      return Math.max(0, items.length - getSlidesPerView());
+    };
+
+    const pauseAllVideos = () => {
+      items.forEach((item) => {
+        const video = item.querySelector("video");
+        if (video) video.pause();
+      });
+    };
+
+    const updateMovieSlider = () => {
+      const itemWidth = items[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+
+      const dots = pagination.querySelectorAll(".c-interview-movie__dot");
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("is-active", index === currentIndex);
+      });
+
+      pauseAllVideos();
     };
 
     const createDots = () => {
@@ -128,50 +131,35 @@ if (videoSliderEl && typeof Swiper !== "undefined") {
       for (let i = 0; i <= getMaxIndex(); i++) {
         const dot = document.createElement("button");
         dot.type = "button";
-        dot.className = "c-video-slider__dot";
-        dot.setAttribute("aria-label", `${i + 1}番目のスライドへ`);
+        dot.className = "c-interview-movie__dot";
+        dot.setAttribute("aria-label", `${i + 1}番目の動画へ`);
 
         dot.addEventListener("click", () => {
           currentIndex = i;
-          updateSlider();
+          updateMovieSlider();
         });
 
         pagination.appendChild(dot);
       }
     };
 
-    const updateSlider = () => {
-      const slideWidth = slides[0].getBoundingClientRect().width;
-      wrapper.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-
-      const dots = pagination.querySelectorAll(".c-video-slider__dot");
-      dots.forEach((dot, index) => {
-        dot.classList.toggle("is-active", index === currentIndex);
-      });
-
-      slides.forEach((slide) => {
-        const video = slide.querySelector("video");
-        if (video) video.pause();
-      });
-    };
-
     prevButton.addEventListener("click", () => {
       currentIndex = Math.max(0, currentIndex - 1);
-      updateSlider();
+      updateMovieSlider();
     });
 
     nextButton.addEventListener("click", () => {
       currentIndex = Math.min(getMaxIndex(), currentIndex + 1);
-      updateSlider();
+      updateMovieSlider();
     });
 
     window.addEventListener("resize", () => {
       currentIndex = Math.min(currentIndex, getMaxIndex());
       createDots();
-      updateSlider();
+      updateMovieSlider();
     });
 
     createDots();
-    updateSlider();
+    updateMovieSlider();
   }
 }
