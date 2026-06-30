@@ -1,0 +1,120 @@
+@use "../../global" as *;
+
+.p-seminar-performance {
+  padding: 100px 0 120px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    max-width: 1200px;
+  }
+
+  &__main-image {
+    max-width: 1140px;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    max-width: 900px;
+    margin: 150px auto 0;
+    padding: 10px 20px;
+    background: $color-orange;
+    font-size: rclamp(25, 48, 360, 1920);
+    font-weight: 700;
+    text-align: center;
+
+    @include mq($bp768) {
+      margin-top: 50px;
+    }
+  }
+
+  &__box {
+    max-width: 900px;
+    margin: 50px auto 0;
+    border: 2px solid $color-orange;
+    padding: 28px 40px;
+
+    @include mq($bp768) {
+      margin-top: 32px;
+      padding: 22px 18px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 16px;
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      font-size: rclamp(15, 20, 360, 1920);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.7em;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: $color-orange;
+      }
+    }
+  }
+
+  &__lead {
+    margin-block: 40px;
+    font-size: rclamp(16, 24, 360, 1920);
+    text-align: center;
+
+    @include mq($bp768) {
+      margin-block: 20px;
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 30px auto 0;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 12px;
+
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  &__message {
+    display: table;
+    margin: 38px auto 0;
+    padding: 0 10px;
+    background: rgba($color-orange, 0.25);
+    font-size: rclamp(16, 24, 360, 1920);
+    text-align: center;
+    @include mq($bp768) {
+      margin-top: 24px;
+    }
+  }
+}
