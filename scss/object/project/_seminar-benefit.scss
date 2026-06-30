@@ -1,0 +1,40 @@
+@use "../../global" as *;
+
+.p-seminar-benefit {
+  margin-top: 100px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    margin-top: 60px;
+  }
+
+  &__inner {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  &__item {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    & + & {
+      margin-top: 60px;
+
+      @include mq($bp768) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__button {
+    text-align: center;
+    margin-top: 90px;
+
+    @include mq($bp768) {
+      margin-top: 30px;
+    }
+  }
+}
