@@ -1,0 +1,117 @@
+@use "../../global" as *;
+
+.p-seminar-reason {
+  padding: 120px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__inner {
+    max-width: 1200px;
+  }
+
+  &__title {
+    font-size: rclamp(26, 40, 360, 1920);
+    font-weight: 700;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 45%;
+    align-items: flex-end;
+    gap: 60px;
+    margin-top: 80px;
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  &__lead {
+    p {
+      font-size: rclamp(15, 20, 360, 1920);
+      font-weight: 500;
+      line-height: 2;
+
+      & + p {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__points {
+    display: grid;
+    gap: 16px;
+    margin-top: 36px;
+    @include mq($bp768) {
+      margin-top: 20px;
+    }
+  }
+
+  &__point {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 18px;
+    background: $color-white;
+
+    p {
+      font-size: rclamp(18, 24, 360, 1920);
+      line-height: 1.7;
+    }
+
+    @include mq($bp640) {
+      grid-template-columns: 42px 1fr;
+      gap: 6px;
+      padding:8px 12px;
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 60px;
+    background: $color-orange;
+    color: $color-white;
+    font-size: rclamp(18, 24, 360, 1920);
+
+    @include mq($bp640) {
+      width: 30px;
+      height: 40px;
+    }
+  }
+
+  &__image {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__bottom {
+    margin-top: 55px;
+    font-size: rclamp(18, 24, 360, 1920);
+    font-weight: 500;
+
+    span {
+      margin: 0 6px;
+      padding: 0 6px;
+      background: rgba($color-orange, 0.25);
+      font-weight: 700;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    @include mq($bp768) {
+      margin-top: 20px;
+    }
+  }
+}
