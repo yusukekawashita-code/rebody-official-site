@@ -1,0 +1,201 @@
+@use "../../global" as *;
+
+.p-seminar-form {
+  padding: 100px 0 120px;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 70px 0 80px;
+  }
+
+  &__title {
+    font-size: rclamp(22, 36, 360, 1920);
+    text-align: center;
+  }
+
+  &__box {
+    max-width: 1150px;
+    margin: 70px auto 0;
+    padding: 45px 30px 70px;
+    border-radius: 30px 30px 0 0;
+    background: $color-white;
+
+    @include mq($bp768) {
+      margin: 35px auto 0;
+      padding: 24px 15px 35px;
+      border-radius: 20px 20px 0 0;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 34px;
+    padding: 26px 42px;
+    border-top: 1px solid #ddd;
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 14px;
+      padding: 22px 0;
+    }
+
+    &--top {
+      padding-top: 30px;
+    }
+
+    &--textarea {
+      align-items: start;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-weight: 800;
+    line-height: 1.7;
+  }
+
+  &__required {
+    display: inline-block;
+    margin-top: 3px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: $color-orange;
+    color: $color-white;
+    font-size: rclamp(16, 20, 360, 1920);
+    line-height: 1.4;
+    flex-shrink: 0;
+  }
+
+  &__label {
+    font-size: rclamp(16, 20, 360, 1920);
+
+    span {
+      font-size: rclamp(14, 18, 360, 1920);
+    }
+  }
+
+  &__body {
+    font-size: rclamp(16, 20, 360, 1920);
+    font-weight: 500;
+  }
+
+  &__check {
+    position: relative;
+    display: block;
+    padding-left: 22px;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      left: 0;
+      top: 0.45em;
+      width: 14px;
+      height: 14px;
+      margin: 0;
+      appearance: auto;
+      -webkit-appearance: checkbox;
+      accent-color: $color-orange;
+      cursor: pointer;
+    }
+
+    & + & {
+      margin-top: 4px;
+    }
+  }
+
+  &__banner {
+    width: 350px;
+    margin-top: 28px;
+
+    @include mq($bp768) {
+      width: min(100%, 320px);
+      margin-inline: auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: $color-white;
+    font: inherit;
+  }
+
+  &__input {
+    height: 38px;
+    padding: 6px 10px;
+  }
+
+  &__textarea {
+    min-height: 220px;
+    padding: 10px;
+    resize: vertical;
+
+    @include mq($bp768) {
+      min-height: 180px;
+    }
+  }
+
+  &__name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+
+    @include mq($bp640) {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    label {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      align-items: center;
+      gap: 8px;
+      @include mq($bp640) {
+        grid-template-columns: 36px 1fr;
+      }
+    }
+  }
+
+  &__submit {
+    margin-top: 54px;
+    text-align: center;
+
+    @include mq($bp768) {
+      margin-top: 36px;
+    }
+  }
+
+  &__button {
+    max-width: 300px;
+    width: min(100%, 300px);
+    padding: 16px 20px;
+    border: none;
+    background: #333;
+    color: $color-white;
+    font-size: rclamp(20, 33, 360, 1920);
+    line-height: 1.4;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    @include mq($bp768) {
+      padding: 10px 16px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
