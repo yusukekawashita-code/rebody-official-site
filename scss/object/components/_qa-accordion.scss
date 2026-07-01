@@ -1,6 +1,6 @@
 @use "../../global" as *;
 
-.p-qa-accordion {
+.c-qa-accordion {
   margin-top: 40px;
   padding: 120px 0;
   background: $Bg-orange;
@@ -27,19 +27,9 @@
     }
 
     &.is-open {
-      .p-qa-accordion__answer {
+      .c-qa-accordion__answer {
         max-height: 3000px;
         opacity: 1;
-      }
-
-      .p-qa-accordion__icon {
-        &::before {
-          transform: translate(-50%, -50%) rotate(0deg);
-        }
-
-        &::after {
-          opacity: 0;
-        }
       }
     }
   }

@@ -91,7 +91,7 @@ const qaAccordionButtons = document.querySelectorAll(".js-qa-accordion");
 
 qaAccordionButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const item = button.closest(".p-qa-accordion__item");
+    const item = button.closest(".c-qa-accordion__item");
     if (!item) return;
 
     const isOpen = item.classList.toggle("is-open");
