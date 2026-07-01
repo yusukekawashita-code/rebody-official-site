@@ -1,0 +1,19 @@
+@use "../../global" as *;
+
+.p-seminar-button {
+  margin: 100px 0 120px;
+
+  @include mq($bp768) {
+    margin: 60px 0 80px;
+  }
+
+  .c-section-button {
+    display: flex;
+    justify-content: center;
+  }
+  .c-button {
+    @include mq($bp640) {
+      min-width: 300px;
+    }
+  }
+}

@@ -9844,4 +9844,22 @@ a {
     opacity: 0.75;
   }
 }
+
+.p-seminar-button {
+  margin: 100px 0 120px;
+}
+@media (max-width: 768px) {
+  .p-seminar-button {
+    margin: 60px 0 80px;
+  }
+}
+.p-seminar-button .c-section-button {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 640px) {
+  .p-seminar-button .c-button {
+    min-width: 300px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
