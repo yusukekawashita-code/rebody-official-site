@@ -1,6 +1,6 @@
 @use "../../global" as *;
 
-.p-seminar-button {
+.c-wrap-button {
   margin: 100px 0 120px;
 
   @include mq($bp768) {

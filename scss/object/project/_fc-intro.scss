@@ -1,0 +1,123 @@
+@use "../../global" as *;
+
+.p-fc-intro {
+  padding: 120px 0;
+  background: $color-white;
+  color: #333;
+
+  @include mq($bp768) {
+    padding: 60px 0;
+  }
+
+  &__content {
+    max-width: 1080px;
+  }
+
+  &__title {
+    font-size: rclamp(24, 40, 360, 1920);
+    text-indent: -0.5em;
+  }
+
+  &__lead {
+    margin-top: 22px;
+    font-size: rclamp(16, 22, 360, 1920);
+    font-weight: 500;
+    line-height: 1.8;
+  }
+
+  &__text {
+    margin-top: 60px;
+
+    @include mq($bp768) {
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2.4;
+      @include mq($bp768) {
+        line-height: 2;
+      }
+
+      & + p {
+        margin-top: 50px;
+
+        @include mq($bp768) {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+
+  &__marker {
+    display: inline;
+    padding: 0 5px 2px;
+    background: #fdecb2;
+    font-weight: 700;
+  }
+
+  &__worry {
+    display: grid;
+    grid-template-columns: 75% 15%;
+    align-items: center;
+    gap: 30px;
+    max-width: 1050px;
+    margin-top: 60px;
+    padding: 45px;
+    border: 3px solid #cccccc;
+    border-radius: 15px;
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      margin-top: 30px;
+      padding: 16px;
+      gap: 20px;
+    }
+  }
+
+  &__list {
+    li {
+      position: relative;
+      padding-left: 1em;
+      font-size: rclamp(15, 19, 360, 1920);
+      line-height: 2.4;
+      @include mq($bp768) {
+        line-height: 2;
+      }
+
+      &::before {
+        content: "・";
+        position: absolute;
+        left: 0;
+        color: $color-orange;
+      }
+
+      & + li {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 135px;
+    justify-self: center;
+
+    @include mq($bp768) {
+      max-width: 85px;
+    }
+  }
+
+  &__bottom-marker {
+    display: inline-block;
+    margin-top: 60px;
+    padding: 0 16px 3px;
+    background: #fdecb2;
+    font-size: rclamp(15, 19, 360, 1920);
+
+    @include mq($bp768) {
+      margin-top: 40px;
+      padding: 0 8px 3px;
+    }
+  }
+}
