@@ -1,0 +1,144 @@
+@use "../../global" as *;
+
+.p-activity-purpose {
+  margin-top: 200px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    margin-top: 70px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 37%;
+    align-items: center;
+    gap: 20px;
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 40, 360, 1920);
+    white-space: nowrap;
+    @include mq($bp768) {
+      white-space: normal;
+      line-height: 1.45;
+    }
+  }
+
+  &__text {
+    margin-top: 80px;
+
+    @include mq($bp768) {
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2.4;
+      @include mq($bp768) {
+        line-height: 2;
+      }
+
+      & + p {
+        margin-top: 50px;
+
+        @include mq($bp768) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  &__marker {
+    display: inline;
+    padding: 0 4px 4px;
+    font-weight: 700;
+    background: #fdecb2;
+
+    &--large {
+      font-size: rclamp(17, 22, 360, 1920);
+      line-height: 1.2;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 470px;
+    margin-top: 120px;
+
+    @include mq($bp768) {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+
+  &__inner {
+    &--reverse {
+      margin-top: 130px;
+      grid-template-columns: 560px 1fr;
+      gap: 100px;
+
+      @include mq($bp1024) {
+        grid-template-columns: 430px 1fr;
+      }
+
+      @include mq($bp768) {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-top: 80px;
+      }
+    }
+  }
+
+  &__text {
+    &--no-title {
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+    &--treatment {
+      max-width: 500px;
+      margin-top: 0;
+
+      @include mq($bp768) {
+        max-width: 300px;
+        order: 2;
+      }
+    }
+  }
+
+  &__inner {
+    &--third {
+      margin-top: 130px;
+      grid-template-columns: 1fr 400px;
+      align-items: center;
+
+      @include mq($bp1024) {
+        grid-template-columns: 1fr 360px;
+      }
+
+      @include mq($bp768) {
+        grid-template-columns: 1fr;
+        margin-top: 80px;
+      }
+    }
+  }
+
+  &__image {
+    &--walking {
+      max-width: 400px;
+      margin-top: 0;
+      justify-self: center;
+
+      @include mq($bp768) {
+        max-width: 230px;
+        margin-inline: auto;
+      }
+    }
+  }
+}

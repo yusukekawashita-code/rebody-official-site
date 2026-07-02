@@ -60,3 +60,9 @@
     text-align: center;
   }
 }
+
+.c-sub-fv--activity-reason {
+  .c-sub-fv__title {
+    font-size: rclamp(20, 60, 360, 1920);
+  }
+}
