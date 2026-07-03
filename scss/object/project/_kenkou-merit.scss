@@ -46,13 +46,14 @@
     align-items: flex-end;
     gap: 16px;
     border-bottom: 2px solid $color-orange;
-    font-size: rclamp(20, 32, 360, 1920);
+    font-size: rclamp(18, 32, 360, 1920);
     font-weight: 700;
     line-height: 1.7;
 
     @include mq($bp640) {
       line-height: 1.45;
       gap: 12px;
+      align-items: center;
     }
 
     span {
