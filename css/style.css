@@ -11027,13 +11027,15 @@ a {
 }
 .p-kenkou-voice__item {
   width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  overflow: hidden;
 }
 .p-kenkou-voice__video {
   display: block;
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background: #000;
 }
 /*# sourceMappingURL=style.css.map */
