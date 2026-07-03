@@ -10992,4 +10992,47 @@ a {
   height: auto;
   display: block;
 }
+
+.p-kenkou-voice {
+  padding: 150px 0;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .p-kenkou-voice {
+    padding: 75px 0;
+  }
+}
+.p-kenkou-voice__title {
+  font-size: clamp(1.5rem, 1.3269230769rem + 0.7692307692vw, 2.25rem);
+  text-align: center;
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .p-kenkou-voice__title {
+    line-height: 1.7;
+  }
+}
+.p-kenkou-voice__list {
+  display: grid;
+  gap: 70px;
+  max-width: 800px;
+  margin: 70px auto 0;
+}
+@media (max-width: 768px) {
+  .p-kenkou-voice__list {
+    gap: 25px;
+    margin-top: 35px;
+  }
+}
+.p-kenkou-voice__item {
+  width: 100%;
+}
+.p-kenkou-voice__video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: #000;
+}
 /*# sourceMappingURL=style.css.map */

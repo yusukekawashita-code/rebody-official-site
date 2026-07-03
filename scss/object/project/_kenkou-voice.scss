@@ -1,0 +1,42 @@
+@use "../../global" as *;
+
+.p-kenkou-voice {
+  padding: 150px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 75px 0;
+  }
+
+  &__title {
+    font-size: rclamp(24, 36, 360, 1920);
+    text-align: center;
+    line-height: 2;
+    @include mq($bp768) {
+      line-height: 1.7;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 70px;
+    max-width: 800px;
+    margin: 70px auto 0;
+    @include mq($bp768) {
+      gap: 25px;
+      margin-top: 35px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #000;
+  }
+}
