@@ -1,0 +1,44 @@
+@use "../../global" as *;
+
+.p-fc-interview {
+  padding: 120px 0 130px;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 70px 0 80px;
+  }
+
+  &__title {
+    font-size: rclamp(22, 45, 360, 1920);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 120px auto 0;
+
+    @include mq($bp1024) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq($bp640) {
+      gap: 4px;
+      margin-top: 40px;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+  }
+
+  &__video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+  }
+}
