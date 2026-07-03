@@ -1,0 +1,105 @@
+@use "../../global" as *;
+
+.p-fc-benefit {
+  padding: 150px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: rclamp(23, 40, 360, 1920);
+    line-height: 1.5;
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    font-size: rclamp(16, 21, 360, 1920);
+    font-weight: 500;
+  }
+
+  &__block {
+    margin-top: 130px;
+    & + & {
+      margin-top: 36px;
+
+      @include mq($bp768) {
+        margin-top: 30px;
+      }
+    }
+
+    @include mq($bp768) {
+      margin-top: 50px;
+    }
+  }
+
+  &__block-title {
+    padding: 8px 48px;
+    background: $Bg-orange;
+    font-size: rclamp(20, 33, 360, 1920);
+
+    @include mq($bp768) {
+      padding: 6px 8px;
+    }
+
+    span {
+      margin-right: 10px;
+      color: $color-orange;
+      @include mq($bp768) {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 39% 1fr;
+    gap: 55px;
+    align-items: flex-start;
+    margin-top: 42px;
+
+    @include mq($bp1024) {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+    @include mq($bp768) {
+      gap: 25px;
+      margin-top: 16px;
+    }
+  }
+
+  &__text {
+    p {
+      font-size: rclamp(15, 20, 360, 1920);
+      font-weight: 500;
+      line-height: 2;
+      margin-left: 2em;
+      @include mq($bp640) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    @include mq($bp640) {
+      gap: 4px;
+    }
+  }
+
+  &__image {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

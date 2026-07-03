@@ -1,12 +1,12 @@
 @use "../../global" as *;
 
 .p-fc-reason {
-  padding: 120px 0;
+  padding: 180px 0;
   background: $Bg-orange;
   color: #333;
 
   @include mq($bp768) {
-    padding: 60px 0;
+    padding: 70px 0;
   }
 
   &__inner {
@@ -52,7 +52,9 @@
     font-size: rclamp(18, 22, 360, 1920);
 
     @include mq($bp768) {
-      padding: 6px 18px;
+      padding: 6px 8px;
+      text-indent: -1.5em;
+      padding-left: 2em;
     }
 
     span {
