@@ -1,0 +1,112 @@
+@use "../../global" as *;
+
+.p-kenkou-merit {
+  padding: 150px 0;
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__title {
+    font-size: rclamp(24, 42, 360, 1920);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    gap: 32px;
+    max-width: 940px;
+    margin: 80px auto 0;
+
+    @include mq($bp768) {
+      gap: 30px;
+      margin-top: 40px;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    align-items: center;
+    gap: 40px;
+    padding: 18px 24px;
+    border: 3px solid #e6e6e6;
+    border-radius: 12px;
+    background: $color-white;
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 10px 14px;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    border-bottom: 2px solid $color-orange;
+    font-size: rclamp(20, 32, 360, 1920);
+    font-weight: 700;
+    line-height: 1.7;
+
+    @include mq($bp640) {
+      line-height: 1.45;
+      gap: 12px;
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 45px;
+      height: 45px;
+      background: $color-orange;
+      font-size: rclamp(22, 32, 360, 1920);
+      line-height: 1;
+      @include mq($bp640) {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 16px;
+    font-size: rclamp(15, 20, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+    @include mq($bp768) {
+      line-height: 1.65;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @include mq($bp768) {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
+
+  &__flyer {
+    max-width: 940px;
+    margin: 100px auto 0;
+
+    @include mq($bp768) {
+      margin-top: 30px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
