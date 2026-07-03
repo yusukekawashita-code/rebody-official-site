@@ -23,10 +23,10 @@
   }
 
   &__body {
-    padding-block: 90px;
+    padding: 90px 0 40px;
 
     @include mq($bp768) {
-      padding-block: 40px;
+      padding: 40px 0 20px;
     }
   }
 
@@ -47,7 +47,7 @@
     transition: opacity 0.3s;
 
     @include mq($bp640) {
-      max-width: 90%;
+      max-width: 100%;
       min-height: 55px;
       padding: 10px 40px 10px 24px;
     }
