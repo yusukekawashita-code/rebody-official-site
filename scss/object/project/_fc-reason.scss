@@ -1,0 +1,72 @@
+@use "../../global" as *;
+
+.p-fc-reason {
+  padding: 120px 0;
+  background: $Bg-orange;
+  color: #333;
+
+  @include mq($bp768) {
+    padding: 60px 0;
+  }
+
+  &__inner {
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: rclamp(23, 40, 360, 1920);
+    line-height: 1.5;
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    font-size: rclamp(18, 24, 360, 1920);
+  }
+
+  &__list {
+    margin-top: 70px;
+
+    @include mq($bp768) {
+      margin-top: 35px;
+    }
+  }
+
+  &__item {
+    & + & {
+      margin-top: 70px;
+
+      @include mq($bp768) {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  &__item-title {
+    padding: 14px 32px;
+    background: #fdecb2;
+    font-size: rclamp(18, 22, 360, 1920);
+
+    @include mq($bp768) {
+      padding: 6px 18px;
+    }
+
+    span {
+      margin-right: 10px;
+
+      @include mq($bp768) {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 4px;
+    font-size: rclamp(16, 20, 360, 1920);
+    font-weight: 500;
+  }
+}
