@@ -10707,12 +10707,12 @@ a {
 }
 
 .p-kenkou-about {
-  margin-top: 180px;
+  padding-block: 180px;
   background: white;
 }
 @media (max-width: 768px) {
   .p-kenkou-about {
-    margin-top: 75px;
+    padding-block: 75px;
   }
 }
 .p-kenkou-about__inner {
@@ -10800,5 +10800,84 @@ a {
 .p-kenkou-about__image img {
   width: 100%;
   height: auto;
+}
+
+.p-kenkou-feature {
+  padding-block: 150px;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .p-kenkou-feature {
+    padding-block: 65px;
+  }
+}
+.p-kenkou-feature__title {
+  font-size: clamp(1.5rem, 1.1971153846rem + 1.3461538462vw, 2.8125rem);
+  line-height: 1.5;
+  text-align: center;
+}
+.p-kenkou-feature__title span {
+  color: #fabe00;
+  font-size: clamp(2.5rem, 2.0673076923rem + 1.9230769231vw, 4.375rem);
+  line-height: 1;
+}
+.p-kenkou-feature__list {
+  display: grid;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 70px auto 0;
+}
+@media (max-width: 768px) {
+  .p-kenkou-feature__list {
+    gap: 24px;
+    margin-top: 30px;
+  }
+}
+.p-kenkou-feature__item {
+  display: grid;
+  grid-template-columns: 1fr 35%;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 32px 32px 32px 50px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-kenkou-feature__item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px 16px 16px 20px;
+  }
+}
+.p-kenkou-feature__heading {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fabe00;
+  font-size: clamp(1.25rem, 1.1057692308rem + 0.641025641vw, 1.875rem);
+  line-height: 1.5;
+}
+@media (max-width: 640px) {
+  .p-kenkou-feature__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+.p-kenkou-feature__point {
+  color: #fabe00;
+  font-size: clamp(1rem, 0.9567307692rem + 0.1923076923vw, 1.1875rem);
+  letter-spacing: 0.08em;
+}
+.p-kenkou-feature__point strong {
+  margin-left: 4px;
+  font-size: clamp(1.875rem, 1.7019230769rem + 0.7692307692vw, 2.625rem);
+  line-height: 1;
+}
+.p-kenkou-feature__text {
+  margin-top: 12px;
+  font-size: clamp(1rem, 0.9423076923rem + 0.2564102564vw, 1.25rem);
+  font-weight: 500;
+  line-height: 2;
 }
 /*# sourceMappingURL=style.css.map */

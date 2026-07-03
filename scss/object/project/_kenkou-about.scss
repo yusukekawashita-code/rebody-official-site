@@ -1,11 +1,11 @@
 @use "../../global" as *;
 
 .p-kenkou-about {
-  margin-top: 180px;
+  padding-block: 180px;
   background: $color-white;
 
   @include mq($bp768) {
-    margin-top: 75px;
+    padding-block: 75px;
   }
 
   &__inner {
