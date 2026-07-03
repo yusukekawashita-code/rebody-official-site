@@ -1,0 +1,103 @@
+@use "../../global" as *;
+
+.p-kenkou-worry {
+  padding: 150px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__lead {
+    margin-bottom: 80px;
+
+    @include mq($bp768) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__heading {
+    font-size: rclamp(22, 40, 360, 1920);
+    line-height: 1.5;
+    text-indent: -0.5em;
+  }
+
+  &__description {
+    margin-top: 25px;
+    font-size: rclamp(16, 24, 360, 1920);
+    font-weight: normal;
+
+    @include mq($bp768) {
+      margin-top: 16px;
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 35%;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 120px;
+    background: $Bg-orange;
+
+    @include mq($bp1024) {
+      padding: 30px 60px;
+    }
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 30px 20px;
+    }
+    @include mq($bp640) {
+      padding: 24px 12px;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 35, 360, 1920);
+    line-height: 1.5;
+  }
+
+  &__list {
+    display: grid;
+    gap: 18px;
+    margin-top: 60px;
+
+    @include mq($bp768) {
+      gap: 14px;
+      margin-top: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 1.2em;
+    font-size: rclamp(15, 18, 360, 1920);
+    font-weight: 700;
+    line-height: 1.8;
+
+    &::before {
+      content: "・";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $color-orange;
+    }
+  }
+
+  &__image {
+    max-width: 360px;
+    margin-left: auto;
+
+    @include mq($bp768) {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

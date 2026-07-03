@@ -10579,4 +10579,226 @@ a {
     opacity: 0.75;
   }
 }
+
+.p-kenkou-worry {
+  padding: 150px 0;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-kenkou-worry {
+    padding: 70px 0;
+  }
+}
+.p-kenkou-worry__lead {
+  margin-bottom: 80px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-worry__lead {
+    margin-bottom: 40px;
+  }
+}
+.p-kenkou-worry__heading {
+  font-size: clamp(1.375rem, 1.1153846154rem + 1.1538461538vw, 2.5rem);
+  line-height: 1.5;
+  text-indent: -0.5em;
+}
+.p-kenkou-worry__description {
+  margin-top: 25px;
+  font-size: clamp(1rem, 0.8846153846rem + 0.5128205128vw, 1.5rem);
+  font-weight: normal;
+}
+@media (max-width: 768px) {
+  .p-kenkou-worry__description {
+    margin-top: 16px;
+  }
+}
+.p-kenkou-worry__box {
+  display: grid;
+  grid-template-columns: 1fr 35%;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 120px;
+  background: #fef9e5;
+}
+@media (max-width: 1024px) {
+  .p-kenkou-worry__box {
+    padding: 30px 60px;
+  }
+}
+@media (max-width: 768px) {
+  .p-kenkou-worry__box {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 640px) {
+  .p-kenkou-worry__box {
+    padding: 24px 12px;
+  }
+}
+.p-kenkou-worry__title {
+  font-size: clamp(1.375rem, 1.1875rem + 0.8333333333vw, 2.1875rem);
+  line-height: 1.5;
+}
+.p-kenkou-worry__list {
+  display: grid;
+  gap: 18px;
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-worry__list {
+    gap: 14px;
+    margin-top: 20px;
+  }
+}
+.p-kenkou-worry__item {
+  position: relative;
+  padding-left: 1.2em;
+  font-size: clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);
+  font-weight: 700;
+  line-height: 1.8;
+}
+.p-kenkou-worry__item::before {
+  content: "・";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fabe00;
+}
+.p-kenkou-worry__image {
+  max-width: 360px;
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .p-kenkou-worry__image {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+.p-kenkou-worry__image img {
+  width: 100%;
+  height: auto;
+}
+
+.p-kenkou-program {
+  background: white;
+}
+.p-kenkou-program__title {
+  font-size: clamp(1.375rem, 1.1153846154rem + 1.1538461538vw, 2.5rem);
+  font-weight: 700;
+}
+.p-kenkou-program__title span {
+  background: linear-gradient(transparent 60%, #fdecb2 60%);
+}
+.p-kenkou-program__image {
+  max-width: 1100px;
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-program__image {
+    margin-top: 30px;
+  }
+}
+.p-kenkou-program__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.p-kenkou-about {
+  margin-top: 180px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-kenkou-about {
+    margin-top: 75px;
+  }
+}
+.p-kenkou-about__inner {
+  display: grid;
+  grid-template-columns: 55% 35%;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-about__inner {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+.p-kenkou-about__title {
+  font-size: clamp(1.375rem, 1.1153846154rem + 1.1538461538vw, 2.5rem);
+  line-height: 1.5;
+}
+.p-kenkou-about__lead {
+  margin-top: 55px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-about__lead {
+    margin-top: 25px;
+  }
+}
+.p-kenkou-about__lead p {
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 2.4;
+}
+@media (max-width: 768px) {
+  .p-kenkou-about__lead p {
+    line-height: 2;
+  }
+}
+.p-kenkou-about__text p {
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 2.4;
+}
+@media (max-width: 768px) {
+  .p-kenkou-about__text p {
+    line-height: 2;
+  }
+}
+.p-kenkou-about__text--bottom {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-about__text--bottom {
+    margin-top: 20px;
+  }
+}
+.p-kenkou-about__point {
+  margin-top: 55px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-about__point {
+    margin-top: 35px;
+  }
+}
+.p-kenkou-about__point p {
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  line-height: 2;
+}
+.p-kenkou-about span {
+  font-weight: 700;
+  display: inline;
+  padding: 2px 6px;
+  background: #fdecb2;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.p-kenkou-about__image {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-kenkou-about__image {
+    max-width: 250px;
+    margin: 10px auto 0;
+  }
+}
+.p-kenkou-about__image img {
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=style.css.map */

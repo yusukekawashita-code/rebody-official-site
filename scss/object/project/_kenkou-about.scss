@@ -1,0 +1,98 @@
+@use "../../global" as *;
+
+.p-kenkou-about {
+  margin-top: 180px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    margin-top: 75px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 55% 35%;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+
+  &__title {
+    font-size: rclamp(22, 40, 360, 1920);
+    line-height: 1.5;
+  }
+
+  &__lead {
+    margin-top: 55px;
+
+    @include mq($bp768) {
+      margin-top: 25px;
+    }
+
+    p {
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2.4;
+      @include mq($bp768) {
+        line-height: 2;
+      }
+    }
+  }
+
+  &__text {
+    p {
+      font-size: rclamp(15, 19, 360, 1920);
+      font-weight: 500;
+      line-height: 2.4;
+      @include mq($bp768) {
+        line-height: 2;
+      }
+    }
+    &--bottom {
+      margin-top: 40px;
+      @include mq($bp768) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__point {
+    margin-top: 55px;
+
+    @include mq($bp768) {
+      margin-top: 35px;
+    }
+
+    p {
+      font-size: rclamp(15, 19, 360, 1920);
+      line-height: 2;
+    }
+  }
+
+  span {
+    font-weight: 700;
+    display: inline;
+    padding: 2px 6px;
+    background: #fdecb2;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  &__image {
+    text-align: center;
+
+    @include mq($bp768) {
+      max-width: 250px;
+      margin: 10px auto 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
