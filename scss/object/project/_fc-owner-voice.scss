@@ -1,0 +1,98 @@
+@use "../../global" as *;
+
+.p-fc-owner-voice {
+  padding: 150px 0;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: rclamp(25, 45, 360, 1920);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+    font-size: rclamp(16, 21, 360, 1920);
+    font-weight: 500;
+    line-height: 1.5;
+    @include mq($bp768) {
+      margin-top: 8px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 100px auto 0;
+    & + & {
+      margin-top: 60px;
+
+      @include mq($bp768) {
+        margin-top: 30px;
+      }
+    }
+
+    @include mq($bp1024) {
+      grid-template-columns: 1fr;
+      gap: 25px;
+      margin-top: 50px;
+    }
+    @include mq($bp768) {
+      gap: 15px;
+      margin-top: 30px;
+    }
+  }
+
+  &__profile {
+    text-align: center;
+  }
+
+  &__image {
+    max-width: 200px;
+    margin: 0 auto;
+    @include mq($bp640) {
+      max-width: 160px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__name {
+    margin-top: 20px;
+    font-size: rclamp(16, 22, 360, 1920);
+    font-weight: 500;
+    line-height: 1.4;
+    @include mq($bp640) {
+      margin-top: 10px;
+    }
+  }
+
+  &__message {
+    padding: 25px;
+    border: 2px solid $color-orange;
+
+    @include mq($bp640) {
+      padding: 16px;
+    }
+
+    p {
+      font-size: rclamp(16, 20, 360, 1920);
+      font-weight: 500;
+      line-height: 2;
+    }
+  }
+}

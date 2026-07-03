@@ -1,0 +1,81 @@
+@use "../../global" as *;
+
+.p-fc-cta {
+  background: $color-white;
+
+  &__head {
+    padding: 50px 0;
+    background: $Bg-orange;
+
+    @include mq($bp768) {
+      padding: 25px 0;
+    }
+  }
+
+  &__text {
+    font-size: rclamp(20, 33, 360, 1920);
+    line-height: 1.9;
+    text-align: center;
+
+    @include mq($bp768) {
+      line-height: 1.7;
+    }
+  }
+
+  &__body {
+    padding-block: 90px;
+
+    @include mq($bp768) {
+      padding-block: 40px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    min-height: 70px;
+    margin: 0 auto;
+    padding: 18px 70px 18px 50px;
+    background: $color-orange;
+    border-radius: 4px;
+    font-size: rclamp(17, 26, 360, 1920);
+    line-height: 1.4;
+    text-align: center;
+    transition: opacity 0.3s;
+
+    @include mq($bp640) {
+      max-width: 90%;
+      min-height: 55px;
+      padding: 10px 40px 10px 24px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 60px;
+      width: 0;
+      height: 0;
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      border-left: 13px solid $color-white;
+      transform: translateY(-50%);
+
+      @include mq($bp640) {
+        right: 30px;
+        border-top-width: 8px;
+        border-bottom-width: 8px;
+        border-left-width: 10px;
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
