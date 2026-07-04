@@ -1,0 +1,87 @@
+@use "../../global" as *;
+
+.p-kenkou-plan {
+  padding: 180px 0;
+
+  @include mq($bp768) {
+    padding: 75px 0;
+  }
+
+  &__title {
+    font-size: rclamp(22, 38, 360, 1920);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  &__table-wrap {
+    max-width: 1000px;
+    margin: 100px auto 0;
+    overflow-x: auto;
+
+    @include mq($bp768) {
+      margin-top: 45px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    border: 1px solid #cccccc;
+    font-size: rclamp(15, 21, 360, 1920);
+    line-height: 1.45;
+    color: #000000;
+
+    th,
+    td {
+      border: 1px solid #e6e6e6;
+      vertical-align: middle;
+      padding: 15px 24px;
+
+      @include mq($bp768) {
+        padding: 10px 12px;
+      }
+    }
+
+    thead {
+      th {
+        background: #e6e6e6;
+        text-align: center;
+        border: 1px solid #cccccc;
+      }
+    }
+
+    tbody {
+      th {
+        width: 32%;
+        background: #fef9e5;
+        text-align: left;
+      }
+
+      td {
+        background: #fff;
+
+        &:nth-child(2) {
+          width: 39%;
+          font-weight: 500;
+        }
+
+        &:nth-child(3) {
+          width: 29%;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__note {
+    max-width: 1000px;
+    margin: 35px auto 0;
+    font-size: rclamp(15, 21, 360, 1920);
+    font-weight: 500;
+    line-height: 1.45;
+    @include mq($bp768) {
+      margin-top: 20px;
+    }
+  }
+}
