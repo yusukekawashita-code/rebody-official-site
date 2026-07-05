@@ -1,0 +1,77 @@
+@use "../../global" as *;
+
+.p-kenkou-contact {
+  padding: 180px 0 120px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__inner {
+    max-width: 1100px;
+  }
+
+  &__title {
+    width: fit-content;
+    min-width: 600px;
+    margin: 0 auto;
+    padding: 4px 24px;
+    background: #fdecb2;
+    font-size: rclamp(22, 40, 360, 1920);
+    line-height: 1.4;
+    text-align: center;
+
+    @include mq($bp768) {
+      width: 100%;
+      min-width: 0;
+      padding: 10px 20px;
+    }
+  }
+
+  &__lead {
+    margin-top: 45px;
+    font-size: rclamp(16, 24, 360, 1920);
+    font-weight: 500;
+    line-height: 2;
+    text-align: center;
+
+    @include mq($bp768) {
+      margin-top: 24px;
+      line-height: 1.8;
+      text-align: left;
+    }
+  }
+
+  &__panel {
+    max-width: 840px;
+    margin: 80px auto 0;
+
+    @include mq($bp768) {
+      margin-top: 40px;
+    }
+  }
+
+  .c-contact-panel {
+    border-width: 4px;
+    @include mq($bp768) {
+      border-width: 3px;
+    }
+  }
+
+  .c-contact-panel__item {
+    padding: 40px 36px;
+
+    @include mq($bp768) {
+      padding: 24px 20px;
+    }
+  }
+
+  .c-contact-panel__person {
+    margin-top: 18px;
+    font-size: rclamp(16, 22, 360, 1920);
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
