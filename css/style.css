@@ -11359,4 +11359,43 @@ a {
   line-height: 1.5;
   text-align: center;
 }
+
+.p-kenkou-closing {
+  padding: 90px 0;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .p-kenkou-closing {
+    padding: 55px 0;
+  }
+}
+.p-kenkou-closing__label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 4px 32px;
+  background: #fdecb2;
+  font-size: clamp(1.25rem, 0.9326923077rem + 1.4102564103vw, 2.625rem);
+  line-height: 1.4;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-kenkou-closing__label {
+    width: 100%;
+    padding: 6px 12px;
+  }
+}
+.p-kenkou-closing__text {
+  margin-top: 24px;
+  font-size: clamp(1.25rem, 0.9326923077rem + 1.4102564103vw, 2.625rem);
+  line-height: 1.8;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-kenkou-closing__text {
+    margin-top: 20px;
+    line-height: 1.7;
+  }
+}
 /*# sourceMappingURL=style.css.map */

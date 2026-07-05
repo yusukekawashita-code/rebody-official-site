@@ -1,0 +1,37 @@
+@use "../../global" as *;
+
+.p-kenkou-closing {
+  padding: 90px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 55px 0;
+  }
+
+  &__label {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 4px 32px;
+    background: #fdecb2;
+    font-size: rclamp(20, 42, 360, 1920);
+    line-height: 1.4;
+    text-align: center;
+
+    @include mq($bp768) {
+      width: 100%;
+      padding: 6px 12px;
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+    font-size: rclamp(20, 42, 360, 1920);
+    line-height: 1.8;
+    text-align: center;
+
+    @include mq($bp768) {
+      margin-top: 20px;
+      line-height: 1.7;
+    }
+  }
+}
