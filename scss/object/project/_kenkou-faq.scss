@@ -1,0 +1,66 @@
+@use "../../global" as *;
+
+.p-kenkou-faq {
+  padding: 240px 0;
+  margin-top: 120px;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+    margin-top: 60px;
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 740px;
+    margin: 0 auto 50px;
+    font-size: rclamp(22, 39, 360, 1920);
+    text-align: center;
+    line-height: 1.5;
+
+    @include mq($bp768) {
+      margin-bottom: 25px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      width: 160px;
+      height: 160px;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: contain;
+
+      @include mq($bp768) {
+        width: 75px;
+        height: 75px;
+        bottom: -25px;
+      }
+    }
+
+    &::before {
+      left: 0;
+      background-image: url("../images/kenkou-keiei/kenkou-faq-woman.png");
+    }
+
+    &::after {
+      right: 0;
+      background-image: url("../images/kenkou-keiei/kenkou-faq-man.png");
+    }
+  }
+
+  .c-qa-accordion {
+    margin-top: 0;
+    padding: 40px 0;
+    background: transparent;
+  }
+
+  .c-qa-accordion__answer-inner::after {
+    content: none;
+  }
+}

@@ -1,7 +1,7 @@
 @use "../../global" as *;
 
 .p-kenkou-flow {
-  margin-top: 120px;
+  margin-top: 40px;
 
   @include mq($bp768) {
     margin-top: 20px;
