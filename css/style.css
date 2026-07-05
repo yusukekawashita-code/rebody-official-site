@@ -11485,4 +11485,121 @@ a {
   max-width: none;
   margin-inline: auto;
 }
+
+.p-trademark {
+  padding: 120px 0 150px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-trademark {
+    padding: 70px 0 20px;
+  }
+}
+.p-trademark__title {
+  font-size: clamp(2rem, 1.7692307692rem + 1.0256410256vw, 3rem);
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-align: center;
+}
+.p-trademark__lead {
+  margin-top: 35px;
+  font-size: clamp(0.875rem, 0.7884615385rem + 0.3846153846vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-trademark__lead {
+    margin-top: 24px;
+    text-align: left;
+  }
+}
+.p-trademark__content {
+  max-width: 1000px;
+  margin: 120px auto 0;
+}
+@media (max-width: 768px) {
+  .p-trademark__content {
+    margin-top: 60px;
+  }
+}
+.p-trademark__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+}
+@media (max-width: 768px) {
+  .p-trademark__main {
+    gap: 32px;
+  }
+}
+@media (max-width: 640px) {
+  .p-trademark__main {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+.p-trademark__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.p-trademark__logo--symbol {
+  max-width: 90px;
+}
+@media (max-width: 768px) {
+  .p-trademark__logo--symbol {
+    max-width: 75px;
+  }
+}
+.p-trademark__logo--rebody {
+  max-width: 550px;
+}
+@media (max-width: 768px) {
+  .p-trademark__logo--rebody {
+    width: min(100%, 360px);
+  }
+}
+.p-trademark__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin: 110px 0 0;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 768px) {
+  .p-trademark__list {
+    gap: 24px;
+    margin-top: 70px;
+  }
+}
+@media (max-width: 640px) {
+  .p-trademark__list {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    max-width: 250px;
+    margin-inline: auto;
+  }
+}
+.p-trademark__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.p-trademark__base {
+  width: min(100%, 575px);
+  margin: 85px auto 0;
+}
+@media (max-width: 768px) {
+  .p-trademark__base {
+    margin-top: 55px;
+  }
+}
+.p-trademark__base img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=style.css.map */

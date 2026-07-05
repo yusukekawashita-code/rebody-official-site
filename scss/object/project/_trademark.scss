@@ -1,0 +1,123 @@
+@use "../../global" as *;
+
+.p-trademark {
+  padding: 120px 0 150px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 70px 0 20px;
+  }
+
+  &__title {
+    font-size: rclamp(32, 48, 360, 1920);
+    line-height: 1.4;
+    letter-spacing: 0.14em;
+    text-align: center;
+  }
+
+  &__lead {
+    margin-top: 35px;
+    font-size: rclamp(14, 20, 360, 1920);
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: center;
+
+    @include mq($bp768) {
+      margin-top: 24px;
+      text-align: left;
+    }
+  }
+
+  &__content {
+    max-width: 1000px;
+    margin: 120px auto 0;
+
+    @include mq($bp768) {
+      margin-top: 60px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+
+    @include mq($bp768) {
+      gap: 32px;
+    }
+
+    @include mq($bp640) {
+      flex-direction: column;
+      gap: 48px;
+    }
+  }
+
+  &__logo {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &--symbol {
+      max-width: 90px;
+
+      @include mq($bp768) {
+        max-width: 75px;
+      }
+    }
+
+    &--rebody {
+      max-width: 550px;
+
+      @include mq($bp768) {
+        width: min(100%, 360px);
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 110px 0 0;
+    padding: 0;
+    list-style: none;
+
+    @include mq($bp768) {
+      gap: 24px;
+      margin-top: 70px;
+    }
+
+    @include mq($bp640) {
+      grid-template-columns: 1fr;
+      gap: 45px;
+      max-width: 250px;
+      margin-inline: auto;
+    }
+  }
+
+  &__item {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__base {
+    width: min(100%, 575px);
+    margin: 85px auto 0;
+
+    @include mq($bp768) {
+      margin-top: 55px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
