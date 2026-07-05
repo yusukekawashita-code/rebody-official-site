@@ -2432,6 +2432,118 @@ a {
   }
 }
 
+.c-contact-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 5px solid #fabe00;
+}
+@media (max-width: 768px) {
+  .c-contact-panel {
+    grid-template-columns: 1fr;
+    border-width: 3px;
+  }
+}
+.c-contact-panel__item {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .c-contact-panel__item {
+    padding: 20px;
+  }
+}
+.c-contact-panel__item--form {
+  position: relative;
+}
+.c-contact-panel__item--form::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 5px;
+  height: calc(100% - 80px);
+  background: #fabe00;
+}
+@media (max-width: 768px) {
+  .c-contact-panel__item--form::after {
+    top: auto;
+    right: 24px;
+    bottom: 0;
+    left: 24px;
+    width: auto;
+    height: 3px;
+  }
+}
+.c-contact-panel__title {
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
+  line-height: 1.5;
+  text-align: center;
+}
+.c-contact-panel__icon {
+  margin-top: 16px;
+}
+@media (max-width: 768px) {
+  .c-contact-panel__icon {
+    margin-top: 10px;
+  }
+}
+.c-contact-panel__icon--mail {
+  width: 60px;
+}
+@media (max-width: 768px) {
+  .c-contact-panel__icon--mail {
+    width: 45px;
+  }
+}
+.c-contact-panel__icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.c-contact-panel__button {
+  width: min(100%, 240px);
+  margin-top: 20px;
+  padding: 4px 16px;
+  border-radius: 999px;
+  background: #333;
+  color: #fff;
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
+  line-height: 1.3;
+  text-align: center;
+  transition: opacity 0.3s;
+}
+@media (any-hover: hover) {
+  .c-contact-panel__button:hover {
+    opacity: 0.75;
+  }
+}
+.c-contact-panel__tel {
+  width: min(100%, 360px);
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .c-contact-panel__tel {
+    margin-top: 10px;
+  }
+}
+.c-contact-panel__tel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.c-contact-panel a {
+  display: block;
+  transition: opacity 0.3s;
+}
+@media (any-hover: hover) {
+  .c-contact-panel a:hover {
+    opacity: 0.7;
+  }
+}
+
 .p-header {
   width: 100%;
   display: flex;
@@ -9546,119 +9658,14 @@ a {
   background: linear-gradient(transparent 58%, #fabe00 58%);
 }
 .p-seminar-contact__lead-text {
-  margin-top: 38px;
+  margin: 38px 0 60px;
   font-size: clamp(0.9375rem, 0.8365384615rem + 0.4487179487vw, 1.375rem);
   font-weight: 500;
   line-height: 1.8;
 }
 @media (max-width: 768px) {
   .p-seminar-contact__lead-text {
-    margin-top: 28px;
-    text-align: left;
-  }
-}
-.p-seminar-contact__box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 50px;
-  border: 5px solid #fabe00;
-}
-@media (max-width: 768px) {
-  .p-seminar-contact__box {
-    grid-template-columns: 1fr;
-    margin-top: 25px;
-    border-width: 3px;
-  }
-}
-.p-seminar-contact__item {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-@media (max-width: 768px) {
-  .p-seminar-contact__item {
-    min-height: auto;
-    padding: 20px;
-  }
-}
-.p-seminar-contact__item--form {
-  position: relative;
-}
-.p-seminar-contact__item--form::after {
-  content: "";
-  position: absolute;
-  top: 40px;
-  right: 0;
-  width: 5px;
-  height: calc(100% - 80px);
-  background: #fabe00;
-}
-@media (max-width: 768px) {
-  .p-seminar-contact__item--form::after {
-    top: auto;
-    right: 24px;
-    bottom: 0;
-    left: 24px;
-    width: auto;
-    height: 3px;
-  }
-}
-.p-seminar-contact__item-title {
-  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
-  line-height: 1.5;
-  text-align: center;
-}
-.p-seminar-contact__icon {
-  margin-top: 38px;
-}
-.p-seminar-contact__icon--mail {
-  width: 92px;
-}
-@media (max-width: 768px) {
-  .p-seminar-contact__icon--mail {
-    width: 72px;
-  }
-}
-.p-seminar-contact__icon img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.p-seminar-contact__button {
-  width: min(100%, 240px);
-  margin-top: 20px;
-  padding: 4px 16px;
-  border-radius: 999px;
-  background: #333;
-  color: white;
-  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
-  line-height: 1.3;
-  text-align: center;
-  transition: opacity 0.3s ease;
-}
-@media (any-hover: hover) {
-  .p-seminar-contact__button:hover {
-    opacity: 0.75;
-  }
-}
-.p-seminar-contact__tel {
-  width: min(100%, 360px);
-  margin-top: 20px;
-}
-.p-seminar-contact__tel img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.p-seminar-contact a {
-  display: block;
-  transition: opacity 0.3s ease;
-}
-@media (any-hover: hover) {
-  .p-seminar-contact a:hover {
-    opacity: 0.7;
+    margin: 20px 0 30px;
   }
 }
 
