@@ -1,0 +1,100 @@
+@use "../../global" as *;
+
+.p-kenkou-flow {
+  margin-top: 120px;
+
+  @include mq($bp768) {
+    margin-top: 20px;
+  }
+
+  &__title {
+    font-size: rclamp(22, 38, 360, 1920);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  &__list {
+    max-width: 840px;
+    margin: 80px auto 0;
+
+    @include mq($bp768) {
+      margin-top: 35px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 21% 1fr;
+    align-items: center;
+    padding: 20px 50px;
+    background: #fff9e8;
+    border-bottom: 8px solid $color-orange;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 160px;
+      bottom: -24px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 20px 0 20px;
+      border-color: $color-orange transparent transparent transparent;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 60px;
+    }
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 16px;
+      border-bottom-width: 6px;
+
+      &::after {
+        bottom: -23px;
+        border-width: 18px 18px 0 18px;
+        left: 42px;
+      }
+
+      &:not(:first-child) {
+        margin-top: 37px;
+      }
+    }
+  }
+
+  &__step {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    color: $color-orange;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    @include mq($bp768) {
+      gap: 4px;
+    }
+  }
+
+  &__step-text {
+    font-size: rclamp(22, 26, 360, 1920);
+  }
+
+  &__step-number {
+    font-size: rclamp(24, 34, 360, 1920);
+  }
+
+  &__text {
+    font-size: rclamp(18, 26, 360, 1920);
+    @include mq($bp768) {
+      line-height: 1.4;
+    }
+  }
+}

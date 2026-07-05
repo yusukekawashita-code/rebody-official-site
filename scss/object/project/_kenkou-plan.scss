@@ -77,7 +77,7 @@
   &__note {
     max-width: 1000px;
     margin: 35px auto 0;
-    font-size: rclamp(15, 21, 360, 1920);
+    font-size: rclamp(14, 21, 360, 1920);
     font-weight: 500;
     line-height: 1.45;
     @include mq($bp768) {

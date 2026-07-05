@@ -11107,13 +11107,105 @@ a {
 .p-kenkou-plan__note {
   max-width: 1000px;
   margin: 35px auto 0;
-  font-size: clamp(0.9375rem, 0.8509615385rem + 0.3846153846vw, 1.3125rem);
+  font-size: clamp(0.875rem, 0.7740384615rem + 0.4487179487vw, 1.3125rem);
   font-weight: 500;
   line-height: 1.45;
 }
 @media (max-width: 768px) {
   .p-kenkou-plan__note {
     margin-top: 20px;
+  }
+}
+
+.p-kenkou-flow {
+  margin-top: 120px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-flow {
+    margin-top: 20px;
+  }
+}
+.p-kenkou-flow__title {
+  font-size: clamp(1.375rem, 1.1442307692rem + 1.0256410256vw, 2.375rem);
+  text-align: center;
+  line-height: 1.5;
+}
+.p-kenkou-flow__list {
+  max-width: 840px;
+  margin: 80px auto 0;
+}
+@media (max-width: 768px) {
+  .p-kenkou-flow__list {
+    margin-top: 35px;
+  }
+}
+.p-kenkou-flow__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 21% 1fr;
+  align-items: center;
+  padding: 20px 50px;
+  background: #fff9e8;
+  border-bottom: 8px solid #fabe00;
+}
+.p-kenkou-flow__item::after {
+  content: "";
+  position: absolute;
+  left: 160px;
+  bottom: -24px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0 20px;
+  border-color: #fabe00 transparent transparent transparent;
+}
+.p-kenkou-flow__item:last-child::after {
+  display: none;
+}
+.p-kenkou-flow__item:not(:first-child) {
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-flow__item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 16px;
+    border-bottom-width: 6px;
+  }
+  .p-kenkou-flow__item::after {
+    bottom: -23px;
+    border-width: 18px 18px 0 18px;
+    left: 42px;
+  }
+  .p-kenkou-flow__item:not(:first-child) {
+    margin-top: 37px;
+  }
+}
+.p-kenkou-flow__step {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: #fabe00;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+@media (max-width: 768px) {
+  .p-kenkou-flow__step {
+    gap: 4px;
+  }
+}
+.p-kenkou-flow__step-text {
+  font-size: clamp(1.375rem, 1.3173076923rem + 0.2564102564vw, 1.625rem);
+}
+.p-kenkou-flow__step-number {
+  font-size: clamp(1.5rem, 1.3557692308rem + 0.641025641vw, 2.125rem);
+}
+.p-kenkou-flow__text {
+  font-size: clamp(1.125rem, 1.0096153846rem + 0.5128205128vw, 1.625rem);
+}
+@media (max-width: 768px) {
+  .p-kenkou-flow__text {
+    line-height: 1.4;
   }
 }
 /*# sourceMappingURL=style.css.map */
