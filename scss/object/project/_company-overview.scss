@@ -1,0 +1,88 @@
+@use "../../global" as *;
+
+.p-company-overview {
+  padding: 180px 0 120px;
+  background: $color-white;
+
+  @include mq($bp768) {
+    padding: 80px 0;
+  }
+
+  &__title {
+    font-size: rclamp(24, 40, 360, 1920);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__table-wrap {
+    max-width: 900px;
+    margin: 70px auto 0;
+
+    @include mq($bp768) {
+      margin-top: 35px;
+      overflow-x: auto;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #d0d0d0;
+    border-bottom: 2px solid #d0d0d0;
+    font-size: rclamp(14, 19, 360, 1920);
+    line-height: 1.6;
+
+    tr {
+      border-top: 2px solid #d0d0d0;
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+
+    th,
+    td {
+      vertical-align: middle;
+      padding: 24px 32px;
+
+      @include mq($bp768) {
+        padding: 18px 16px;
+      }
+    }
+
+    th {
+      width: 24%;
+      background: #e6e6e6;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    td {
+      background: $color-white;
+      font-weight: 500;
+    }
+  }
+
+  &__buttons {
+    max-width: 900px;
+    margin: 120px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+
+    @include mq($bp768) {
+      margin-top: 45px;
+      gap: 20px;
+    }
+
+    @include mq($bp640) {
+      grid-template-columns: 1fr;
+    }
+
+    .c-button {
+      width: 100%;
+      max-width: none;
+      margin-inline: auto;
+    }
+  }
+}

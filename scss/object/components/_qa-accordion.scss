@@ -31,6 +31,11 @@
         max-height: 3000px;
         opacity: 1;
       }
+
+      .c-qa-accordion__icon::after {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(90deg) scaleY(0);
+      }
     }
   }
 
@@ -107,12 +112,15 @@
       height: 6px;
       background: $color-orange;
       transform: translate(-50%, -50%);
-      transition: 0.3s ease;
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 
       @include mq($bp768) {
         width: 28px;
         height: 4px;
       }
+
       @include mq($bp640) {
         width: 20px;
         height: 2.5px;
@@ -166,6 +174,7 @@
       line-height: 2;
       font-weight: 500;
     }
+
     &--q6 {
       &::after {
         bottom: -2%;
@@ -194,6 +203,7 @@
         top: 0;
       }
     }
+
     &--disc {
       li::before {
         content: "●";

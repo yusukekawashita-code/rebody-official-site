@@ -2259,6 +2259,10 @@ a {
   max-height: 3000px;
   opacity: 1;
 }
+.c-qa-accordion__item.is-open .c-qa-accordion__icon::after {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg) scaleY(0);
+}
 .c-qa-accordion__question {
   position: relative;
   width: 100%;
@@ -2330,7 +2334,7 @@ a {
   height: 6px;
   background: #fabe00;
   transform: translate(-50%, -50%);
-  transition: 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 @media (max-width: 768px) {
   .c-qa-accordion__icon::before, .c-qa-accordion__icon::after {
@@ -11397,5 +11401,88 @@ a {
     margin-top: 20px;
     line-height: 1.7;
   }
+}
+
+.p-company-overview {
+  padding: 180px 0 120px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-company-overview {
+    padding: 80px 0;
+  }
+}
+.p-company-overview__title {
+  font-size: clamp(1.5rem, 1.2692307692rem + 1.0256410256vw, 2.5rem);
+  line-height: 1.5;
+  text-align: center;
+}
+.p-company-overview__table-wrap {
+  max-width: 900px;
+  margin: 70px auto 0;
+}
+@media (max-width: 768px) {
+  .p-company-overview__table-wrap {
+    margin-top: 35px;
+    overflow-x: auto;
+  }
+}
+.p-company-overview__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2px solid #d0d0d0;
+  border-bottom: 2px solid #d0d0d0;
+  font-size: clamp(0.875rem, 0.8028846154rem + 0.3205128205vw, 1.1875rem);
+  line-height: 1.6;
+}
+.p-company-overview__table tr {
+  border-top: 2px solid #d0d0d0;
+}
+.p-company-overview__table tr:first-child {
+  border-top: 0;
+}
+.p-company-overview__table th,
+.p-company-overview__table td {
+  vertical-align: middle;
+  padding: 24px 32px;
+}
+@media (max-width: 768px) {
+  .p-company-overview__table th,
+.p-company-overview__table td {
+    padding: 18px 16px;
+  }
+}
+.p-company-overview__table th {
+  width: 24%;
+  background: #e6e6e6;
+  font-weight: 700;
+  text-align: center;
+}
+.p-company-overview__table td {
+  background: white;
+  font-weight: 500;
+}
+.p-company-overview__buttons {
+  max-width: 900px;
+  margin: 120px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+@media (max-width: 768px) {
+  .p-company-overview__buttons {
+    margin-top: 45px;
+    gap: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .p-company-overview__buttons {
+    grid-template-columns: 1fr;
+  }
+}
+.p-company-overview__buttons .c-button {
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
 }
 /*# sourceMappingURL=style.css.map */
