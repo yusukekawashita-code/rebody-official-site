@@ -1,0 +1,35 @@
+@use "../../global" as *;
+
+.p-kenkou-torikumi-intro {
+  padding: 130px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 65px 0;
+  }
+
+  &__title {
+    font-size: rclamp(22, 40, 360, 1920);
+    text-align: center;
+
+    @include mq($bp768) {
+      line-height: 1.7;
+    }
+  }
+
+  &__image {
+    width: min(100%, 920px);
+    margin: 60px auto 0;
+    background: $color-white;
+
+    @include mq($bp768) {
+      margin-top: 30px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

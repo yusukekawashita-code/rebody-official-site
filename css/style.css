@@ -11602,4 +11602,73 @@ a {
   width: 100%;
   height: auto;
 }
+
+.p-kenkou-torikumi-intro {
+  padding: 130px 0;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-intro {
+    padding: 65px 0;
+  }
+}
+.p-kenkou-torikumi-intro__title {
+  font-size: clamp(1.375rem, 1.1153846154rem + 1.1538461538vw, 2.5rem);
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-intro__title {
+    line-height: 1.7;
+  }
+}
+.p-kenkou-torikumi-intro__image {
+  width: min(100%, 920px);
+  margin: 60px auto 0;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-intro__image {
+    margin-top: 30px;
+  }
+}
+.p-kenkou-torikumi-intro__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.p-kenkou-torikumi-message {
+  padding: 130px 0;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-message {
+    padding: 70px 0;
+  }
+}
+.p-kenkou-torikumi-message__title {
+  font-size: clamp(1.375rem, 1.0865384615rem + 1.2820512821vw, 2.625rem);
+  line-height: 1.5;
+  text-align: center;
+}
+.p-kenkou-torikumi-message__body {
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-message__body {
+    margin-top: 30px;
+  }
+}
+.p-kenkou-torikumi-message__body p {
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
+  font-weight: 500;
+  line-height: 2.4;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-message__body p {
+    text-align: left;
+    line-height: 2;
+  }
+}
 /*# sourceMappingURL=style.css.map */
