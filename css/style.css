@@ -11660,7 +11660,7 @@ a {
   }
 }
 .p-kenkou-torikumi-message__body p {
-  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
+  font-size: clamp(0.9375rem, 0.8365384615rem + 0.4487179487vw, 1.375rem);
   font-weight: 500;
   line-height: 2.4;
   text-align: center;
@@ -11715,7 +11715,7 @@ a {
 .p-kenkou-torikumi-activity__heading {
   position: relative;
   padding-bottom: 12px;
-  font-size: clamp(1.25rem, 1.0192307692rem + 1.0256410256vw, 2.25rem);
+  font-size: clamp(1.25rem, 1.0625rem + 0.8333333333vw, 2.0625rem);
   line-height: 1.35;
 }
 .p-kenkou-torikumi-activity__heading::after {
@@ -11751,5 +11751,168 @@ a {
   aspect-ratio: 690/430;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-kenkou-torikumi-balance {
+  padding: 180px 0 120px;
+  background: #f2f2f2;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-balance {
+    padding: 80px 0;
+  }
+}
+.p-kenkou-torikumi-balance__title {
+  font-size: clamp(1.375rem, 1.0865384615rem + 1.2820512821vw, 2.625rem);
+  line-height: 1.5;
+  text-align: center;
+}
+.p-kenkou-torikumi-balance__text {
+  margin-top: 55px;
+  font-size: clamp(0.9375rem, 0.8365384615rem + 0.4487179487vw, 1.375rem);
+  font-weight: 500;
+  line-height: 2.4;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-balance__text {
+    margin-top: 28px;
+    line-height: 2;
+    text-align: left;
+  }
+}
+.p-kenkou-torikumi-balance__plan {
+  max-width: 900px;
+  margin: 80px auto 0;
+  padding: 70px 50px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-balance__plan {
+    margin-top: 40px;
+    padding: 35px 12px;
+  }
+}
+.p-kenkou-torikumi-balance__plan-title {
+  position: relative;
+  padding-bottom: 8px;
+  font-size: clamp(1.375rem, 1.2163461538rem + 0.7051282051vw, 2.0625rem);
+  line-height: 1.5;
+}
+.p-kenkou-torikumi-balance__plan-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #fabe00;
+}
+.p-kenkou-torikumi-balance__plan-text {
+  margin-top: 24px;
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 2;
+}
+.p-kenkou-torikumi-balance__plan-info {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-balance__plan-info {
+    margin-top: 20px;
+  }
+}
+.p-kenkou-torikumi-balance__plan-info p {
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 2;
+}
+.p-kenkou-torikumi-balance__plan-info p:not(:first-child) {
+  margin-top: 20px;
+}
+.p-kenkou-torikumi-balance__goal {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-balance__goal {
+    margin-top: 15px;
+  }
+}
+.p-kenkou-torikumi-balance__goal-title {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 20px 24px;
+  background: #fdecb2;
+  font-size: clamp(0.9375rem, 0.8365384615rem + 0.4487179487vw, 1.375rem);
+  line-height: 1.5;
+}
+.p-kenkou-torikumi-balance__goal-title dt {
+  white-space: nowrap;
+}
+.p-kenkou-torikumi-balance__goal-title dd {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-balance__goal-title {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 16px;
+  }
+}
+.p-kenkou-torikumi-balance__measure {
+  margin-top: 30px;
+}
+.p-kenkou-torikumi-balance__measure-label {
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  font-weight: 500;
+}
+.p-kenkou-torikumi-balance__list {
+  margin-top: 16px;
+}
+.p-kenkou-torikumi-balance__list li {
+  display: grid;
+  grid-template-columns: 17px 150px 1fr;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  align-items: flex-start;
+  font-size: clamp(0.9375rem, 0.8798076923rem + 0.2564102564vw, 1.1875rem);
+  line-height: 1.5;
+}
+.p-kenkou-torikumi-balance__list li:not(:first-child) {
+  margin-top: 18px;
+}
+.p-kenkou-torikumi-balance__list li::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: #fabe00;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-balance__list li::before {
+    width: 14px;
+    height: 14px;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-balance__list li {
+    grid-template-columns: 14px 1fr;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+    row-gap: 8px;
+  }
+}
+.p-kenkou-torikumi-balance__date {
+  font-weight: 700;
+}
+.p-kenkou-torikumi-balance__content {
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-balance__content {
+    grid-column: 2/3;
+  }
 }
 /*# sourceMappingURL=style.css.map */
