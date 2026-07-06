@@ -1,0 +1,84 @@
+@use "../../global" as *;
+
+.p-kenkou-torikumi-activity {
+  padding: 150px 0;
+  background: $Bg-orange;
+
+  @include mq($bp768) {
+    padding: 70px 0;
+  }
+
+  &__title {
+    font-size: rclamp(22, 42, 360, 1920);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: 1fr 44%;
+    gap: 36px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 36px;
+    background: $color-white;
+    &:not(:first-of-type) {
+      margin-top: 60px;
+
+      @include mq($bp768) {
+        margin-top: 40px;
+      }
+    }
+
+    @include mq($bp768) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 50px;
+      padding: 24px;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    padding-bottom: 12px;
+    font-size: rclamp(20, 36, 360, 1920);
+    line-height: 1.35;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 5px;
+      background: $color-orange;
+
+      @include mq($bp768) {
+        height: 4px;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 12px;
+    font-size: rclamp(14, 19, 360, 1920);
+    font-weight: 500;
+    line-height: 2.4;
+
+    @include mq($bp768) {
+      margin-top: 8px;
+      line-height: 2;
+    }
+  }
+
+  &__image {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 690 / 430;
+      object-fit: cover;
+    }
+  }
+}

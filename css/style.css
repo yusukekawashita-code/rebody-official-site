@@ -11671,4 +11671,85 @@ a {
     line-height: 2;
   }
 }
+
+.p-kenkou-torikumi-activity {
+  padding: 150px 0;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-activity {
+    padding: 70px 0;
+  }
+}
+.p-kenkou-torikumi-activity__title {
+  font-size: clamp(1.375rem, 1.0865384615rem + 1.2820512821vw, 2.625rem);
+  line-height: 1.5;
+  text-align: center;
+}
+.p-kenkou-torikumi-activity__card {
+  display: grid;
+  grid-template-columns: 1fr 44%;
+  gap: 36px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 120px auto 0;
+  padding: 36px;
+  background: white;
+}
+.p-kenkou-torikumi-activity__card:not(:first-of-type) {
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-activity__card:not(:first-of-type) {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-activity__card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 50px;
+    padding: 24px;
+  }
+}
+.p-kenkou-torikumi-activity__heading {
+  position: relative;
+  padding-bottom: 12px;
+  font-size: clamp(1.25rem, 1.0192307692rem + 1.0256410256vw, 2.25rem);
+  line-height: 1.35;
+}
+.p-kenkou-torikumi-activity__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: #fabe00;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-activity__heading::after {
+    height: 4px;
+  }
+}
+.p-kenkou-torikumi-activity__text {
+  margin-top: 12px;
+  font-size: clamp(0.875rem, 0.8028846154rem + 0.3205128205vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 2.4;
+}
+@media (max-width: 768px) {
+  .p-kenkou-torikumi-activity__text {
+    margin-top: 8px;
+    line-height: 2;
+  }
+}
+.p-kenkou-torikumi-activity__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 690/430;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /*# sourceMappingURL=style.css.map */
