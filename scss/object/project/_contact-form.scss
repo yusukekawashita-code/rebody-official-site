@@ -127,4 +127,114 @@
       min-height: 220px;
     }
   }
+
+  &__privacy {
+    max-width: 900px;
+    height: 480px;
+    margin: 60px auto 0;
+    padding: 32px 36px;
+    border: 1px solid #cfcfcf;
+    background: $color-white;
+    overflow-y: auto;
+
+    @include mq($bp768) {
+      height: 360px;
+      margin-top: 40px;
+      padding: 24px 18px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f0f0f0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 999px;
+      background: #bdbdbd;
+    }
+  }
+
+  &__privacy-inner {
+    h3 {
+      font-size: rclamp(17, 20, 360, 1920);
+      line-height: 1.6;
+    }
+
+    h4 {
+      margin-top: 26px;
+      font-size: rclamp(15, 17, 360, 1920);
+      line-height: 1.6;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: rclamp(14, 16, 360, 1920);
+      font-weight: 500;
+      line-height: 1.8;
+    }
+  }
+
+  &__submit-area {
+    margin-top: 70px;
+    text-align: center;
+
+    @include mq($bp768) {
+      margin-top: 40px;
+    }
+  }
+
+  &__agree {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: rclamp(14, 17, 360, 1920);
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      appearance: checkbox;
+      -webkit-appearance: checkbox;
+      width: 18px;
+      height: 18px;
+      margin: 4px 0 0 0;
+      accent-color: $color-orange;
+      cursor: pointer;
+      @include mq($bp768) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 400px);
+    margin: 50px auto 0;
+    padding: 12px 24px;
+    border: 0;
+    border-radius: 8px;
+    background: $color-orange;
+    color: #333;
+    font-size: rclamp(20, 30, 360, 768);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    @include mq($bp768) {
+      margin-top: 25px;
+      padding: 8px 16px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
 }

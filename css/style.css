@@ -12034,4 +12034,106 @@ a {
     min-height: 220px;
   }
 }
+.p-contact-form__privacy {
+  max-width: 900px;
+  height: 480px;
+  margin: 60px auto 0;
+  padding: 32px 36px;
+  border: 1px solid #cfcfcf;
+  background: white;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+  .p-contact-form__privacy {
+    height: 360px;
+    margin-top: 40px;
+    padding: 24px 18px;
+  }
+}
+.p-contact-form__privacy::-webkit-scrollbar {
+  width: 10px;
+}
+.p-contact-form__privacy::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+.p-contact-form__privacy::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #bdbdbd;
+}
+.p-contact-form__privacy-inner h3 {
+  font-size: clamp(1.0625rem, 1.0192307692rem + 0.1923076923vw, 1.25rem);
+  line-height: 1.6;
+}
+.p-contact-form__privacy-inner h4 {
+  margin-top: 26px;
+  font-size: clamp(0.9375rem, 0.9086538462rem + 0.1282051282vw, 1.0625rem);
+  line-height: 1.6;
+}
+.p-contact-form__privacy-inner p {
+  margin-top: 20px;
+  font-size: clamp(0.875rem, 0.8461538462rem + 0.1282051282vw, 1rem);
+  font-weight: 500;
+  line-height: 1.8;
+}
+.p-contact-form__submit-area {
+  margin-top: 70px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-contact-form__submit-area {
+    margin-top: 40px;
+  }
+}
+.p-contact-form__agree {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: clamp(0.875rem, 0.8317307692rem + 0.1923076923vw, 1.0625rem);
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.p-contact-form__agree input[type=checkbox] {
+  -moz-appearance: checkbox;
+       appearance: checkbox;
+  -webkit-appearance: checkbox;
+  width: 18px;
+  height: 18px;
+  margin: 4px 0 0 0;
+  accent-color: #fabe00;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .p-contact-form__agree input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+  }
+}
+.p-contact-form__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 400px);
+  margin: 50px auto 0;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #fabe00;
+  color: #333;
+  font-size: clamp(1.25rem, 0.6985294118rem + 2.4509803922vw, 1.875rem);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+@media (max-width: 768px) {
+  .p-contact-form__submit {
+    margin-top: 25px;
+    padding: 8px 16px;
+  }
+}
+@media (any-hover: hover) {
+  .p-contact-form__submit:hover {
+    opacity: 0.75;
+  }
+}
 /*# sourceMappingURL=style.css.map */
