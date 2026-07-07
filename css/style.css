@@ -370,6 +370,16 @@ th {
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 120px;
+}
+@media (max-width: 640px) {
+  [id] {
+    scroll-margin-top: 85px;
+  }
 }
 
 body {
@@ -1348,6 +1358,7 @@ a {
 }
 .c-voice-section__text {
   margin-top: 12px;
+  margin-bottom: 1rem;
 }
 .c-voice-section__text p {
   font-size: clamp(0.875rem, 0.8028846154rem + 0.3205128205vw, 1.1875rem);
