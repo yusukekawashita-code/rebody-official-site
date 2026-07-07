@@ -2621,8 +2621,8 @@ a {
 }
 @media (max-width: 768px) {
   .c-page-top__link {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
   }
 }
 
