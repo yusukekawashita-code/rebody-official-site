@@ -268,3 +268,28 @@ if (pageTop) {
     });
   }
 }
+
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+anchorLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const href = link.getAttribute("href");
+
+    if (href === "#") return;
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    event.preventDefault();
+
+    const header = document.querySelector(".l-header");
+    const headerHeight = header ? header.offsetHeight : 0;
+
+    const position = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+    window.scrollTo({
+      top: position,
+      behavior: "smooth",
+    });
+  });
+});

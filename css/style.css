@@ -370,16 +370,6 @@ th {
 
 html {
   font-size: 100%;
-  scroll-behavior: smooth;
-}
-
-[id] {
-  scroll-margin-top: 120px;
-}
-@media (max-width: 640px) {
-  [id] {
-    scroll-margin-top: 85px;
-  }
 }
 
 body {
@@ -2296,7 +2286,7 @@ a {
   }
 }
 .c-qa-accordion__item.is-open .c-qa-accordion__answer {
-  max-height: 3000px;
+  display: block;
   opacity: 1;
 }
 .c-qa-accordion__item.is-open .c-qa-accordion__icon::after {
@@ -2392,10 +2382,12 @@ a {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 .c-qa-accordion__answer {
-  max-height: 0;
+  display: none;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+.c-qa-accordion__item.is-open .c-qa-accordion__answer {
+  display: block;
 }
 .c-qa-accordion__answer-inner {
   position: relative;
