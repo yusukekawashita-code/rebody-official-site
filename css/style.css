@@ -422,6 +422,10 @@ a {
 }
 
 .l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 800;
   width: 100%;
   background: white;
 }
@@ -833,6 +837,20 @@ a {
   .l-footer__bottom {
     padding: 12px 12px;
     gap: 10px;
+  }
+}
+
+.l-main {
+  padding-top: 120px;
+}
+@media (max-width: 1024px) {
+  .l-main {
+    padding-top: 115px;
+  }
+}
+@media (max-width: 640px) {
+  .l-main {
+    padding-top: 85px;
   }
 }
 

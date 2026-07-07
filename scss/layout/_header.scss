@@ -1,6 +1,10 @@
 @use "../global" as *;
 
 .l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 800;
   width: 100%;
   background: $color-white;
 
@@ -9,21 +13,26 @@
     padding-inline: 28px;
     display: flex;
     align-items: center;
+
     @include mq($bp1024) {
       height: 115px;
       padding: 4px 12px;
     }
+
     @include mq($bp768) {
       height: 115px;
       padding: 4px 20px;
     }
+
     @include mq($bp640) {
       height: 85px;
       padding: 4px 8px;
     }
+
     @include mq($bp399) {
       padding: 4px;
     }
+
     @include mq($bp330) {
       padding: 3px;
     }
