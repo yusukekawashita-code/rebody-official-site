@@ -253,7 +253,7 @@
             </div>
 
             <div class="p-seminar-intro__button-wrap">
-              <a href="#seminar-form" class="p-seminar-intro__button">
+              <a href="seminar.html?form=1" class="p-seminar-intro__button">
                 セミナー申し込みはこちら
               </a>
             </div>
@@ -1049,9 +1049,15 @@
               </div>
 
               <div class="p-seminar-form__body">
-                <label class="p-seminar-form__check"><input type="checkbox" name="date[]" value="all"> 全日程</label>
-                <label class="p-seminar-form__check"><input type="checkbox" name="date[]" value="2026-05-24">
-                  第1回　5月24日（土）</label>
+                <label class="p-seminar-form__check">
+                  <input type="checkbox" name="date[]" value="all" disabled>
+                  <del>全日程</del>
+                </label>
+
+                <label class="p-seminar-form__check">
+                  <input type="checkbox" name="date[]" value="2026-05-24" disabled>
+                  <del>第1回　5月24日（土）</del>
+                </label>
                 <label class="p-seminar-form__check"><input type="checkbox" name="date[]" value="2026-06-28">
                   第2回　6月28日（日）</label>
                 <label class="p-seminar-form__check"><input type="checkbox" name="date[]" value="2026-07-26">

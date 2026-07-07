@@ -282,14 +282,61 @@ anchorLinks.forEach((link) => {
 
     event.preventDefault();
 
-    const header = document.querySelector(".l-header");
-    const headerHeight = header ? header.offsetHeight : 0;
+    setTimeout(() => {
+      const header = document.querySelector(".l-header");
+      const headerHeight = header ? header.offsetHeight : 0;
 
-    const position = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      const position = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
-    window.scrollTo({
-      top: position,
-      behavior: "smooth",
+      window.scrollTo({
+        top: position,
+        behavior: "smooth",
+      });
+    }, 300);
+  });
+});
+window.addEventListener("load", () => {
+  if (!window.location.hash) return;
+
+  const target = document.querySelector(window.location.hash);
+
+  if (!target) return;
+
+  // ブラウザの自動スクロールをリセット
+  window.scrollTo(0, 0);
+
+  setTimeout(() => {
+    requestAnimationFrame(() => {
+      const header = document.querySelector(".l-header");
+      const headerHeight = header ? header.offsetHeight : 0;
+
+      const position = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+      window.scrollTo({
+        top: position,
+        behavior: "smooth",
+      });
     });
+  }, 500);
+});
+window.addEventListener("load", () => {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("form") !== "1") return;
+
+  const target = document.querySelector("#seminar-form");
+  if (!target) return;
+
+  const header = document.querySelector(".l-header");
+  const headerHeight = header ? header.offsetHeight : 0;
+
+  // フォームより少し上で止める余白
+  const extraOffset = window.innerWidth <= 640 ? 80 : 100;
+
+  const position = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - extraOffset;
+
+  window.scrollTo({
+    top: position,
+    behavior: "auto",
   });
 });
