@@ -2994,7 +2994,7 @@ a {
   color: white;
   font-size: clamp(0.875rem, 0.7884615385rem + 0.3846153846vw, 1.25rem);
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.9;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
