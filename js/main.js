@@ -218,3 +218,53 @@ if (interviewMovie) {
     }
   }
 }
+
+const pageTop = document.querySelector(".js-page-top");
+const footer = document.querySelector(".js-footer");
+
+if (pageTop) {
+  const showPoint = 100;
+
+  const updatePageTop = () => {
+    const scroll = window.scrollY;
+
+    if (scroll > showPoint) {
+      pageTop.classList.remove("is-hide");
+      pageTop.classList.add("is-show");
+    } else {
+      pageTop.classList.remove("is-show");
+      pageTop.classList.add("is-hide");
+    }
+
+    if (footer) {
+      const footerRect = footer.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const baseBottom = window.innerWidth <= 768 ? 10 : 20;
+
+      if (footerRect.top < windowHeight) {
+        const overlap = windowHeight - footerRect.top;
+        pageTop.style.bottom = `${baseBottom + overlap}px`;
+      } else {
+        pageTop.style.bottom = `${baseBottom}px`;
+      }
+    }
+  };
+
+  window.addEventListener("scroll", updatePageTop);
+  window.addEventListener("resize", updatePageTop);
+
+  updatePageTop();
+
+  const pageTopLink = pageTop.querySelector(".c-page-top__link");
+
+  if (pageTopLink) {
+    pageTopLink.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+}

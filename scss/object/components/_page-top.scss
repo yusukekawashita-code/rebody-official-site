@@ -1,0 +1,63 @@
+@use "../../global" as *;
+
+/* =========================
+  トップへ戻るボタン
+========================= */
+
+.c-page-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(100px);
+
+  @include mq($bp768) {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  &.is-show {
+    animation: pageTopUp 0.5s forwards;
+  }
+
+  &.is-hide {
+    animation: pageTopDown 0.5s forwards;
+  }
+
+  &__link {
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: url("../images/common/top-btn.png") no-repeat center / contain;
+
+    @include mq($bp768) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+@keyframes pageTopUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageTopDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}

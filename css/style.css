@@ -2548,6 +2548,85 @@ a {
   }
 }
 
+/* =========================
+  トップへ戻るボタン
+========================= */
+.c-page-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(100px);
+}
+@media (max-width: 768px) {
+  .c-page-top {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+.c-page-top.is-show {
+  -webkit-animation: pageTopUp 0.5s forwards;
+          animation: pageTopUp 0.5s forwards;
+}
+.c-page-top.is-hide {
+  -webkit-animation: pageTopDown 0.5s forwards;
+          animation: pageTopDown 0.5s forwards;
+}
+.c-page-top__link {
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: url("../images/common/top-btn.png") no-repeat center/contain;
+}
+@media (max-width: 768px) {
+  .c-page-top__link {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@-webkit-keyframes pageTopUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageTopUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes pageTopDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+@keyframes pageTopDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
 .p-header {
   width: 100%;
   display: flex;
