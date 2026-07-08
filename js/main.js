@@ -221,6 +221,7 @@ if (interviewMovie) {
 
 const pageTop = document.querySelector(".js-page-top");
 const footer = document.querySelector(".js-footer");
+const spFixedBanner = document.querySelector(".p-sp-fixed-banner");
 
 if (pageTop) {
   const showPoint = 100;
@@ -236,10 +237,16 @@ if (pageTop) {
       pageTop.classList.add("is-hide");
     }
 
+    let baseBottom = 20;
+
+    if (window.innerWidth <= 768) {
+      const bannerHeight = spFixedBanner ? spFixedBanner.offsetHeight : 0;
+      baseBottom = bannerHeight + 2;
+    }
+
     if (footer) {
       const footerRect = footer.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      const baseBottom = window.innerWidth <= 768 ? 10 : 20;
 
       if (footerRect.top < windowHeight) {
         const overlap = windowHeight - footerRect.top;
@@ -247,6 +254,8 @@ if (pageTop) {
       } else {
         pageTop.style.bottom = `${baseBottom}px`;
       }
+    } else {
+      pageTop.style.bottom = `${baseBottom}px`;
     }
   };
 

@@ -2593,8 +2593,8 @@ a {
 }
 @media (max-width: 768px) {
   .c-page-top {
-    right: 10px;
-    bottom: 10px;
+    right: 6px;
+    bottom: 55px;
   }
 }
 .c-page-top.is-show {
@@ -2613,8 +2613,8 @@ a {
 }
 @media (max-width: 768px) {
   .c-page-top__link {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -12421,7 +12421,6 @@ a {
 }
 .p-sp-fixed-banner__item {
   flex: 1;
-  min-height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
