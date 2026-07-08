@@ -3770,6 +3770,7 @@ a {
   .p-top-story__buttons {
     margin-top: 40px;
     gap: 20px;
+    text-align: center;
   }
 }
 .p-top-story__button {
