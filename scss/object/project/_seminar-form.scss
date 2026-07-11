@@ -25,11 +25,27 @@
       padding: 24px 15px 35px;
       border-radius: 20px 20px 0 0;
     }
+
+    .wpcf7 {
+      width: 100%;
+    }
+
+    .wpcf7-form {
+      margin: 0;
+    }
+
+    .wpcf7-response-output {
+      margin: 30px 42px 0;
+
+      @include mq($bp768) {
+        margin: 25px 0 0;
+      }
+    }
   }
 
   &__row {
     display: grid;
-    grid-template-columns: 230px 1fr;
+    grid-template-columns: 230px minmax(0, 1fr);
     gap: 34px;
     padding: 26px 42px;
     border-top: 1px solid #ddd;
@@ -59,6 +75,7 @@
 
   &__required {
     display: inline-block;
+    flex-shrink: 0;
     margin-top: 3px;
     padding: 1px 5px;
     border-radius: 3px;
@@ -66,7 +83,6 @@
     color: $color-white;
     font-size: rclamp(16, 20, 360, 1920);
     line-height: 1.4;
-    flex-shrink: 0;
   }
 
   &__label {
@@ -78,20 +94,27 @@
   }
 
   &__body {
+    min-width: 0;
     font-size: rclamp(16, 20, 360, 1920);
     font-weight: 500;
   }
 
+  &__body-title {
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  // 手書きした無効チェックボックス
   &__check {
     position: relative;
     display: block;
     padding-left: 22px;
     cursor: pointer;
 
-    input {
+    input[type="checkbox"] {
       position: absolute;
-      left: 0;
       top: 0.45em;
+      left: 0;
       width: 14px;
       height: 14px;
       margin: 0;
@@ -101,34 +124,86 @@
       cursor: pointer;
     }
 
+    input[type="checkbox"]:disabled {
+      cursor: not-allowed;
+    }
+
     & + & {
       margin-top: 4px;
     }
   }
 
+  // Contact Form 7のチェックボックス
+  .wpcf7-checkbox.p-seminar-form__check {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 0;
+
+    .wpcf7-list-item {
+      display: block;
+      margin: 0;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      padding-left: 22px;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      top: 0.45em;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      margin: 0;
+      appearance: auto;
+      -webkit-appearance: checkbox;
+      accent-color: $color-orange;
+      cursor: pointer;
+    }
+
+    .wpcf7-list-item-label {
+      display: inline;
+      line-height: 1.7;
+    }
+  }
+
   &__banner {
-    width: 350px;
+    width: min(100%, 350px);
+    max-width: 350px;
     margin-top: 28px;
 
     @include mq($bp768) {
       width: min(100%, 320px);
+      max-width: 320px;
       margin-inline: auto;
     }
 
     img {
       display: block;
       width: 100%;
+      max-width: 100%;
       height: auto;
+      object-fit: contain;
     }
   }
 
   &__input,
   &__textarea {
+    display: block;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
     background: $color-white;
     font: inherit;
+
+    &:focus {
+      border-color: $color-orange;
+      outline: 1px solid $color-orange;
+    }
   }
 
   &__input {
@@ -146,6 +221,12 @@
     }
   }
 
+  // CF7が入力欄を囲うspan
+  .wpcf7-form-control-wrap {
+    display: block;
+    width: 100%;
+  }
+
   &__name {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -158,11 +239,12 @@
 
     label {
       display: grid;
-      grid-template-columns: 48px 1fr;
+      grid-template-columns: 48px minmax(0, 1fr);
       align-items: center;
       gap: 8px;
+
       @include mq($bp640) {
-        grid-template-columns: 36px 1fr;
+        grid-template-columns: 36px minmax(0, 1fr);
       }
     }
   }
@@ -174,11 +256,18 @@
     @include mq($bp768) {
       margin-top: 36px;
     }
+
+    .wpcf7-spinner {
+      display: block;
+      margin: 15px auto 0;
+    }
   }
 
   &__button {
-    max-width: 300px;
+    display: block;
     width: min(100%, 300px);
+    max-width: 300px;
+    margin-inline: auto;
     padding: 16px 20px;
     border: none;
     background: #333;
@@ -197,5 +286,11 @@
         opacity: 0.75;
       }
     }
+  }
+
+  .wpcf7-not-valid-tip {
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
