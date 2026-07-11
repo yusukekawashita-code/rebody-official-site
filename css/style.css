@@ -13001,4 +13001,58 @@ a {
   background: #d6a300;
   transform: translateX(-3px);
 }
+
+.p-error {
+  padding: 100px 0 140px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .p-error {
+    padding: 70px 0 100px;
+  }
+}
+.p-error__inner {
+  max-width: 760px;
+  margin-inline: auto;
+}
+.p-error__number {
+  color: #fabe00;
+  font-size: clamp(5rem, 3.8461538462rem + 5.1282051282vw, 10rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+.p-error__title {
+  margin-top: 24px;
+  font-size: clamp(1.375rem, 1.2019230769rem + 0.7692307692vw, 2.125rem);
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .p-error__title {
+    margin-top: 16px;
+  }
+}
+.p-error__text {
+  margin-top: 24px;
+  color: #666;
+  font-size: clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .p-error__text {
+    margin-top: 18px;
+  }
+}
+.p-error__button {
+  max-width: 70%;
+  margin: 48px auto 0;
+}
+@media (max-width: 768px) {
+  .p-error__button {
+    margin-top: 32px;
+  }
+}
+.p-error__button .c-button {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

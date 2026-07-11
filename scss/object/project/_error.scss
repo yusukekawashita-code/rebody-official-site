@@ -1,0 +1,57 @@
+@use "../../global" as *;
+
+.p-error {
+  padding: 100px 0 140px;
+  text-align: center;
+
+  @include mq($bp768) {
+    padding: 70px 0 100px;
+  }
+
+  &__inner {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  &__number {
+    color: $color-orange;
+    font-size: rclamp(80, 160, 360, 1920);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  &__title {
+    margin-top: 24px;
+    font-size: rclamp(22, 34, 360, 1920);
+    line-height: 1.5;
+
+    @include mq($bp768) {
+      margin-top: 16px;
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+    color: #666;
+    font-size: rclamp(15, 18, 360, 1920);
+    line-height: 2;
+
+    @include mq($bp768) {
+      margin-top: 18px;
+    }
+  }
+
+  &__button {
+    max-width: 70%;
+    margin: 48px auto 0;
+
+    @include mq($bp768) {
+      margin-top: 32px;
+    }
+
+    .c-button {
+      width: 100%;
+    }
+  }
+}
