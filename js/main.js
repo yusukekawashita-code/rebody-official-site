@@ -349,3 +349,29 @@ window.addEventListener("load", () => {
     behavior: "auto",
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForms = document.querySelectorAll(".wpcf7 form");
+
+  contactForms.forEach((form) => {
+    const checkbox = form.querySelector('input[name="privacy-agree"][type="checkbox"]');
+    const submitButton = form.querySelector(".wpcf7-submit");
+
+    if (!checkbox || !submitButton) return;
+
+    const updateSubmitButton = () => {
+      const isChecked = checkbox.checked;
+
+      submitButton.disabled = !isChecked;
+      submitButton.classList.toggle("is-active", isChecked);
+    };
+
+    updateSubmitButton();
+
+    checkbox.addEventListener("change", updateSubmitButton);
+
+    form.addEventListener("reset", () => {
+      window.setTimeout(updateSubmitButton, 0);
+    });
+  });
+});

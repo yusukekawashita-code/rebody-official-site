@@ -206,9 +206,9 @@ input,
 optgroup,
 select,
 textarea {
-  -webkit-appearance: none; /* 1 */
-  -moz-appearance: none;
-       appearance: none;
+  -webkit-appearance: auto; /* 1 */
+  -moz-appearance: auto;
+       appearance: auto;
   vertical-align: middle;
   color: inherit;
   font: inherit;
@@ -12426,11 +12426,12 @@ a {
   font-weight: 500;
   line-height: 1.5;
   cursor: pointer;
+  margin-bottom: 2px;
 }
 .p-contact-form__agree input[type=checkbox] {
-  -moz-appearance: checkbox;
-       appearance: checkbox;
-  -webkit-appearance: checkbox;
+  -moz-appearance: auto;
+       appearance: auto;
+  -webkit-appearance: auto;
   width: 18px;
   height: 18px;
   margin: 4px 0 0 0;
@@ -12452,11 +12453,23 @@ a {
   padding: 12px 24px;
   border: 0;
   border-radius: 8px;
-  background: #fabe00;
-  color: #333;
+  background-color: #bdbdbd;
+  color: white;
   font-size: clamp(1.25rem, 0.6985294118rem + 2.4509803922vw, 1.875rem);
+  cursor: not-allowed;
+  opacity: 1;
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+.p-contact-form__submit:disabled {
+  background-color: #bdbdbd;
+  color: white;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.p-contact-form__submit:not(:disabled), .p-contact-form__submit.is-active {
+  background-color: #fabe00;
+  color: #333333;
   cursor: pointer;
-  transition: opacity 0.3s ease;
 }
 @media (max-width: 768px) {
   .p-contact-form__submit {
@@ -12465,7 +12478,7 @@ a {
   }
 }
 @media (any-hover: hover) {
-  .p-contact-form__submit:hover {
+  .p-contact-form__submit:not(:disabled):hover, .p-contact-form__submit.is-active:hover {
     opacity: 0.75;
   }
 }

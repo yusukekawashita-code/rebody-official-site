@@ -195,10 +195,11 @@
     font-weight: 500;
     line-height: 1.5;
     cursor: pointer;
+    margin-bottom: 2px;
 
     input[type="checkbox"] {
-      appearance: checkbox;
-      -webkit-appearance: checkbox;
+      appearance: auto;
+      -webkit-appearance: auto;
       width: 18px;
       height: 18px;
       margin: 4px 0 0 0;
@@ -220,11 +221,29 @@
     padding: 12px 24px;
     border: 0;
     border-radius: 8px;
-    background: $color-orange;
-    color: #333;
+    background-color: #bdbdbd;
+    color: $color-white;
     font-size: rclamp(20, 30, 360, 768);
-    cursor: pointer;
-    transition: opacity 0.3s ease;
+    cursor: not-allowed;
+    opacity: 1;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      opacity 0.3s ease;
+
+    &:disabled {
+      background-color: #bdbdbd;
+      color: $color-white;
+      cursor: not-allowed;
+      opacity: 1;
+    }
+
+    &:not(:disabled),
+    &.is-active {
+      background-color: $color-orange;
+      color: $color-black;
+      cursor: pointer;
+    }
 
     @include mq($bp768) {
       margin-top: 25px;
@@ -232,7 +251,8 @@
     }
 
     @media (any-hover: hover) {
-      &:hover {
+      &:not(:disabled):hover,
+      &.is-active:hover {
         opacity: 0.75;
       }
     }
