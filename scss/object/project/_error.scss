@@ -44,6 +44,7 @@
 
   &__button {
     max-width: 70%;
+    min-width: auto;
     margin: 48px auto 0;
 
     @include mq($bp768) {
