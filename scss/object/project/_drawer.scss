@@ -154,6 +154,7 @@
 
     @include mq($bp640) {
       font-size: rclamp(13, 16, 360, 1920);
+      line-height: 2.3;
     }
   }
 

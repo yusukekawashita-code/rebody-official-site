@@ -3319,6 +3319,7 @@ a {
 @media (max-width: 640px) {
   .p-drawer__child-link {
     font-size: clamp(0.8125rem, 0.7692307692rem + 0.1923076923vw, 1rem);
+    line-height: 2.3;
   }
 }
 .p-drawer__parent {
