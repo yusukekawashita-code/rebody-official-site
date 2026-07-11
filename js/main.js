@@ -250,7 +250,7 @@ if (pageTop) {
 
       if (footerRect.top < windowHeight) {
         const overlap = windowHeight - footerRect.top;
-        pageTop.style.bottom = `${baseBottom + overlap}px`;
+        pageTop.style.bottom = `${baseBottom + overlap - 40}px`;
       } else {
         pageTop.style.bottom = `${baseBottom}px`;
       }

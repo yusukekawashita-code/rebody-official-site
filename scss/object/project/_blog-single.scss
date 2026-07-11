@@ -4,7 +4,7 @@
   padding: 80px 0 150px;
 
   @include mq($bp768) {
-    padding: 60px 0 120px;
+    padding: 40px 0 120px;
   }
 
   &__container {
@@ -141,6 +141,7 @@
   &__pagination {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-top: 20px;
   }
 
