@@ -1813,7 +1813,7 @@ a {
   left: 50%;
   z-index: 1;
   width: min(1100px, 100% - 40px);
-  max-height: calc(100vh - 80px);
+  max-height: 97vh;
   transform: translate(-50%, -50%);
   overflow-y: auto;
   background: transparent;
