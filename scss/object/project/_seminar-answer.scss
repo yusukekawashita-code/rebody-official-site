@@ -37,6 +37,10 @@
     padding-bottom: 4px;
     border-bottom: 2px solid $color-orange;
     font-size: rclamp(17, 22, 360, 1920);
+    @include mq($bp399) {
+      grid-template-columns: 29px 1fr;
+      gap: 4px;
+    }
   }
 
   &__number {

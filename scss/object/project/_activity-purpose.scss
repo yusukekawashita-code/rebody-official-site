@@ -10,7 +10,7 @@
 
   &__inner {
     display: grid;
-    grid-template-columns: 1fr 37%;
+    grid-template-columns: 1fr 47%;
     align-items: center;
     gap: 20px;
 
@@ -67,11 +67,10 @@
 
   &__image {
     width: 100%;
-    max-width: 470px;
+    max-width: 100%;
     margin-top: 120px;
 
     @include mq($bp768) {
-      max-width: 300px;
       margin: 0 auto;
     }
   }
@@ -79,16 +78,12 @@
   &__inner {
     &--reverse {
       margin-top: 130px;
-      grid-template-columns: 560px 1fr;
-      gap: 100px;
-
-      @include mq($bp1024) {
-        grid-template-columns: 430px 1fr;
-      }
+      grid-template-columns: 47% 1fr;
+      gap: 60px;
 
       @include mq($bp768) {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 40px;
         margin-top: 80px;
       }
     }
@@ -102,11 +97,10 @@
 
   &__image {
     &--treatment {
-      max-width: 500px;
+      max-width: 100%;
       margin-top: 0;
 
       @include mq($bp768) {
-        max-width: 300px;
         order: 2;
       }
     }
@@ -115,12 +109,8 @@
   &__inner {
     &--third {
       margin-top: 130px;
-      grid-template-columns: 1fr 400px;
+      grid-template-columns: 1fr 47%;
       align-items: center;
-
-      @include mq($bp1024) {
-        grid-template-columns: 1fr 360px;
-      }
 
       @include mq($bp768) {
         grid-template-columns: 1fr;
@@ -131,12 +121,11 @@
 
   &__image {
     &--walking {
-      max-width: 400px;
+      max-width: 100%;
       margin-top: 0;
       justify-self: center;
 
       @include mq($bp768) {
-        max-width: 230px;
         margin-inline: auto;
       }
     }

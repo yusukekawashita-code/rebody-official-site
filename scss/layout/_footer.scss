@@ -132,7 +132,7 @@
 
   &__catch {
     margin-top: 20px;
-    font-size: rclamp(12, 18, 360, 1920);
+    font-size: rclamp(11, 18, 360, 1920);
     line-height: 1.5;
 
     @include mq($bp1024) {

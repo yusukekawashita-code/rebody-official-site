@@ -595,7 +595,7 @@ a {
 }
 .l-footer__catch {
   margin-top: 20px;
-  font-size: clamp(0.75rem, 0.6634615385rem + 0.3846153846vw, 1.125rem);
+  font-size: clamp(0.6875rem, 0.5865384615rem + 0.4487179487vw, 1.125rem);
   line-height: 1.5;
 }
 @media (max-width: 1024px) {
@@ -1353,7 +1353,7 @@ a {
 .c-voice-section__profile {
   padding-bottom: 12px;
   border-bottom: 2px solid #333333;
-  font-size: clamp(1.125rem, 1.0240384615rem + 0.4487179487vw, 1.5625rem);
+  font-size: clamp(1.0625rem, 0.9471153846rem + 0.5128205128vw, 1.5625rem);
   font-weight: 500;
   line-height: 1.5;
 }
@@ -1813,7 +1813,7 @@ a {
   left: 50%;
   z-index: 1;
   width: min(1100px, 100% - 40px);
-  max-height: 97vh;
+  max-height: calc(100vh - 80px);
   transform: translate(-50%, -50%);
   overflow-y: auto;
   background: transparent;
@@ -3788,6 +3788,7 @@ a {
   .p-top-reason__button {
     width: 100%;
     margin-top: 40px;
+    text-align: center;
   }
 }
 
@@ -4056,10 +4057,10 @@ a {
   line-height: 1;
 }
 .p-top-station__number span {
-  font-size: clamp(1.375rem, 1rem + 1.6666666667vw, 3rem);
+  font-size: clamp(1.875rem, 1.6153846154rem + 1.1538461538vw, 3rem);
 }
 .p-top-station__number strong {
-  font-size: clamp(1.875rem, 0.8653846154rem + 4.4871794872vw, 6.25rem);
+  font-size: clamp(3.125rem, 2.4038461538rem + 3.2051282051vw, 6.25rem);
 }
 @media (max-width: 768px) {
   .p-top-station__number {
@@ -5120,7 +5121,7 @@ a {
 .p-reason-development__step-text {
   display: inline-block;
   margin-top: 40px;
-  padding: 6px 12px;
+  padding: 6px 24px;
   border: 3px solid #fabe00;
   font-size: clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);
   line-height: 2.5;
@@ -9267,6 +9268,12 @@ a {
   border-bottom: 2px solid #fabe00;
   font-size: clamp(1.0625rem, 0.9903846154rem + 0.3205128205vw, 1.375rem);
 }
+@media (max-width: 399px) {
+  .p-seminar-answer__heading {
+    grid-template-columns: 29px 1fr;
+    gap: 4px;
+  }
+}
 .p-seminar-answer__number {
   display: flex;
   align-items: center;
@@ -10285,7 +10292,7 @@ a {
 }
 .p-activity-purpose__inner {
   display: grid;
-  grid-template-columns: 1fr 37%;
+  grid-template-columns: 1fr 47%;
   align-items: center;
   gap: 20px;
 }
@@ -10342,29 +10349,23 @@ a {
 }
 .p-activity-purpose__image {
   width: 100%;
-  max-width: 470px;
+  max-width: 100%;
   margin-top: 120px;
 }
 @media (max-width: 768px) {
   .p-activity-purpose__image {
-    max-width: 300px;
     margin: 0 auto;
   }
 }
 .p-activity-purpose__inner--reverse {
   margin-top: 130px;
-  grid-template-columns: 560px 1fr;
-  gap: 100px;
-}
-@media (max-width: 1024px) {
-  .p-activity-purpose__inner--reverse {
-    grid-template-columns: 430px 1fr;
-  }
+  grid-template-columns: 47% 1fr;
+  gap: 60px;
 }
 @media (max-width: 768px) {
   .p-activity-purpose__inner--reverse {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
     margin-top: 80px;
   }
 }
@@ -10372,24 +10373,18 @@ a {
   margin-top: 0;
 }
 .p-activity-purpose__image--treatment {
-  max-width: 500px;
+  max-width: 100%;
   margin-top: 0;
 }
 @media (max-width: 768px) {
   .p-activity-purpose__image--treatment {
-    max-width: 300px;
     order: 2;
   }
 }
 .p-activity-purpose__inner--third {
   margin-top: 130px;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 1fr 47%;
   align-items: center;
-}
-@media (max-width: 1024px) {
-  .p-activity-purpose__inner--third {
-    grid-template-columns: 1fr 360px;
-  }
 }
 @media (max-width: 768px) {
   .p-activity-purpose__inner--third {
@@ -10398,13 +10393,12 @@ a {
   }
 }
 .p-activity-purpose__image--walking {
-  max-width: 400px;
+  max-width: 100%;
   margin-top: 0;
   justify-self: center;
 }
 @media (max-width: 768px) {
   .p-activity-purpose__image--walking {
-    max-width: 230px;
     margin-inline: auto;
   }
 }
@@ -10722,7 +10716,7 @@ a {
 .p-fc-benefit__block-title {
   padding: 8px 48px;
   background: #fef9e5;
-  font-size: clamp(1.25rem, 1.0625rem + 0.8333333333vw, 2.0625rem);
+  font-size: clamp(1.0625rem, 0.8317307692rem + 1.0256410256vw, 2.0625rem);
 }
 @media (max-width: 768px) {
   .p-fc-benefit__block-title {

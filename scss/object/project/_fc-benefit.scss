@@ -41,7 +41,7 @@
   &__block-title {
     padding: 8px 48px;
     background: $Bg-orange;
-    font-size: rclamp(20, 33, 360, 1920);
+    font-size: rclamp(17, 33, 360, 1920);
 
     @include mq($bp768) {
       padding: 6px 8px;

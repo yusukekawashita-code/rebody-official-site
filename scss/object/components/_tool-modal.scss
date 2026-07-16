@@ -22,7 +22,7 @@
     left: 50%;
     z-index: 1;
     width: min(1100px, calc(100% - 40px));
-    max-height: 97vh;
+    max-height: calc(100vh - 80px);
     transform: translate(-50%, -50%);
     overflow-y: auto;
     background: transparent;
