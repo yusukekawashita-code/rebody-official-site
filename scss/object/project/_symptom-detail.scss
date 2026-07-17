@@ -1,11 +1,10 @@
 @use "../../global" as *;
 
-.p-traffic-detail {
+.p-symptom-detail {
   padding-top: 100px;
   @include mq($bp768) {
     padding-top: 60px;
   }
-
   .l-inner {
     max-width: 1000px;
   }
@@ -92,8 +91,7 @@
       }
     }
   }
-
-  &__about {
+  &__cause {
     margin-top: 150px;
 
     @include mq($bp768) {
@@ -105,14 +103,14 @@
     }
   }
 
-  &__about-title {
-    font-size: rclamp(22, 40, 360, 1920);
+  &__cause-heading {
+    font-size: rclamp(22, 44, 360, 1920);
   }
 
-  &__about-content {
+  &__cause-layout {
     display: flex;
     align-items: flex-start;
-    gap: 80px;
+    gap: 50px;
     margin-top: 60px;
 
     @include mq($bp1024) {
@@ -127,11 +125,11 @@
 
     @include mq($bp640) {
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 30px;
     }
   }
 
-  &__about-text {
+  &__cause-text {
     min-width: 0;
     flex: 1;
     font-size: rclamp(15, 20, 360, 1920);
@@ -141,9 +139,8 @@
     p + p {
       margin-top: 38px;
     }
-
-    @include mq($bp768) {
-      width: 100%;
+    strong {
+      font-weight: 700;
     }
 
     @include mq($bp640) {
@@ -153,154 +150,82 @@
     }
   }
 
-  &__about-image {
-    width: 42%;
+  &__cause-visual {
+    width: 30%;
     flex-shrink: 0;
 
+    @include mq($bp1024) {
+      width: 35%;
+    }
+
+    @include mq($bp768) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: 20px;
+      width: 100%;
+    }
+
+    @include mq($bp640) {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+
+  &__cause-image,
+  &__cause-diagram {
     img {
       display: block;
       width: 100%;
       height: auto;
+    }
+  }
+
+  &__cause-image {
+    img {
+      aspect-ratio: 8 / 5;
       object-fit: cover;
     }
+  }
+
+  &__cause-diagram {
+    margin-top: 12px;
 
     @include mq($bp768) {
-      width: 100%;
+      margin-top: 0;
     }
   }
-
-  &__content-section {
-    margin-top: 150px;
-
-    @include mq($bp768) {
-      margin-top: 90px;
-    }
-
-    @include mq($bp640) {
-      margin-top: 60px;
-    }
-  }
-
-  &__content-heading {
-    position: relative;
-    padding-left: 22px;
-    font-size: rclamp(22, 40, 360, 1920);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0.1em;
-      bottom: 0.1em;
-      left: 0;
-      width: 7px;
-      background: $color-orange;
-    }
-
-    @include mq($bp640) {
-      padding-left: 17px;
-
-      &::before {
-        width: 5px;
-      }
-    }
-  }
-
-  &__content-layout {
-    display: flex;
-    align-items: flex-start;
-    gap: 70px;
-    margin-top: 45px;
-
-    @include mq($bp1024) {
-      gap: 45px;
-    }
-
-    @include mq($bp768) {
-      flex-direction: column;
-      gap: 40px;
-      margin-top: 35px;
-    }
-
-    @include mq($bp640) {
-      gap: 30px;
-      margin-top: 20px;
-    }
-  }
-
-  &__content-text {
-    min-width: 0;
-    flex: 1;
-    font-size: rclamp(15, 20, 360, 1920);
-    font-weight: 500;
-    line-height: 1.75;
-
-    p + p {
-      margin-top: 30px;
-    }
-
-    @include mq($bp640) {
-      p + p {
-        margin-top: 20px;
-      }
-    }
-  }
-
-  &__content-image {
-    width: 45%;
-    flex-shrink: 0;
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    @include mq($bp1024) {
-      width: 44%;
-    }
-
-    @include mq($bp768) {
-      width: 100%;
-      max-width: 600px;
-      margin-inline: auto;
-    }
-  }
-
   &__treatment {
     margin-top: 150px;
-    padding-bottom: 150px;
 
     @include mq($bp768) {
       margin-top: 90px;
-      padding-bottom: 90px;
     }
 
     @include mq($bp640) {
       margin-top: 60px;
-      padding-bottom: 60px;
     }
   }
 
   &__treatment-heading {
     position: relative;
-    padding-left: 22px;
-    font-size: rclamp(22, 40, 360, 1920);
+    padding-left: 24px;
+    font-size: rclamp(22, 44, 360, 1920);
+    @include mq($bp768) {
+      padding-left: 20px;
+      line-height: 1.45;
+    }
 
     &::before {
       content: "";
       position: absolute;
-      top: 0.1em;
-      bottom: 0.1em;
+      top: 0.2em;
       left: 0;
-      width: 7px;
+      width: 8px;
+      height: 1.6em;
       background: $color-orange;
-    }
-
-    @include mq($bp640) {
-      padding-left: 18px;
-
-      &::before {
-        width: 5px;
+      @include mq($bp768) {
+        height: 2.5em;
       }
     }
   }
@@ -308,99 +233,113 @@
   &__treatment-layout {
     display: flex;
     align-items: flex-start;
-    gap: 70px;
-    margin-top: 45px;
+    gap: 50px;
+    margin-top: 60px;
 
     @include mq($bp1024) {
-      gap: 45px;
+      gap: 40px;
     }
 
     @include mq($bp768) {
       flex-direction: column;
-      gap: 40px;
-      margin-top: 35px;
+      gap: 30px;
+      margin-top: 45px;
     }
 
     @include mq($bp640) {
-      gap: 30px;
-      margin-top: 20px;
+      gap: 20px;
+      margin-top: 30px;
     }
   }
 
-  &__treatment-text {
+  &__treatment-content {
     min-width: 0;
     flex: 1;
-    font-size: rclamp(15, 20, 360, 1920);
+    font-size: rclamp(15, 19, 360, 1920);
     font-weight: 500;
     line-height: 1.75;
 
-    p + p {
-      margin-top: 30px;
+    p:first-child {
+      font-size: rclamp(17, 24, 360, 1920);
+      font-weight: 700;
+      margin-bottom: 150px;
+      @include mq($bp1024) {
+        margin-bottom: 120px;
+      }
+      @include mq($bp899) {
+        margin-bottom: 80px;
+      }
+      @include mq($bp768) {
+        margin-bottom: 20px;
+      }
     }
 
+    p + p {
+      margin-top: 38px;
+    }
     @include mq($bp640) {
       p + p {
         margin-top: 20px;
       }
     }
+  }
 
-    strong {
-      font-weight: 700;
+  &__accent {
+    color: #f15a24;
+    font-weight: 700;
+  }
+
+  &__treatment-visual {
+    width: 30%;
+    flex-shrink: 0;
+
+    @include mq($bp768) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
     }
 
-    span {
-      color: #ff6b1a;
-      font-weight: 700;
+    @include mq($bp640) {
+      grid-template-columns: 1fr;
     }
   }
 
-  &__treatment-image {
-    width: 45%;
-    flex-shrink: 0;
-
+  &__treatment-image,
+  &__treatment-flow {
     img {
       display: block;
       width: 100%;
       height: auto;
     }
-    @include mq($bp1024) {
-      width: 44%;
-    }
+  }
+
+  &__treatment-flow {
+    margin-top: 20px;
 
     @include mq($bp768) {
-      width: 100%;
-      max-width: 600px;
-      margin-inline: auto;
+      margin-top: 0;
     }
   }
 
   &__treatment-message {
-    margin-top: 70px;
-    font-size: rclamp(15, 20, 360, 1920);
-    font-weight: 500;
-    line-height: 1.75;
-
-    p + p {
-      margin-top: 30px;
-    }
-
-    @include mq($bp640) {
-      p + p {
-        margin-top: 20px;
-      }
-    }
-
-    strong {
-      font-weight: 700;
-    }
+    margin-top: 80px;
+    font-size: rclamp(20, 36, 360, 1920);
 
     span {
-      color: #ff6b1a;
-      font-weight: 700;
+      border-bottom: 4px solid $color-orange;
     }
 
     @include mq($bp768) {
-      margin-top: 30px;
+      margin-top: 60px;
+    }
+
+    @include mq($bp640) {
+      font-size: 22px;
+
+      span {
+        border-bottom-width: 3px;
+      }
     }
   }
 }
