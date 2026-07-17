@@ -3,11 +3,13 @@
 .c-video-section {
   &__inner {
     max-width: 1000px;
+    margin: 0 auto;
   }
 
   &__title {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     font-size: rclamp(16, 24, 360, 1920);
     line-height: 1.5;

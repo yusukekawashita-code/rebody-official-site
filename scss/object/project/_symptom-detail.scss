@@ -323,7 +323,7 @@
   }
 
   &__treatment-message {
-    margin-top: 80px;
+    margin: 80px 0 160px;
     font-size: rclamp(20, 36, 360, 1920);
 
     span {
@@ -331,7 +331,7 @@
     }
 
     @include mq($bp768) {
-      margin-top: 60px;
+      margin: 60px 0 80px;
     }
 
     @include mq($bp640) {

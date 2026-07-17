@@ -863,11 +863,11 @@ a {
 
 .c-section-button {
   margin-top: 60px;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .c-section-button {
     margin-top: 30px;
-    text-align: center;
   }
 }
 
@@ -926,10 +926,12 @@ a {
 
 .c-video-section__inner {
   max-width: 1000px;
+  margin: 0 auto;
 }
 .c-video-section__title {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   font-size: clamp(1rem, 0.8846153846rem + 0.5128205128vw, 1.5rem);
   line-height: 1.5;
@@ -1326,7 +1328,7 @@ a {
   }
 }
 .c-voice-section__card {
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 28px auto 0;
   padding: 30px;
   display: flex;
@@ -2794,6 +2796,100 @@ a {
   transform: translateY(-2px);
 }
 
+.c-treatment-diary {
+  margin-top: 150px;
+  padding-top: 150px;
+  background: #fef9e5;
+}
+@media (max-width: 768px) {
+  .c-treatment-diary {
+    margin-top: 90px;
+    padding-top: 90px;
+  }
+}
+@media (max-width: 640px) {
+  .c-treatment-diary {
+    margin-top: 60px;
+    padding-top: 60px;
+  }
+}
+.c-treatment-diary__title {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: clamp(1.375rem, 1.0865384615rem + 1.2820512821vw, 2.625rem);
+  line-height: 1.5;
+}
+.c-treatment-diary__title span {
+  width: 39px;
+  height: 39px;
+  background: #fabe00;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .c-treatment-diary__title span {
+    width: 25px;
+    height: 25px;
+  }
+}
+.c-treatment-diary__body {
+  max-width: 1200px;
+  margin: 28px auto 0;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background: white;
+}
+@media (max-width: 768px) {
+  .c-treatment-diary__body {
+    padding: 16px;
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+}
+.c-treatment-diary__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 640px) {
+  .c-treatment-diary__list {
+    gap: 18px;
+  }
+}
+.c-treatment-diary__item {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+@media (max-width: 640px) {
+  .c-treatment-diary__item {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+.c-treatment-diary__date {
+  flex-shrink: 0;
+  font-size: clamp(1rem, 0.9134615385rem + 0.3846153846vw, 1.375rem);
+  line-height: 1.5;
+}
+.c-treatment-diary__link {
+  color: #f15a24;
+  font-size: clamp(0.9375rem, 0.8653846154rem + 0.3205128205vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: opacity 0.3s ease;
+}
+.c-treatment-diary__link:hover {
+  opacity: 0.7;
+}
+
 .p-header {
   width: 100%;
   display: flex;
@@ -3563,7 +3659,7 @@ a {
   display: block;
 }
 .p-top-concept__bottom {
-  margin: 60px 0 100px;
+  margin: 60px 0 150px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -3571,7 +3667,7 @@ a {
 }
 @media (max-width: 768px) {
   .p-top-concept__bottom {
-    margin: 30px 0 50px;
+    margin: 30px 0 60px;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
@@ -13778,7 +13874,7 @@ a {
   }
 }
 .p-symptom-detail__treatment-message {
-  margin-top: 80px;
+  margin: 80px 0 160px;
   font-size: clamp(1.25rem, 1.0192307692rem + 1.0256410256vw, 2.25rem);
 }
 .p-symptom-detail__treatment-message span {
@@ -13786,7 +13882,7 @@ a {
 }
 @media (max-width: 768px) {
   .p-symptom-detail__treatment-message {
-    margin-top: 60px;
+    margin: 60px 0 80px;
   }
 }
 @media (max-width: 640px) {
