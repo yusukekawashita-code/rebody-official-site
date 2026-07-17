@@ -1441,6 +1441,21 @@ a {
   width: 4px;
   height: 26px;
 }
+.c-voice-section__empty {
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: clamp(0.875rem, 0.8028846154rem + 0.3205128205vw, 1.1875rem);
+  font-weight: 500;
+  background-color: white;
+}
+@media (max-width: 768px) {
+  .c-voice-section__empty {
+    margin-top: 16px;
+    padding: 16px;
+  }
+}
 
 .c-contact-box {
   padding: 20px 0 40px;

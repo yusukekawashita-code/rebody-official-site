@@ -150,4 +150,17 @@
       height: 26px;
     }
   }
+  &__empty {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: rclamp(14, 19, 360, 1920);
+    font-weight: 500;
+    background-color: white;
+    @include mq($bp768) {
+      margin-top: 16px;
+      padding: 16px;
+    }
+  }
 }
